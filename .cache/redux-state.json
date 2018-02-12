@@ -1,0 +1,602 @@
+{
+  "nodes": {
+    "SitePage /dev-404-page/": {
+      "layout": "index",
+      "jsonName": "dev-404-page.json",
+      "internalComponentName": "ComponentDev404Page",
+      "path": "/dev-404-page/",
+      "component": "/Users/aim-imac-3/projects/wFern.github.io/.cache/dev-404-page.js",
+      "componentChunkName": "component---cache-dev-404-page-js",
+      "context": {},
+      "updatedAt": 1518425176592,
+      "pluginCreator___NODE": "Plugin dev-404-page",
+      "pluginCreatorId": "Plugin dev-404-page",
+      "componentPath": "/Users/aim-imac-3/projects/wFern.github.io/.cache/dev-404-page.js",
+      "id": "SitePage /dev-404-page/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "5e16ff4ec52d78aac16b708c68d1841f",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin dev-404-page": {
+      "resolve": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "id": "Plugin dev-404-page",
+      "name": "dev-404-page",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "createPagesStatefully"
+      ],
+      "pluginFilepath": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "packageJson": {
+        "name": "dev-404-page",
+        "description": "Internal plugin to add a 404 page in development with helpful information",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "3101406bbe7009a90a7566bce5486f98",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin component-page-creator": {
+      "resolve": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/component-page-creator",
+      "id": "Plugin component-page-creator",
+      "name": "component-page-creator",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "createPagesStatefully"
+      ],
+      "pluginFilepath": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/component-page-creator",
+      "packageJson": {
+        "name": "component-page-creator",
+        "description": "An internal Gatsby plugin that creates pages from component files in src/pages",
+        "version": "1.0.0",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "372fabfc5642803d5c3f3dc43fac147b",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin component-layout-creator": {
+      "resolve": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/component-layout-creator",
+      "id": "Plugin component-layout-creator",
+      "name": "component-layout-creator",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "createLayouts"
+      ],
+      "pluginFilepath": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/component-layout-creator",
+      "packageJson": {
+        "name": "component-layout-creator",
+        "description": "An internal Gatsby plugin that creates pages from component files in src/layouts",
+        "version": "1.0.0",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "88fce2c59f8b15d4009c83658e0a0c0a",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin internal-data-bridge": {
+      "resolve": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "id": "Plugin internal-data-bridge",
+      "name": "internal-data-bridge",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "sourceNodes",
+        "onCreatePage"
+      ],
+      "pluginFilepath": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "packageJson": {
+        "name": "internal-data-bridge",
+        "description": "An internal Gatsby plugin which creates data nodes from internal data",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "c5348d140cb7777f629f06bc0350c3e3",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin prod-404": {
+      "resolve": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "id": "Plugin prod-404",
+      "name": "prod-404",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreatePage"
+      ],
+      "pluginFilepath": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "packageJson": {
+        "name": "prod-404",
+        "description": "Internal plugin to detect various flavors of 404 pages and ensure there's a 404.html path created as well to ensure compatability with static hosts",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "63c26deb38461dc500deab26fbbf34e4",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin query-runner": {
+      "resolve": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "id": "Plugin query-runner",
+      "name": "query-runner",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreatePage",
+        "onCreateLayout"
+      ],
+      "pluginFilepath": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "packageJson": {
+        "name": "query-runner",
+        "description": "Internal plugin for running queries",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "63e4aa14946092f933888bd6f420bb0b",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-plugin-react-helmet": {
+      "resolve": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby-plugin-react-helmet",
+      "id": "Plugin gatsby-plugin-react-helmet",
+      "name": "gatsby-plugin-react-helmet",
+      "version": "1.0.8",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [],
+      "pluginFilepath": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby-plugin-react-helmet",
+      "packageJson": {
+        "name": "gatsby-plugin-react-helmet",
+        "description": "Stub description for gatsby-plugin-react-helmet",
+        "version": "1.0.8",
+        "main": "index.js",
+        "keywords": [
+          "gatsby"
+        ],
+        "author": "Kyle Mathews &lt;mathews.kyle@gmail.com&gt;",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "babel-runtime",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "react-helmet",
+            "version": "^5.1.3"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.0.5"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "bc98d97c17c58c2b623ae092bacebe54",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-plugin-i18n": {
+      "resolve": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby-plugin-i18n",
+      "id": "Plugin gatsby-plugin-i18n",
+      "name": "gatsby-plugin-i18n",
+      "version": "0.4.1",
+      "pluginOptions": {
+        "plugins": [],
+        "langKeyDefault": "ru",
+        "useLangKeyLayout": false
+      },
+      "nodeAPIs": [
+        "createPages",
+        "onCreateNode",
+        "onCreatePage"
+      ],
+      "pluginFilepath": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby-plugin-i18n",
+      "packageJson": {
+        "name": "gatsby-plugin-i18n",
+        "description": "Multi language feature for Gatsby",
+        "version": "0.4.1",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "i18n"
+        ],
+        "author": "angeloocana.com",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "folktale",
+            "version": "^2.0.1"
+          },
+          {
+            "name": "graphql",
+            "version": "^0.11.7"
+          },
+          {
+            "name": "ptz-i18n",
+            "version": "^0.3.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.24.1"
+          },
+          {
+            "name": "babel-eslint",
+            "version": "^8.0.1"
+          },
+          {
+            "name": "babel-plugin-transform-object-rest-spread",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "babel-preset-env",
+            "version": "^1.6.0"
+          },
+          {
+            "name": "codecov",
+            "version": "^2.3.0"
+          },
+          {
+            "name": "eslint",
+            "version": "^4.8.0"
+          },
+          {
+            "name": "eslint-config-standard",
+            "version": "^10.2.1"
+          },
+          {
+            "name": "eslint-config-standard-react",
+            "version": "^5.0.0"
+          },
+          {
+            "name": "eslint-plugin-import",
+            "version": "^2.7.0"
+          },
+          {
+            "name": "eslint-plugin-jest",
+            "version": "^21.2.0"
+          },
+          {
+            "name": "eslint-plugin-node",
+            "version": "^5.2.0"
+          },
+          {
+            "name": "eslint-plugin-promise",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "eslint-plugin-react",
+            "version": "^7.4.0"
+          },
+          {
+            "name": "eslint-plugin-standard",
+            "version": "^3.0.1"
+          },
+          {
+            "name": "jest",
+            "version": "^21.2.1"
+          },
+          {
+            "name": "opn-cli",
+            "version": "^3.1.0"
+          },
+          {
+            "name": "ptz-assert",
+            "version": "^1.6.8"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "7704579d2b2097a7bd291b0522433218",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin default-site-plugin": {
+      "resolve": "/Users/aim-imac-3/projects/wFern.github.io",
+      "id": "Plugin default-site-plugin",
+      "name": "default-site-plugin",
+      "version": "5c24c58fd9d028fffc3903121579d730",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [],
+      "pluginFilepath": "/Users/aim-imac-3/projects/wFern.github.io",
+      "packageJson": {
+        "name": "gatsby-starter-default",
+        "description": "Gatsby default starter",
+        "version": "1.0.0",
+        "main": "n/a",
+        "keywords": [
+          "gatsby"
+        ],
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "gatsby",
+            "version": "^1.9.127"
+          },
+          {
+            "name": "gatsby-link",
+            "version": "^1.6.30"
+          },
+          {
+            "name": "gatsby-plugin-i18n",
+            "version": "^0.4.1"
+          },
+          {
+            "name": "gatsby-plugin-react-helmet",
+            "version": "^1.0.8"
+          },
+          {
+            "name": "gh-pages",
+            "version": "^1.1.0"
+          },
+          {
+            "name": "semantic-ui-css",
+            "version": "^2.2.12"
+          },
+          {
+            "name": "semantic-ui-react",
+            "version": "^0.77.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "prettier",
+            "version": "^1.8.2"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "e1130b0109bb2b24ce86eb96b9d57aeb",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Site": {
+      "siteMetadata": {
+        "title": "Gatsby Default Starter"
+      },
+      "port": "8000",
+      "host": "localhost",
+      "pathPrefix": "",
+      "polyfill": true,
+      "buildTime": "2018-02-12T08:46:04.860Z",
+      "id": "Site",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "e2114f9013ad3be8ce5a56dd544b6f7c",
+        "type": "Site",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /404/": {
+      "layout": "index",
+      "jsonName": "404.json",
+      "internalComponentName": "Component404",
+      "path": "/404/",
+      "component": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/404.js",
+      "componentChunkName": "component---src-pages-404-js",
+      "context": {
+        "slug": "/404/",
+        "langKey": "ru"
+      },
+      "updatedAt": 1518425176637,
+      "pluginCreator___NODE": "Plugin gatsby-plugin-i18n",
+      "pluginCreatorId": "Plugin gatsby-plugin-i18n",
+      "componentPath": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/404.js",
+      "id": "SitePage /404/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "2b2f8dfbd4c160ad4bdfbd021188f9d7",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /en/": {
+      "layout": "index",
+      "jsonName": "en.json",
+      "internalComponentName": "ComponentEn",
+      "path": "/en/",
+      "component": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/index.en.js",
+      "componentChunkName": "component---src-pages-index-en-js",
+      "context": {
+        "slug": "/en/",
+        "langKey": "en"
+      },
+      "updatedAt": 1518425176634,
+      "pluginCreator___NODE": "Plugin gatsby-plugin-i18n",
+      "pluginCreatorId": "Plugin gatsby-plugin-i18n",
+      "componentPath": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/index.en.js",
+      "id": "SitePage /en/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "d2bfae7784bfa6a8bfcc394c2e5734a3",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /ru/": {
+      "layout": "index",
+      "jsonName": "ru.json",
+      "internalComponentName": "ComponentRu",
+      "path": "/ru/",
+      "component": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/index.ru.js",
+      "componentChunkName": "component---src-pages-index-ru-js",
+      "context": {
+        "slug": "/ru/",
+        "langKey": "ru"
+      },
+      "updatedAt": 1518425176635,
+      "pluginCreator___NODE": "Plugin gatsby-plugin-i18n",
+      "pluginCreatorId": "Plugin gatsby-plugin-i18n",
+      "componentPath": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/index.ru.js",
+      "id": "SitePage /ru/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "ff4d0928c38ea33716b19c74add3b368",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /page-2/": {
+      "layout": "index",
+      "jsonName": "page-2.json",
+      "internalComponentName": "ComponentPage2",
+      "path": "/page-2/",
+      "component": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/page-2.js",
+      "componentChunkName": "component---src-pages-page-2-js",
+      "context": {
+        "slug": "/page-2/",
+        "langKey": "ru"
+      },
+      "updatedAt": 1518425176636,
+      "pluginCreator___NODE": "Plugin gatsby-plugin-i18n",
+      "pluginCreatorId": "Plugin gatsby-plugin-i18n",
+      "componentPath": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/page-2.js",
+      "id": "SitePage /page-2/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "6290e8c803f5be03b272ccd6583a75b3",
+        "owner": "internal-data-bridge"
+      }
+    }
+  },
+  "status": {
+    "plugins": {},
+    "PLUGINS_HASH": "6132324f59f1e9b1f5f4137393451ec4"
+  },
+  "componentDataDependencies": {
+    "nodes": {},
+    "connections": {
+      "SitePage": [
+        "/dev-404-page/"
+      ]
+    }
+  }
+}
