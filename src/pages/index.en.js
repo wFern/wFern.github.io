@@ -11,7 +11,7 @@ const IndexPage = () => (
                     <h1>About</h1>
                     <p>Hello</p>
                     <p>My name is Andrey and I'm a mostly web developer</p>
-                    <p>Here I describe what I have done and write about my experience</p>
+                    <p>Also, I'm interested in music, cycling, and some other stuff</p>
                 </Grid.Column>
                 <Grid.Column>
                     <Image src={PersonalPic} size='small' circular/>

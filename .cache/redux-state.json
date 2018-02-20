@@ -5,57 +5,24 @@
       "jsonName": "dev-404-page.json",
       "internalComponentName": "ComponentDev404Page",
       "path": "/dev-404-page/",
-      "component": "/Users/aim-imac-3/projects/wFern.github.io/.cache/dev-404-page.js",
+      "component": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/.cache/dev-404-page.js",
       "componentChunkName": "component---cache-dev-404-page-js",
       "context": {},
-      "updatedAt": 1518425176592,
+      "updatedAt": 1519119285020,
       "pluginCreator___NODE": "Plugin dev-404-page",
       "pluginCreatorId": "Plugin dev-404-page",
-      "componentPath": "/Users/aim-imac-3/projects/wFern.github.io/.cache/dev-404-page.js",
+      "componentPath": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/.cache/dev-404-page.js",
       "id": "SitePage /dev-404-page/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "5e16ff4ec52d78aac16b708c68d1841f",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "Plugin dev-404-page": {
-      "resolve": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/dev-404-page",
-      "id": "Plugin dev-404-page",
-      "name": "dev-404-page",
-      "version": "1.0.0",
-      "pluginOptions": {
-        "plugins": []
-      },
-      "nodeAPIs": [
-        "createPagesStatefully"
-      ],
-      "pluginFilepath": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/dev-404-page",
-      "packageJson": {
-        "name": "dev-404-page",
-        "description": "Internal plugin to add a 404 page in development with helpful information",
-        "version": "1.0.0",
-        "main": "index.js",
-        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-        "license": "MIT",
-        "dependencies": [],
-        "devDependencies": [],
-        "peerDependencies": [],
-        "optionalDependecies": [],
-        "bundledDependecies": []
-      },
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "contentDigest": "3101406bbe7009a90a7566bce5486f98",
-        "type": "SitePlugin",
+        "contentDigest": "272b8db072825abf495cff781a4cc5ec",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin component-page-creator": {
-      "resolve": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/component-page-creator",
+      "resolve": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/node_modules/gatsby/dist/internal-plugins/component-page-creator",
       "id": "Plugin component-page-creator",
       "name": "component-page-creator",
       "version": "1.0.0",
@@ -65,7 +32,7 @@
       "nodeAPIs": [
         "createPagesStatefully"
       ],
-      "pluginFilepath": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/component-page-creator",
+      "pluginFilepath": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/node_modules/gatsby/dist/internal-plugins/component-page-creator",
       "packageJson": {
         "name": "component-page-creator",
         "description": "An internal Gatsby plugin that creates pages from component files in src/pages",
@@ -86,13 +53,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "372fabfc5642803d5c3f3dc43fac147b",
+        "contentDigest": "841a19098f0e9359234a5af3e3d0a2b1",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin component-layout-creator": {
-      "resolve": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/component-layout-creator",
+      "resolve": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/node_modules/gatsby/dist/internal-plugins/component-layout-creator",
       "id": "Plugin component-layout-creator",
       "name": "component-layout-creator",
       "version": "1.0.0",
@@ -102,7 +69,7 @@
       "nodeAPIs": [
         "createLayouts"
       ],
-      "pluginFilepath": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/component-layout-creator",
+      "pluginFilepath": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/node_modules/gatsby/dist/internal-plugins/component-layout-creator",
       "packageJson": {
         "name": "component-layout-creator",
         "description": "An internal Gatsby plugin that creates pages from component files in src/layouts",
@@ -123,13 +90,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "88fce2c59f8b15d4009c83658e0a0c0a",
+        "contentDigest": "fcc5f78e53d25082a939a2b3cddbb0ae",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin internal-data-bridge": {
-      "resolve": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "resolve": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
       "id": "Plugin internal-data-bridge",
       "name": "internal-data-bridge",
       "version": "1.0.0",
@@ -140,7 +107,7 @@
         "sourceNodes",
         "onCreatePage"
       ],
-      "pluginFilepath": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "pluginFilepath": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
       "packageJson": {
         "name": "internal-data-bridge",
         "description": "An internal Gatsby plugin which creates data nodes from internal data",
@@ -157,13 +124,46 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "c5348d140cb7777f629f06bc0350c3e3",
+        "contentDigest": "28e5d90ee144c580ceaaecb2c0c8e84f",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin dev-404-page": {
+      "resolve": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "id": "Plugin dev-404-page",
+      "name": "dev-404-page",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "createPages"
+      ],
+      "pluginFilepath": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "packageJson": {
+        "name": "dev-404-page",
+        "description": "Internal plugin to add a 404 page in development with helpful information",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "881331745e0bef5213cd6a15a00c96dc",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin prod-404": {
-      "resolve": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "resolve": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/node_modules/gatsby/dist/internal-plugins/prod-404",
       "id": "Plugin prod-404",
       "name": "prod-404",
       "version": "1.0.0",
@@ -173,7 +173,7 @@
       "nodeAPIs": [
         "onCreatePage"
       ],
-      "pluginFilepath": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "pluginFilepath": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/node_modules/gatsby/dist/internal-plugins/prod-404",
       "packageJson": {
         "name": "prod-404",
         "description": "Internal plugin to detect various flavors of 404 pages and ensure there's a 404.html path created as well to ensure compatability with static hosts",
@@ -190,13 +190,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "63c26deb38461dc500deab26fbbf34e4",
+        "contentDigest": "48c49bf59f5316652e406875898703c4",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin query-runner": {
-      "resolve": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "resolve": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/node_modules/gatsby/dist/internal-plugins/query-runner",
       "id": "Plugin query-runner",
       "name": "query-runner",
       "version": "1.0.0",
@@ -207,7 +207,7 @@
         "onCreatePage",
         "onCreateLayout"
       ],
-      "pluginFilepath": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "pluginFilepath": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/node_modules/gatsby/dist/internal-plugins/query-runner",
       "packageJson": {
         "name": "query-runner",
         "description": "Internal plugin for running queries",
@@ -224,13 +224,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "63e4aa14946092f933888bd6f420bb0b",
+        "contentDigest": "36fb82b0d812227c70c3649c6ccb8e21",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin gatsby-plugin-react-helmet": {
-      "resolve": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby-plugin-react-helmet",
+      "resolve": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/node_modules/gatsby-plugin-react-helmet",
       "id": "Plugin gatsby-plugin-react-helmet",
       "name": "gatsby-plugin-react-helmet",
       "version": "1.0.8",
@@ -238,7 +238,7 @@
         "plugins": []
       },
       "nodeAPIs": [],
-      "pluginFilepath": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby-plugin-react-helmet",
+      "pluginFilepath": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/node_modules/gatsby-plugin-react-helmet",
       "packageJson": {
         "name": "gatsby-plugin-react-helmet",
         "description": "Stub description for gatsby-plugin-react-helmet",
@@ -247,7 +247,9 @@
         "keywords": [
           "gatsby"
         ],
-        "author": "Kyle Mathews &lt;mathews.kyle@gmail.com&gt;",
+        "author": {
+          "name": "Kyle Mathews &lt;mathews.kyle@gmail.com&gt;"
+        },
         "license": "MIT",
         "dependencies": [
           {
@@ -276,18 +278,19 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "bc98d97c17c58c2b623ae092bacebe54",
+        "contentDigest": "1c88fc78d6a956349bb1fa93a0a6b324",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin gatsby-plugin-i18n": {
-      "resolve": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby-plugin-i18n",
+      "resolve": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/node_modules/gatsby-plugin-i18n",
       "id": "Plugin gatsby-plugin-i18n",
       "name": "gatsby-plugin-i18n",
       "version": "0.4.1",
       "pluginOptions": {
         "plugins": [],
+        "langKeyForNull": "any",
         "langKeyDefault": "ru",
         "useLangKeyLayout": false
       },
@@ -296,7 +299,7 @@
         "onCreateNode",
         "onCreatePage"
       ],
-      "pluginFilepath": "/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby-plugin-i18n",
+      "pluginFilepath": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/node_modules/gatsby-plugin-i18n",
       "packageJson": {
         "name": "gatsby-plugin-i18n",
         "description": "Multi language feature for Gatsby",
@@ -306,7 +309,9 @@
           "gatsby-plugin",
           "i18n"
         ],
-        "author": "angeloocana.com",
+        "author": {
+          "name": "angeloocana.com"
+        },
         "license": "MIT",
         "dependencies": [
           {
@@ -399,21 +404,21 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "7704579d2b2097a7bd291b0522433218",
+        "contentDigest": "88e6e3639eb511b93e401491792a8c9e",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin default-site-plugin": {
-      "resolve": "/Users/aim-imac-3/projects/wFern.github.io",
+      "resolve": "/Users/aim-imac-3/projects/wfrn/wFern.github.io",
       "id": "Plugin default-site-plugin",
       "name": "default-site-plugin",
-      "version": "5c24c58fd9d028fffc3903121579d730",
+      "version": "5c2df2c77021a2116554812fa5bd3318",
       "pluginOptions": {
         "plugins": []
       },
       "nodeAPIs": [],
-      "pluginFilepath": "/Users/aim-imac-3/projects/wFern.github.io",
+      "pluginFilepath": "/Users/aim-imac-3/projects/wfrn/wFern.github.io",
       "packageJson": {
         "name": "gatsby-starter-default",
         "description": "Gatsby default starter",
@@ -467,25 +472,32 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "e1130b0109bb2b24ce86eb96b9d57aeb",
+        "contentDigest": "d0e43f5d9a81f23dd7e6c0d4e2736805",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Site": {
       "siteMetadata": {
-        "title": "Gatsby Default Starter"
+        "title": "Personal website",
+        "languages": {
+          "langs": [
+            "ru",
+            "en"
+          ],
+          "defaultLangKey": "ru"
+        }
       },
       "port": "8000",
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-02-12T08:46:04.860Z",
+      "buildTime": "2018-02-20T09:34:27.350Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "e2114f9013ad3be8ce5a56dd544b6f7c",
+        "contentDigest": "978f4d12fe708430e17a2166006287fc",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -495,22 +507,46 @@
       "jsonName": "404.json",
       "internalComponentName": "Component404",
       "path": "/404/",
-      "component": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/404.js",
+      "component": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/src/pages/404.js",
       "componentChunkName": "component---src-pages-404-js",
       "context": {
         "slug": "/404/",
         "langKey": "ru"
       },
-      "updatedAt": 1518425176637,
+      "updatedAt": 1519119285037,
       "pluginCreator___NODE": "Plugin gatsby-plugin-i18n",
       "pluginCreatorId": "Plugin gatsby-plugin-i18n",
-      "componentPath": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/404.js",
+      "componentPath": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/src/pages/404.js",
       "id": "SitePage /404/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "2b2f8dfbd4c160ad4bdfbd021188f9d7",
+        "contentDigest": "f1fd5069fc6c9e1c439147ec9d88d3cd",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /": {
+      "layout": "index",
+      "jsonName": "index.json",
+      "internalComponentName": "ComponentIndex",
+      "path": "/",
+      "component": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/src/pages/index.js",
+      "componentChunkName": "component---src-pages-index-js",
+      "context": {
+        "slug": "/",
+        "langKey": "ru"
+      },
+      "updatedAt": 1519119285034,
+      "pluginCreator___NODE": "Plugin gatsby-plugin-i18n",
+      "pluginCreatorId": "Plugin gatsby-plugin-i18n",
+      "componentPath": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/src/pages/index.js",
+      "id": "SitePage /",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "00b9c4a55fe740d7570b924e9efbd236",
         "owner": "internal-data-bridge"
       }
     },
@@ -519,22 +555,22 @@
       "jsonName": "en.json",
       "internalComponentName": "ComponentEn",
       "path": "/en/",
-      "component": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/index.en.js",
+      "component": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/src/pages/index.en.js",
       "componentChunkName": "component---src-pages-index-en-js",
       "context": {
         "slug": "/en/",
         "langKey": "en"
       },
-      "updatedAt": 1518425176634,
+      "updatedAt": 1519119285034,
       "pluginCreator___NODE": "Plugin gatsby-plugin-i18n",
       "pluginCreatorId": "Plugin gatsby-plugin-i18n",
-      "componentPath": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/index.en.js",
+      "componentPath": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/src/pages/index.en.js",
       "id": "SitePage /en/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "d2bfae7784bfa6a8bfcc394c2e5734a3",
+        "contentDigest": "c7bb1a3bfe82eb8148410e6f0c222857",
         "owner": "internal-data-bridge"
       }
     },
@@ -543,56 +579,36 @@
       "jsonName": "ru.json",
       "internalComponentName": "ComponentRu",
       "path": "/ru/",
-      "component": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/index.ru.js",
+      "component": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/src/pages/index.ru.js",
       "componentChunkName": "component---src-pages-index-ru-js",
       "context": {
         "slug": "/ru/",
         "langKey": "ru"
       },
-      "updatedAt": 1518425176635,
+      "updatedAt": 1519119285035,
       "pluginCreator___NODE": "Plugin gatsby-plugin-i18n",
       "pluginCreatorId": "Plugin gatsby-plugin-i18n",
-      "componentPath": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/index.ru.js",
+      "componentPath": "/Users/aim-imac-3/projects/wfrn/wFern.github.io/src/pages/index.ru.js",
       "id": "SitePage /ru/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "ff4d0928c38ea33716b19c74add3b368",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "SitePage /page-2/": {
-      "layout": "index",
-      "jsonName": "page-2.json",
-      "internalComponentName": "ComponentPage2",
-      "path": "/page-2/",
-      "component": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/page-2.js",
-      "componentChunkName": "component---src-pages-page-2-js",
-      "context": {
-        "slug": "/page-2/",
-        "langKey": "ru"
-      },
-      "updatedAt": 1518425176636,
-      "pluginCreator___NODE": "Plugin gatsby-plugin-i18n",
-      "pluginCreatorId": "Plugin gatsby-plugin-i18n",
-      "componentPath": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/page-2.js",
-      "id": "SitePage /page-2/",
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "6290e8c803f5be03b272ccd6583a75b3",
+        "contentDigest": "4f9d93600937e2c6ce2c541d706741a1",
         "owner": "internal-data-bridge"
       }
     }
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "6132324f59f1e9b1f5f4137393451ec4"
+    "PLUGINS_HASH": "fd592c6c463b3298c15dbe2c79bba03c"
   },
   "componentDataDependencies": {
-    "nodes": {},
+    "nodes": {
+      "Site": [
+        "/"
+      ]
+    },
     "connections": {
       "SitePage": [
         "/dev-404-page/"

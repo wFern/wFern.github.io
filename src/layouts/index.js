@@ -9,7 +9,7 @@ import 'semantic-ui-css/semantic.min.css'
 const Header = () => (
   <header
     style={{
-      background: '#c5c3b5',
+      borderBottom: '2px solid #c5c3b5',
       marginBottom: '1.45rem',
     }}
   >
@@ -38,28 +38,38 @@ const Header = () => (
 const Footer = () => (
     <footer
         style={{
-            background: '#c5c3b5',
+            borderTop: '2px solid #c5c3b5',
             marginTop: '1.45rem',
             padding: '1em 1rem'
         }}
     >
-        <Grid centered columns={1}>
-            <Grid.Row>
-                <a href="https://www.facebook.com/andrey.wrd.frn" target="_blank">
-                    <Icon circular link name='facebook square'/>
-                </a>
-                <a href="https://vk.com/cinereus" target="_blank">
-                    <Icon circular link name='vk'/>
-                </a>
-                <a href="https://500px.com/witheredfern" target="_blank">
-                    <Icon circular link name='500px'/>
-                </a>
-                <a href="https://codepen.io/wFern/" target="_blank">
-                    <Icon circular link name='codepen'/>
-                </a>
-                <a href="https://github.com/wFern" target="_blank">
-                    <Icon circular link name='github'/>
-                </a>
+        <Grid centered divided='vertically'>
+            <Grid.Row columns={2}>
+                <Grid.Column textAlign={'right'}>
+                    <Link to="/ru/">RU</Link>
+                    &nbsp;/&nbsp;
+                    <a href="/en/">EN</a>
+                </Grid.Column>
+                <Grid.Column>
+                    <a href="https://www.facebook.com/andrey.wrd.frn" target="_blank">
+                        <Icon circular link name='facebook square'/>
+                    </a>
+                    <a href="https://vk.com/cinereus" target="_blank">
+                        <Icon circular link name='vk'/>
+                    </a>
+                    <a href="https://500px.com/witheredfern" target="_blank">
+                        <Icon circular link name='500px'/>
+                    </a>
+                    <a href="https://codepen.io/wFern/" target="_blank">
+                        <Icon circular link name='codepen'/>
+                    </a>
+                    <a href="https://github.com/wFern" target="_blank">
+                        <Icon circular link name='github'/>
+                    </a>
+                    <a href="https://bandcamp.com/w_fern/" target="_blank">
+                        <Icon circular link name='bandcamp'/>
+                    </a>
+                </Grid.Column>
             </Grid.Row>
         </Grid>
     </footer>

@@ -1,14 +1,12 @@
 // TODO add tests especially for handling prefixed links.
 import { matchPath } from "react-router-dom"
-import stripPrefix from "./strip-prefix"
 
 const pageCache = {}
 
 module.exports = (pages, pathPrefix = ``) => rawPathname => {
   let pathname = decodeURIComponent(rawPathname)
-
   // Remove the pathPrefix from the pathname.
-  let trimmedPathname = stripPrefix(pathname, pathPrefix)
+  let trimmedPathname = pathname.slice(pathPrefix.length)
 
   // Remove any hashfragment
   if (trimmedPathname.split(`#`).length > 1) {

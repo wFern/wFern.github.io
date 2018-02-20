@@ -1,7 +1,6 @@
 import React, { createElement } from "react"
 import pageFinderFactory from "./find-page"
 import emitter from "./emitter"
-import stripPrefix from "./strip-prefix"
 let findPage
 
 let syncRequires = {}
@@ -15,16 +14,11 @@ let pages = []
 // we load all resources for likely-to-be-visited paths.
 let pathArray = []
 let pathCount = {}
-let pathPrefix = ``
 let resourcesArray = []
 let resourcesCount = {}
 const preferDefault = m => (m && m.default) || m
 let prefetcher
 let inInitialRender = true
-let fetchHistory = []
-const failedPaths = {}
-const failedResources = {}
-const MAX_HISTORY = 5
 
 // Prefetcher logic
 if (process.env.NODE_ENV === `production`) {
@@ -84,16 +78,6 @@ const fetchResource = (resourceName, cb = () => {}) => {
     // Download the resource
     resourceFunction((err, executeChunk) => {
       resourceStrCache[resourceName] = executeChunk
-      fetchHistory.push({
-        resource: resourceName,
-        succeeded: !err,
-      })
-
-      if (!failedResources[resourceName]) {
-        failedResources[resourceName] = err
-      }
-
-      fetchHistory = fetchHistory.slice(-MAX_HISTORY)
       cb(err, executeChunk)
     })
   }
@@ -103,10 +87,6 @@ const getResourceModule = (resourceName, cb) => {
   if (resourceCache[resourceName]) {
     process.nextTick(() => {
       cb(null, resourceCache[resourceName])
-    })
-  } else if (failedResources[resourceName]) {
-    process.nextTick(() => {
-      cb(failedResources[resourceName])
     })
   } else {
     fetchResource(resourceName, (err, executeChunk) => {
@@ -121,32 +101,6 @@ const getResourceModule = (resourceName, cb) => {
   }
 }
 
-const appearsOnLine = () => {
-  const isOnLine = navigator.onLine
-  if (typeof isOnLine === `boolean`) {
-    return isOnLine
-  }
-
-  // If no navigator.onLine support assume onLine if any of last N fetches succeeded
-  const succeededFetch = fetchHistory.find(entry => entry.succeeded)
-  return !!succeededFetch
-}
-
-const handleResourceLoadError = (path, message) => {
-  console.log(message)
-
-  if (!failedPaths[path]) {
-    failedPaths[path] = message
-  }
-
-  if (
-    appearsOnLine() &&
-    window.location.pathname.replace(/\/$/g, ``) !== path.replace(/\/$/g, ``)
-  ) {
-    window.location.pathname = path
-  }
-}
-
 let mountOrder = 1
 const queue = {
   empty: () => {
@@ -155,15 +109,12 @@ const queue = {
     resourcesCount = {}
     resourcesArray = []
     pages = []
-    pathPrefix = ``
   },
   addPagesArray: newPages => {
     pages = newPages
-    if (
-      typeof __PREFIX_PATHS__ !== `undefined` &&
-      typeof __PATH_PREFIX__ !== `undefined`
-    ) {
-      if (__PREFIX_PATHS__ === true) pathPrefix = __PATH_PREFIX__
+    let pathPrefix = ``
+    if (typeof __PREFIX_PATHS__ !== `undefined`) {
+      pathPrefix = __PATH_PREFIX__
     }
     findPage = pageFinderFactory(newPages, pathPrefix)
   },
@@ -173,10 +124,9 @@ const queue = {
   addProdRequires: prodRequires => {
     asyncRequires = prodRequires
   },
-  dequeue: () => pathArray.pop(),
-  enqueue: rawPath => {
+  dequeue: path => pathArray.pop(),
+  enqueue: path => {
     // Check page exists.
-    const path = stripPrefix(rawPath, pathPrefix)
     if (!pages.some(p => p.path === path)) {
       return false
     }
@@ -303,20 +253,10 @@ const queue = {
       return pageResources
       // Production code path
     } else {
-      if (failedPaths[path]) {
-        handleResourceLoadError(
-          path,
-          `Previously detected load failure for "${path}"`
-        )
-
-        return cb()
-      }
-
       const page = findPage(path)
 
       if (!page) {
-        handleResourceLoadError(path, `A page wasn't found for "${path}"`)
-
+        console.log(`A page wasn't found for "${path}"`)
         return cb()
       }
 
@@ -357,20 +297,14 @@ const queue = {
       }
       getResourceModule(page.componentChunkName, (err, c) => {
         if (err) {
-          handleResourceLoadError(
-            page.path,
-            `Loading the component for ${page.path} failed`
-          )
+          console.log(`Loading the component for ${page.path} failed`)
         }
         component = c
         done()
       })
       getResourceModule(page.jsonName, (err, j) => {
         if (err) {
-          handleResourceLoadError(
-            page.path,
-            `Loading the JSON for ${page.path} failed`
-          )
+          console.log(`Loading the JSON for ${page.path} failed`)
         }
         json = j
         done()
@@ -379,10 +313,7 @@ const queue = {
       page.layoutComponentChunkName &&
         getResourceModule(page.layout, (err, l) => {
           if (err) {
-            handleResourceLoadError(
-              page.path,
-              `Loading the Layout for ${page.path} failed`
-            )
+            console.log(`Loading the Layout for ${page.path} failed`)
           }
           layout = l
           done()

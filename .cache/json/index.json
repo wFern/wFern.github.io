@@ -1,0 +1,19 @@
+{
+    "data": {
+        "site": {
+            "siteMetadata": {
+                "languages": {
+                    "defaultLangKey": "ru",
+                    "langs": [
+                        "ru",
+                        "en"
+                    ]
+                }
+            }
+        }
+    },
+    "pathContext": {
+        "slug": "/",
+        "langKey": "ru"
+    }
+}

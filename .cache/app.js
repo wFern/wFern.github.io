@@ -24,7 +24,7 @@ apiRunnerAsync(`onClientEntry`).then(() => {
    *
    * Let's unregister the service workers in development, and tidy up a few errors.
    */
-  if (supportsServiceWorkers(location, navigator)) {
+  if (`serviceWorker` in navigator) {
     navigator.serviceWorker.getRegistrations().then(registrations => {
       for (let registration of registrations) {
         registration.unregister()
@@ -69,10 +69,3 @@ apiRunnerAsync(`onClientEntry`).then(() => {
     })
   }
 })
-
-function supportsServiceWorkers(location, navigator) {
-  if (location.hostname === `localhost` || location.protocol === `https:`) {
-    return `serviceWorker` in navigator
-  }
-  return false
-}
