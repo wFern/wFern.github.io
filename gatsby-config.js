@@ -7,6 +7,7 @@ module.exports = {
   },
   plugins: [
       `gatsby-plugin-react-helmet`,
+      'gatsby-plugin-catch-links',
       {
           resolve: 'gatsby-plugin-i18n',
           options: {
@@ -15,7 +16,19 @@ module.exports = {
               useLangKeyLayout: false
           }
       },
-
+      {
+          resolve: `gatsby-source-filesystem`,
+          options: {
+              path: `${__dirname}/src/pages/blog`,
+              name: 'blog',
+          },
+      },
+      {
+          resolve: 'gatsby-transformer-remark',
+          options: {
+              plugins: []
+          }
+      },
   ],
 
 }

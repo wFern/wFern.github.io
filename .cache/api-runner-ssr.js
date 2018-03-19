@@ -1,8 +1,8 @@
 var plugins = [{
-      plugin: require('/Users/aim-imac-3/projects/wfrn/wFern.github.io/node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js'),
+      plugin: require('/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/aim-imac-3/projects/wfrn/wFern.github.io/gatsby-ssr.js'),
+      plugin: require('/Users/aim-imac-3/projects/wFern.github.io/gatsby-ssr.js'),
       options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:

@@ -54,9 +54,6 @@ const Footer = () => (
                     <a href="https://www.facebook.com/andrey.wrd.frn" target="_blank">
                         <Icon circular link name='facebook square'/>
                     </a>
-                    <a href="https://vk.com/cinereus" target="_blank">
-                        <Icon circular link name='vk'/>
-                    </a>
                     <a href="https://500px.com/witheredfern" target="_blank">
                         <Icon circular link name='500px'/>
                     </a>

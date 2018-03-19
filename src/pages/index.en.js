@@ -10,7 +10,7 @@ const IndexPage = () => (
                 <Grid.Column>
                     <h1>About</h1>
                     <p>Hello</p>
-                    <p>My name is Andrey and I'm a mostly web developer</p>
+                    <p>My name is Andrey and mostly I'm a web developer</p>
                     <p>Also, I'm interested in music, cycling, and some other stuff</p>
                 </Grid.Column>
                 <Grid.Column>

@@ -1,5 +1,8 @@
 var plugins = [{
-      plugin: require('/Users/aim-imac-3/projects/wfrn/wFern.github.io/gatsby-browser.js'),
+      plugin: require('/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby-plugin-catch-links/gatsby-browser.js'),
+      options: {"plugins":[]},
+    },{
+      plugin: require('/Users/aim-imac-3/projects/wFern.github.io/gatsby-browser.js'),
       options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks
