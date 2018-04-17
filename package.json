@@ -12,7 +12,6 @@
     "gatsby-plugin-sass": "^1.0.25",
     "gatsby-source-filesystem": "^1.5.27",
     "gatsby-transformer-remark": "^1.7.37",
-    "gh-pages": "^1.1.0",
     "semantic-ui-css": "^2.2.12",
     "semantic-ui-react": "^0.77.0"
   },
@@ -29,6 +28,7 @@
     "deploy": "gatsby build && gh-pages -d public --branch master"
   },
   "devDependencies": {
+    "gh-pages": "^1.1.0",
     "prettier": "^1.8.2"
   }
 }
