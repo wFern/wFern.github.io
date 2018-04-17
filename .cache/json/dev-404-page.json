@@ -1,1 +1,50 @@
-{"data":{"allSitePage":{"totalCount":8,"edges":[{"node":{"path":"/en/hello-world"}},{"node":{"path":"/ru/hello-world"}},{"node":{"path":"/404/"}},{"node":{"path":"/en/blog/"}},{"node":{"path":"/ru/blog/"}},{"node":{"path":"/en/"}},{"node":{"path":"/"}},{"node":{"path":"/ru/"}}]}},"pathContext":{}}
+{
+    "data": {
+        "allSitePage": {
+            "totalCount": 8,
+            "edges": [
+                {
+                    "node": {
+                        "path": "/en/hello-world"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/ru/hello-world"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/404/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/en/blog/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/ru/blog/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/en/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/ru/"
+                    }
+                }
+            ]
+        }
+    },
+    "pathContext": {}
+}

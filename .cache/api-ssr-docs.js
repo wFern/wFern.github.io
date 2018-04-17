@@ -73,7 +73,7 @@ exports.replaceRenderer = true
  * is merged with other body props and passed to `html.js` as `bodyProps`.
  * @param {Object} pluginOptions
  * @example
- * import Helmet from "react-helmet"
+ * import helmet from "react-helmet"
  *
  * exports.onRenderBody = (
  *   { setHeadComponents, setHtmlAttributes, setBodyAttributes },

@@ -7,11 +7,9 @@ const IndexPage = () => (
     <div>
         <Grid columns={2} verticalAlign='middle' centered>
             <Grid.Row>
-                <Grid.Column>
-                    <h1>About</h1>
-                    <p>Hello</p>
+                <Grid.Column textAlign={'right'}>
+                    <h1>Hello</h1>
                     <p>My name is Andrey and mostly I'm a web developer</p>
-                    <p>Also, I'm interested in music, cycling, and some other stuff</p>
                 </Grid.Column>
                 <Grid.Column>
                     <Image src={PersonalPic} size='small' circular/>

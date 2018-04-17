@@ -2,55 +2,53 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import { Icon, Grid } from 'semantic-ui-react'
+import { Icon, Grid, Container } from 'semantic-ui-react'
 
 import 'semantic-ui-css/semantic.min.css'
+import './index.scss'
 
 const Header = () => (
   <header
     style={{
-      borderBottom: '2px solid #c5c3b5',
-      marginBottom: '1.45rem',
+        padding: '1.45rem 1.0875rem'
     }}
   >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/ru/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          wFern
-        </Link>
-      </h1>
-    </div>
+      <Container>
+          <Grid centered divided='vertically'>
+              <Grid.Row columns={2}>
+                  <Grid.Column>
+                      <Link
+                          to="/ru/"
+                          style={{
+                              color: '#3f325a',
+                              textDecoration: 'none',
+                              fontSize: '2em',
+                              fontWeight: 'bold'
+                          }}
+                      >
+                          wFern
+                      </Link>
+                  </Grid.Column>
+                  <Grid.Column textAlign={'right'}>
+                      <Link to="/ru/">RU</Link>
+                      &nbsp;/&nbsp;
+                      <a href="/en/">EN</a>
+                  </Grid.Column>
+              </Grid.Row>
+          </Grid>
+      </Container>
   </header>
 )
 
 const Footer = () => (
     <footer
         style={{
-            borderTop: '2px solid #c5c3b5',
-            marginTop: '1.45rem',
             padding: '1em 1rem'
         }}
     >
-        <Grid centered divided='vertically'>
-            <Grid.Row columns={2}>
-                <Grid.Column textAlign={'right'}>
-                    <Link to="/ru/">RU</Link>
-                    &nbsp;/&nbsp;
-                    <a href="/en/">EN</a>
-                </Grid.Column>
-                <Grid.Column>
+        <Container>
+            <Grid centered divided='vertically'>
+                <Grid.Row>
                     <a href="https://www.facebook.com/andrey.wrd.frn" target="_blank">
                         <Icon circular link name='facebook square'/>
                     </a>
@@ -66,9 +64,9 @@ const Footer = () => (
                     <a href="https://bandcamp.com/w_fern/" target="_blank">
                         <Icon circular link name='bandcamp'/>
                     </a>
-                </Grid.Column>
-            </Grid.Row>
-        </Grid>
+                </Grid.Row>
+            </Grid>
+        </Container>
     </footer>
 )
 
@@ -77,7 +75,9 @@ const TemplateWrapper = ({ children }) => (
     style={{
         display: 'flex',
         minHeight: '100vh',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        backgroundColor: '#36669d',
+        backgroundImage: 'linear-gradient(315deg, #36669d 0%, #d3d3d3 74%)'
     }}
   >
     <Helmet
@@ -88,17 +88,20 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
-    <div
-      style={{
-          margin: '0 auto',
-          maxWidth: 960,
-          padding: '0px 1.0875rem 1.45rem',
-          paddingTop: 0,
-          flex: 1
-      }}
-    >
-      {children()}
-    </div>
+        <div
+            style={{
+                padding: '1.45rem 1.0875rem',
+                flex: 1,
+                color: '#2a2338',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+            }}
+        >
+            <Container>
+                {children()}
+            </Container>
+        </div>
     <Footer/>
   </div>
 )

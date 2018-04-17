@@ -80,7 +80,9 @@ function maybeRedirect(pathname) {
 
     if (pageResources != null) {
       console.error(
-        `The route "${pathname}" matches both a page and a redirect; this is probably not intentional.`
+        `The route "${
+          pathname
+        }" matches both a page and a redirect; this is probably not intentional.`
       )
     }
 
@@ -111,7 +113,7 @@ function shouldUpdateScroll(prevRouterProps, { location: { pathname } }) {
 
 let noMatch
 for (let i = 0; i < pages.length; i++) {
-  if (/^\/dev-404-page/.test(pages[i].path)) {
+  if (pages[i].path === `/dev-404-page/`) {
     noMatch = pages[i]
     break
   }
@@ -132,8 +134,8 @@ const addNotFoundRoute = () => {
   }
 }
 
-const navigateTo = to => {
-  window.___history.push(to)
+const navigateTo = pathname => {
+  window.___history.push(pathname)
 }
 
 window.___navigateTo = navigateTo
@@ -174,9 +176,7 @@ const Root = () =>
                   pageResources,
                 })
               } else {
-                const dev404Page = pages.find(p =>
-                  /^\/dev-404-page/.test(p.path)
-                )
+                const dev404Page = pages.find(p => p.path === `/dev-404-page/`)
                 return createElement(Route, {
                   key: `404-page`,
                   component: props =>
