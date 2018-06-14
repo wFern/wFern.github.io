@@ -9,3 +9,7 @@ a {
     color: #201c29;
   }
 }
+
+i.icon.strava{
+  :before { content: '\f428'; }
+}

@@ -64,6 +64,13 @@ const Footer = () => (
                     <a href="https://bandcamp.com/w_fern/" target="_blank">
                         <Icon circular link name='bandcamp'/>
                     </a>
+                    <a href="https://www.mixcloud.com/andrey-ivanov19/" target="_blank">
+                        <Icon circular link name='mixcloud'/>
+                    </a>
+                    <a href="https://www.strava.com/athletes/brn_fern" target="_blank">
+                        <Icon circular link className='strava'/>
+                    </a>
+
                 </Grid.Row>
             </Grid>
         </Container>
