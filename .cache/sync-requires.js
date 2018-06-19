@@ -8,6 +8,7 @@ exports.layouts = {
 
 exports.components = {
   "component---src-templates-blog-post-js": preferDefault(require("/Users/aim-imac-3/projects/wFern.github.io/src/templates/blog-post.js")),
+  "component---cache-dev-404-page-js": preferDefault(require("/Users/aim-imac-3/projects/wFern.github.io/.cache/dev-404-page.js")),
   "component---src-pages-404-js": preferDefault(require("/Users/aim-imac-3/projects/wFern.github.io/src/pages/404.js")),
   "component---src-pages-blog-en-js": preferDefault(require("/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog.en.js")),
   "component---src-pages-blog-ru-js": preferDefault(require("/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog.ru.js")),
@@ -20,6 +21,9 @@ exports.json = {
   "layout-index.json": require("/Users/aim-imac-3/projects/wFern.github.io/.cache/json/layout-index.json"),
   "en-hello-world.json": require("/Users/aim-imac-3/projects/wFern.github.io/.cache/json/en-hello-world.json"),
   "ru-hello-world.json": require("/Users/aim-imac-3/projects/wFern.github.io/.cache/json/ru-hello-world.json"),
+  "ru-hello-world-2.json": require("/Users/aim-imac-3/projects/wFern.github.io/.cache/json/ru-hello-world-2.json"),
+  "en-hello-world-2.json": require("/Users/aim-imac-3/projects/wFern.github.io/.cache/json/en-hello-world-2.json"),
+  "dev-404-page.json": require("/Users/aim-imac-3/projects/wFern.github.io/.cache/json/dev-404-page.json"),
   "404.json": require("/Users/aim-imac-3/projects/wFern.github.io/.cache/json/404.json"),
   "en-blog.json": require("/Users/aim-imac-3/projects/wFern.github.io/.cache/json/en-blog.json"),
   "ru-blog.json": require("/Users/aim-imac-3/projects/wFern.github.io/.cache/json/ru-blog.json"),

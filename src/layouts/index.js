@@ -84,7 +84,7 @@ const TemplateWrapper = ({ children }) => (
         minHeight: '100vh',
         flexDirection: 'column',
         backgroundColor: '#36669d',
-        backgroundImage: 'linear-gradient(315deg, #36669d 0%, #d3d3d3 74%)'
+        backgroundImage: 'linear-gradient(315deg, #f9f9f9 0%, #d3d3d3 74%)'
     }}
   >
     <Helmet
@@ -99,7 +99,7 @@ const TemplateWrapper = ({ children }) => (
             style={{
                 padding: '1.45rem 1.0875rem',
                 flex: 1,
-                color: '#2a2338',
+                color: '#000',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'

@@ -1,13 +1,23 @@
 {
   "nodes": {
     "SitePage /dev-404-page/": {
+      "layout": "index",
+      "jsonName": "dev-404-page.json",
+      "internalComponentName": "ComponentDev404Page",
       "path": "/dev-404-page/",
+      "component": "/Users/aim-imac-3/projects/wFern.github.io/.cache/dev-404-page.js",
+      "componentChunkName": "component---cache-dev-404-page-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin dev-404-page",
+      "pluginCreatorId": "Plugin dev-404-page",
+      "componentPath": "/Users/aim-imac-3/projects/wFern.github.io/.cache/dev-404-page.js",
       "id": "SitePage /dev-404-page/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "f91d29e10ba680b413138cf9ed86e655",
+        "contentDigest": "94dc2af91b931b308199377bbd72bb63",
+        "description": "Plugin dev-404-page",
         "owner": "internal-data-bridge"
       }
     },
@@ -820,6 +830,10 @@
         "license": "MIT",
         "dependencies": [
           {
+            "name": "d3",
+            "version": "^5.5.0"
+          },
+          {
             "name": "gatsby",
             "version": "^1.9.127"
           },
@@ -893,14 +907,16 @@
           "defaultLangKey": "ru"
         }
       },
+      "port": "8000",
+      "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-06-14T09:18:36.493Z",
+      "buildTime": "2018-06-19T12:09:28.340Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "e0caa1d1f8e280a1b57a3789ea92426b",
+        "contentDigest": "79169a6710fb82c111b3cb247b48f3a6",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -910,7 +926,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "c5f46eeac72b799d7ea6a1829409eb35",
+        "contentDigest": "a42482d56a2832b0791bffc27f50b5d5",
         "type": "Directory",
         "description": "Directory \"src/pages/blog\"",
         "owner": "gatsby-source-filesystem"
@@ -919,12 +935,12 @@
       "absolutePath": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog",
       "relativePath": "",
       "extension": "",
-      "size": 102,
-      "prettySize": "102 B",
-      "modifiedTime": "2018-03-29T09:09:28.000Z",
-      "accessTime": "2018-06-14T09:19:08.000Z",
-      "changeTime": "2018-03-29T09:09:28.000Z",
-      "birthTime": "2018-03-29T09:09:28.000Z",
+      "size": 136,
+      "prettySize": "136 B",
+      "modifiedTime": "2018-06-14T11:45:03.000Z",
+      "accessTime": "2018-06-19T12:09:57.000Z",
+      "changeTime": "2018-06-14T11:45:03.000Z",
+      "birthTime": "2018-06-14T11:28:31.000Z",
       "root": "/",
       "dir": "/Users/aim-imac-3/projects/wFern.github.io/src/pages",
       "base": "blog",
@@ -933,28 +949,28 @@
       "relativeDirectory": "..",
       "dev": 16777218,
       "mode": 16877,
-      "nlink": 3,
+      "nlink": 4,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4096,
-      "ino": 12064718,
+      "ino": 16181386,
       "blocks": 0,
-      "atimeMs": 1528967948000,
-      "mtimeMs": 1522314568000,
-      "ctimeMs": 1522314568000,
-      "birthtimeMs": 1522314568000,
-      "atime": "2018-06-14T09:19:08.000Z",
-      "mtime": "2018-03-29T09:09:28.000Z",
-      "ctime": "2018-03-29T09:09:28.000Z",
-      "birthtime": "2018-03-29T09:09:28.000Z"
+      "atimeMs": 1529410197000,
+      "mtimeMs": 1528976703000,
+      "ctimeMs": 1528976703000,
+      "birthtimeMs": 1528975711000,
+      "atime": "2018-06-19T12:09:57.000Z",
+      "mtime": "2018-06-14T11:45:03.000Z",
+      "ctime": "2018-06-14T11:45:03.000Z",
+      "birthtime": "2018-06-14T11:28:31.000Z"
     },
     "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/first-post absPath of file": {
       "id": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/first-post absPath of file",
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "d0966e59c590b7195b51430150270807",
+        "contentDigest": "08804cdf1275a7ce136686d172cff370",
         "type": "Directory",
         "description": "Directory \"src/pages/blog/first-post\"",
         "owner": "gatsby-source-filesystem"
@@ -965,10 +981,10 @@
       "extension": "",
       "size": 136,
       "prettySize": "136 B",
-      "modifiedTime": "2018-03-29T09:09:28.000Z",
-      "accessTime": "2018-06-14T09:19:08.000Z",
-      "changeTime": "2018-03-29T09:09:28.000Z",
-      "birthTime": "2018-03-29T09:09:28.000Z",
+      "modifiedTime": "2018-06-14T12:24:04.000Z",
+      "accessTime": "2018-06-19T12:09:57.000Z",
+      "changeTime": "2018-06-14T12:24:04.000Z",
+      "birthTime": "2018-06-14T11:28:31.000Z",
       "root": "/",
       "dir": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog",
       "base": "first-post",
@@ -982,16 +998,60 @@
       "gid": 20,
       "rdev": 0,
       "blksize": 4096,
-      "ino": 12064719,
+      "ino": 16181387,
       "blocks": 0,
-      "atimeMs": 1528967948000,
-      "mtimeMs": 1522314568000,
-      "ctimeMs": 1522314568000,
-      "birthtimeMs": 1522314568000,
-      "atime": "2018-06-14T09:19:08.000Z",
-      "mtime": "2018-03-29T09:09:28.000Z",
-      "ctime": "2018-03-29T09:09:28.000Z",
-      "birthtime": "2018-03-29T09:09:28.000Z"
+      "atimeMs": 1529410197000,
+      "mtimeMs": 1528979044000,
+      "ctimeMs": 1528979044000,
+      "birthtimeMs": 1528975711000,
+      "atime": "2018-06-19T12:09:57.000Z",
+      "mtime": "2018-06-14T12:24:04.000Z",
+      "ctime": "2018-06-14T12:24:04.000Z",
+      "birthtime": "2018-06-14T11:28:31.000Z"
+    },
+    "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post absPath of file": {
+      "id": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "43480e073f4cc325dae7ae581d670df8",
+        "type": "Directory",
+        "description": "Directory \"src/pages/blog/second-post\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "blog",
+      "absolutePath": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post",
+      "relativePath": "second-post",
+      "extension": "",
+      "size": 136,
+      "prettySize": "136 B",
+      "modifiedTime": "2018-06-14T11:55:54.000Z",
+      "accessTime": "2018-06-19T12:09:57.000Z",
+      "changeTime": "2018-06-14T11:55:54.000Z",
+      "birthTime": "2018-06-14T11:45:03.000Z",
+      "root": "/",
+      "dir": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog",
+      "base": "second-post",
+      "ext": "",
+      "name": "second-post",
+      "relativeDirectory": "",
+      "dev": 16777218,
+      "mode": 16877,
+      "nlink": 4,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 16182280,
+      "blocks": 0,
+      "atimeMs": 1529410197000,
+      "mtimeMs": 1528977354000,
+      "ctimeMs": 1528977354000,
+      "birthtimeMs": 1528976703000,
+      "atime": "2018-06-19T12:09:57.000Z",
+      "mtime": "2018-06-14T11:55:54.000Z",
+      "ctime": "2018-06-14T11:55:54.000Z",
+      "birthtime": "2018-06-14T11:45:03.000Z"
     },
     "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/first-post/index.en.md absPath of file": {
       "id": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/first-post/index.en.md absPath of file",
@@ -1015,33 +1075,33 @@
       "extension": "md",
       "size": 129,
       "prettySize": "129 B",
-      "modifiedTime": "2018-03-29T09:09:28.000Z",
-      "accessTime": "2018-04-17T07:30:02.000Z",
-      "changeTime": "2018-03-29T09:09:28.000Z",
-      "birthTime": "2018-03-29T09:09:28.000Z",
+      "modifiedTime": "2018-06-14T11:28:31.000Z",
+      "accessTime": "2018-06-19T11:33:12.000Z",
+      "changeTime": "2018-06-14T11:28:31.000Z",
+      "birthTime": "2018-06-14T11:28:31.000Z",
       "root": "/",
       "dir": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/first-post",
       "base": "index.en.md",
       "ext": ".md",
       "name": "index.en",
       "relativeDirectory": "first-post",
-      "dev": 16777219,
+      "dev": 16777218,
       "mode": 33188,
       "nlink": 1,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4096,
-      "ino": 12064720,
+      "ino": 16181388,
       "blocks": 8,
-      "atimeMs": 1523950202000,
-      "mtimeMs": 1522314568000,
-      "ctimeMs": 1522314568000,
-      "birthtimeMs": 1522314568000,
-      "atime": "2018-04-17T07:30:02.000Z",
-      "mtime": "2018-03-29T09:09:28.000Z",
-      "ctime": "2018-03-29T09:09:28.000Z",
-      "birthtime": "2018-03-29T09:09:28.000Z",
+      "atimeMs": 1529407992000,
+      "mtimeMs": 1528975711000,
+      "ctimeMs": 1528975711000,
+      "birthtimeMs": 1528975711000,
+      "atime": "2018-06-19T11:33:12.000Z",
+      "mtime": "2018-06-14T11:28:31.000Z",
+      "ctime": "2018-06-14T11:28:31.000Z",
+      "birthtime": "2018-06-14T11:28:31.000Z",
       "fields": {
         "slug": "/en/blog/first-post/"
       }
@@ -1068,35 +1128,141 @@
       "extension": "md",
       "size": 132,
       "prettySize": "132 B",
-      "modifiedTime": "2018-03-29T09:09:28.000Z",
-      "accessTime": "2018-04-17T07:30:02.000Z",
-      "changeTime": "2018-03-29T09:09:28.000Z",
-      "birthTime": "2018-03-29T09:09:28.000Z",
+      "modifiedTime": "2018-06-14T12:24:04.000Z",
+      "accessTime": "2018-06-19T11:33:12.000Z",
+      "changeTime": "2018-06-14T12:24:04.000Z",
+      "birthTime": "2018-06-14T12:24:04.000Z",
       "root": "/",
       "dir": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/first-post",
       "base": "index.ru.md",
       "ext": ".md",
       "name": "index.ru",
       "relativeDirectory": "first-post",
-      "dev": 16777219,
+      "dev": 16777218,
       "mode": 33188,
       "nlink": 1,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4096,
-      "ino": 12064721,
+      "ino": 16184641,
       "blocks": 8,
-      "atimeMs": 1523950202000,
-      "mtimeMs": 1522314568000,
-      "ctimeMs": 1522314568000,
-      "birthtimeMs": 1522314568000,
-      "atime": "2018-04-17T07:30:02.000Z",
-      "mtime": "2018-03-29T09:09:28.000Z",
-      "ctime": "2018-03-29T09:09:28.000Z",
-      "birthtime": "2018-03-29T09:09:28.000Z",
+      "atimeMs": 1529407992000,
+      "mtimeMs": 1528979044000,
+      "ctimeMs": 1528979044000,
+      "birthtimeMs": 1528979044000,
+      "atime": "2018-06-19T11:33:12.000Z",
+      "mtime": "2018-06-14T12:24:04.000Z",
+      "ctime": "2018-06-14T12:24:04.000Z",
+      "birthtime": "2018-06-14T12:24:04.000Z",
       "fields": {
         "slug": "/ru/blog/first-post/"
+      }
+    },
+    "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.ru.md absPath of file": {
+      "id": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.ru.md absPath of file",
+      "children": [
+        "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.ru.md absPath of file >>> MarkdownRemark"
+      ],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "f1b2f6e5dd285ccf19020f42dbd032ce",
+        "mediaType": "text/markdown",
+        "type": "File",
+        "description": "File \"src/pages/blog/second-post/index.ru.md\"",
+        "owner": "gatsby-source-filesystem",
+        "fieldOwners": {
+          "slug": "gatsby-plugin-i18n"
+        }
+      },
+      "sourceInstanceName": "blog",
+      "absolutePath": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.ru.md",
+      "relativePath": "second-post/index.ru.md",
+      "extension": "md",
+      "size": 133,
+      "prettySize": "133 B",
+      "modifiedTime": "2018-06-14T11:55:54.000Z",
+      "accessTime": "2018-06-19T11:33:12.000Z",
+      "changeTime": "2018-06-14T11:55:54.000Z",
+      "birthTime": "2018-06-14T11:55:54.000Z",
+      "root": "/",
+      "dir": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post",
+      "base": "index.ru.md",
+      "ext": ".md",
+      "name": "index.ru",
+      "relativeDirectory": "second-post",
+      "dev": 16777218,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 16182952,
+      "blocks": 8,
+      "atimeMs": 1529407992000,
+      "mtimeMs": 1528977354000,
+      "ctimeMs": 1528977354000,
+      "birthtimeMs": 1528977354000,
+      "atime": "2018-06-19T11:33:12.000Z",
+      "mtime": "2018-06-14T11:55:54.000Z",
+      "ctime": "2018-06-14T11:55:54.000Z",
+      "birthtime": "2018-06-14T11:55:54.000Z",
+      "fields": {
+        "slug": "/ru/blog/second-post/"
+      }
+    },
+    "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.en.md absPath of file": {
+      "id": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.en.md absPath of file",
+      "children": [
+        "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.en.md absPath of file >>> MarkdownRemark"
+      ],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "289261ca53a8bafb8e7583098dd8defc",
+        "mediaType": "text/markdown",
+        "type": "File",
+        "description": "File \"src/pages/blog/second-post/index.en.md\"",
+        "owner": "gatsby-source-filesystem",
+        "fieldOwners": {
+          "slug": "gatsby-plugin-i18n"
+        }
+      },
+      "sourceInstanceName": "blog",
+      "absolutePath": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.en.md",
+      "relativePath": "second-post/index.en.md",
+      "extension": "md",
+      "size": 132,
+      "prettySize": "132 B",
+      "modifiedTime": "2018-06-14T11:55:54.000Z",
+      "accessTime": "2018-06-19T11:33:12.000Z",
+      "changeTime": "2018-06-14T11:55:54.000Z",
+      "birthTime": "2018-06-14T11:55:54.000Z",
+      "root": "/",
+      "dir": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post",
+      "base": "index.en.md",
+      "ext": ".md",
+      "name": "index.en",
+      "relativeDirectory": "second-post",
+      "dev": 16777218,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 16182953,
+      "blocks": 8,
+      "atimeMs": 1529407992000,
+      "mtimeMs": 1528977354000,
+      "ctimeMs": 1528977354000,
+      "birthtimeMs": 1528977354000,
+      "atime": "2018-06-19T11:33:12.000Z",
+      "mtime": "2018-06-14T11:55:54.000Z",
+      "ctime": "2018-06-14T11:55:54.000Z",
+      "birthtime": "2018-06-14T11:55:54.000Z",
+      "fields": {
+        "slug": "/en/blog/second-post/"
       }
     },
     "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/first-post/index.en.md absPath of file >>> MarkdownRemark": {
@@ -1155,6 +1321,62 @@
         "slug": "/ru/blog/first-post/"
       }
     },
+    "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.ru.md absPath of file >>> MarkdownRemark": {
+      "id": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.ru.md absPath of file >>> MarkdownRemark",
+      "children": [],
+      "parent": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.ru.md absPath of file",
+      "internal": {
+        "content": "---\npath: \"/ru/hello-world2\"\ndate: \"2017-07-12T17:12:33.962Z\"\ntitle: \"Второй Gatsby пост\"\n---\n\nВторой Gatsby пост",
+        "type": "MarkdownRemark",
+        "contentDigest": "e850798b7e99784633632a38a3a1d896",
+        "owner": "gatsby-transformer-remark",
+        "fieldOwners": {
+          "langKey": "gatsby-plugin-i18n",
+          "slug": "gatsby-plugin-i18n"
+        }
+      },
+      "frontmatter": {
+        "title": "Второй Gatsby пост",
+        "path": "/ru/hello-world2",
+        "date": "2017-07-12T17:12:33.962Z",
+        "_PARENT": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.ru.md absPath of file",
+        "parent": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.ru.md absPath of file"
+      },
+      "excerpt": "",
+      "fileAbsolutePath": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.ru.md",
+      "fields": {
+        "langKey": "ru",
+        "slug": "/ru/blog/second-post/"
+      }
+    },
+    "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.en.md absPath of file >>> MarkdownRemark": {
+      "id": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.en.md absPath of file >>> MarkdownRemark",
+      "children": [],
+      "parent": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.en.md absPath of file",
+      "internal": {
+        "content": "---\npath: \"/en/hello-world2\"\ndate: \"2017-07-12T17:12:33.962Z\"\ntitle: \"My Second Gatsby Post\"\n---\n\nOooooh-weeee, my second blog post!",
+        "type": "MarkdownRemark",
+        "contentDigest": "2c96e8f3002ec84acc9242bc49f0bb02",
+        "owner": "gatsby-transformer-remark",
+        "fieldOwners": {
+          "langKey": "gatsby-plugin-i18n",
+          "slug": "gatsby-plugin-i18n"
+        }
+      },
+      "frontmatter": {
+        "title": "My Second Gatsby Post",
+        "path": "/en/hello-world2",
+        "date": "2017-07-12T17:12:33.962Z",
+        "_PARENT": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.en.md absPath of file",
+        "parent": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.en.md absPath of file"
+      },
+      "excerpt": "",
+      "fileAbsolutePath": "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.en.md",
+      "fields": {
+        "langKey": "en",
+        "slug": "/en/blog/second-post/"
+      }
+    },
     "SitePage /en/hello-world": {
       "layout": "index",
       "jsonName": "en-hello-world.json",
@@ -1171,7 +1393,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "c043f496be23e9c49c6e164619a1b4c1",
+        "contentDigest": "9f208b02c25bc644a1b01a3cd8e05be3",
         "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
@@ -1192,7 +1414,49 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "9633413527b9f5207f985788ddc54c65",
+        "contentDigest": "f570648f5a24526d829bf06a38a578f7",
+        "description": "Your site's \"gatsby-node.js\"",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /ru/hello-world2": {
+      "layout": "index",
+      "jsonName": "ru-hello-world-2.json",
+      "internalComponentName": "ComponentRuHelloWorld2",
+      "path": "/ru/hello-world2",
+      "component": "/Users/aim-imac-3/projects/wFern.github.io/src/templates/blog-post.js",
+      "componentChunkName": "component---src-templates-blog-post-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "pluginCreatorId": "Plugin default-site-plugin",
+      "componentPath": "/Users/aim-imac-3/projects/wFern.github.io/src/templates/blog-post.js",
+      "id": "SitePage /ru/hello-world2",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "d1d3911573401119bdf4517b93484b69",
+        "description": "Your site's \"gatsby-node.js\"",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /en/hello-world2": {
+      "layout": "index",
+      "jsonName": "en-hello-world-2.json",
+      "internalComponentName": "ComponentEnHelloWorld2",
+      "path": "/en/hello-world2",
+      "component": "/Users/aim-imac-3/projects/wFern.github.io/src/templates/blog-post.js",
+      "componentChunkName": "component---src-templates-blog-post-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "pluginCreatorId": "Plugin default-site-plugin",
+      "componentPath": "/Users/aim-imac-3/projects/wFern.github.io/src/templates/blog-post.js",
+      "id": "SitePage /en/hello-world2",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "a0a79f18d20d7a0150badc8a524c7aeb",
         "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
@@ -1216,7 +1480,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "fe487014d690aa1444ccb71559f5b65a",
+        "contentDigest": "ad3d95428a7b343275172b1d14fbca1c",
         "description": "Plugin gatsby-plugin-i18n",
         "owner": "internal-data-bridge"
       }
@@ -1240,7 +1504,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "52f053d631131a62ae4d714d42353dde",
+        "contentDigest": "b833c77ceb47076c34a3d26fac1277a8",
         "description": "Plugin gatsby-plugin-i18n",
         "owner": "internal-data-bridge"
       }
@@ -1264,7 +1528,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "252018313d637ff565e7a67256d30a35",
+        "contentDigest": "e4505bcc9d5eb8c96b0f75305080e233",
         "description": "Plugin gatsby-plugin-i18n",
         "owner": "internal-data-bridge"
       }
@@ -1288,7 +1552,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "f7dd44018d372948b24ddb116ac2b967",
+        "contentDigest": "6c1359f1012a9d01400d3efbe73074a0",
         "description": "Plugin gatsby-plugin-i18n",
         "owner": "internal-data-bridge"
       }
@@ -1312,7 +1576,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "969bce41132bd2266b9748b53d75905c",
+        "contentDigest": "905c09a37f3d041da7225310bfebd09f",
         "description": "Plugin gatsby-plugin-i18n",
         "owner": "internal-data-bridge"
       }
@@ -1336,7 +1600,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "262f3df678f2a0611fcc0abc4a9d9628",
+        "contentDigest": "31128784b3174deb316b161b8c048c4e",
         "description": "Plugin gatsby-plugin-i18n",
         "owner": "internal-data-bridge"
       }
@@ -1360,7 +1624,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "84f11ded4f10845b684c95ffd7ae0314",
+        "contentDigest": "d82588aef391c0a981a60218f1db5906",
         "description": "Plugin gatsby-plugin-i18n",
         "owner": "internal-data-bridge"
       }
@@ -1368,15 +1632,21 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "942fb3ad44c7422aa4eac49684cc3aac"
+    "PLUGINS_HASH": "962e98b97be49b509f3c551709d42178"
   },
   "componentDataDependencies": {
     "nodes": {
+      "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.ru.md absPath of file >>> MarkdownRemark": [
+        "/ru/hello-world2"
+      ],
       "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/first-post/index.ru.md absPath of file >>> MarkdownRemark": [
         "/ru/hello-world"
       ],
       "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/first-post/index.en.md absPath of file >>> MarkdownRemark": [
         "/en/hello-world"
+      ],
+      "/Users/aim-imac-3/projects/wFern.github.io/src/pages/blog/second-post/index.en.md absPath of file >>> MarkdownRemark": [
+        "/en/hello-world2"
       ],
       "Site": [
         "/"
