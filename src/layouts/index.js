@@ -2,43 +2,66 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import { Icon, Grid, Container } from 'semantic-ui-react'
-
+import { Icon, Grid, Container, Menu } from 'semantic-ui-react'
+import { getCurrentLangKey, getUrlForLang, getLangs } from 'ptz-i18n'
 import 'semantic-ui-css/semantic.min.css'
 import './index.scss'
 
-const Header = () => (
-  <header
-    style={{
-        padding: '1.45rem 1.0875rem'
-    }}
-  >
-      <Container>
-          <Grid centered divided='vertically'>
-              <Grid.Row columns={2}>
-                  <Grid.Column>
-                      <Link
-                          to="/ru/"
-                          style={{
-                              color: '#3f325a',
-                              textDecoration: 'none',
-                              fontSize: '2em',
-                              fontWeight: 'bold'
-                          }}
-                      >
-                          wFern
-                      </Link>
-                  </Grid.Column>
-                  <Grid.Column textAlign={'right'}>
-                      <Link to="/ru/">RU</Link>
-                      &nbsp;/&nbsp;
-                      <a href="/en/">EN</a>
-                  </Grid.Column>
-              </Grid.Row>
-          </Grid>
-      </Container>
-  </header>
-)
+const languages = require('../data/languages');
+
+const Header = (props) => {
+
+    const links = props.langs.map((lang, i) => {
+        return (
+            <Menu.Item>
+                <Link key={lang.link} to={lang.link} className={lang.selected ? 'active' : ''}>
+                    <span>{lang.langKey}</span>
+                </Link>
+            </Menu.Item>
+        )
+    })
+
+    return (
+        <header
+            style={{
+                padding: '1.45rem 1.0875rem'
+            }}
+        >
+            <Container>
+                <Grid centered divided='vertically'>
+                    <Grid.Row columns={2}>
+                        <Grid.Column>
+                            <Link
+                                to={`/${props.langKey}/`}
+                                style={{
+                                    color: '#3f325a',
+                                    textDecoration: 'none',
+                                    fontSize: '2em',
+                                    fontWeight: 'bold'
+                                }}
+                            >
+                                wFern
+                            </Link>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Menu secondary size='large'>
+                                <Menu.Item>
+                                    <Link exact to={`/${props.langKey}/`} activeClassName="active">Blog</Link>
+                                </Menu.Item>
+                                <Menu.Item>
+                                    <Link to={`/${props.langKey}/about`} activeClassName="active">About</Link>
+                                </Menu.Item>
+                                <Menu.Menu position='right' secondary size='small' className="lang-selector">
+                                    {links}
+                                </Menu.Menu>
+                            </Menu>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </Container>
+        </header>
+    )
+}
 
 const Footer = () => (
     <footer
@@ -68,7 +91,7 @@ const Footer = () => (
                         <Icon circular link name='mixcloud'/>
                     </a>
                     <a href="https://www.strava.com/athletes/brn_fern" target="_blank">
-                        <Icon circular link className='strava'/>
+                        <Icon circular link name='strava'/>
                     </a>
 
                 </Grid.Row>
@@ -77,44 +100,57 @@ const Footer = () => (
     </footer>
 )
 
-const TemplateWrapper = ({ children }) => (
-  <div
-    style={{
-        display: 'flex',
-        minHeight: '100vh',
-        flexDirection: 'column',
-        backgroundColor: '#36669d',
-        backgroundImage: 'linear-gradient(315deg, #f9f9f9 0%, #d3d3d3 74%)'
-    }}
-  >
-    <Helmet
-      title="wFern"
-      meta={[
-        { name: 'description', content: 'Personal website about programing, music, photo etc' },
-        { name: 'keywords', content: 'wfern, programing, music, photo' },
-      ]}
-    />
-    <Header />
+const TemplateWrapper = (props) => {
+
+    const { children, location } = props;
+    const url = location.pathname;
+    const {langs, defaultLangKey} = languages;
+    const langKey = getCurrentLangKey(langs, defaultLangKey, url);
+    const homeLink = `/${langKey}/`;
+    const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
+
+    return (
         <div
             style={{
-                padding: '1.45rem 1.0875rem',
-                flex: 1,
-                color: '#000',
                 display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
+                minHeight: '100vh',
+                flexDirection: 'column',
             }}
         >
-            <Container>
-                {children()}
-            </Container>
+            <Helmet
+                title="wFern"
+                meta={[
+                    {name: 'description', content: 'Personal website about programing, music, photo etc'},
+                    {name: 'keywords', content: 'wfern, programing, music, photo'},
+                ]}
+            />
+            <Header langs={langsMenu} langKey={langKey}/>
+            <div
+                style={{
+                    padding: '1.45rem 1.0875rem',
+                    flex: 1,
+                    color: '#000',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                }}
+            >
+                <Container>
+                    {children()}
+                </Container>
+            </div>
+            <Footer/>
         </div>
-    <Footer/>
-  </div>
-)
+    )
+}
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
-}
+};
+
+Header.propTypes = {
+    langs: PropTypes.array,
+    langKey: PropTypes.string,
+};
 
 export default TemplateWrapper

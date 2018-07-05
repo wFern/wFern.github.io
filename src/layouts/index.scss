@@ -10,6 +10,12 @@ a {
   }
 }
 
-i.icon.strava{
-  :before { content: '\f428'; }
+.menu > .item > .active{
+  font-weight: bold;
+}
+
+.lang-selector{
+  a.active{
+    font-weight: bold;
+  }
 }
