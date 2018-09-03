@@ -1,15 +1,18 @@
 var plugins = [{
-      plugin: require('/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby-plugin-catch-links/gatsby-browser.js'),
-      options: {"plugins":[]},
-    },{
-      plugin: require('/Users/aim-imac-3/projects/wFern.github.io/gatsby-browser.js'),
+      plugin: require('/Users/aim-imac-3/projects/wFern.github.io/node_modules/gatsby-plugin-catch-links/gatsby-browser'),
       options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks
 // basically like:
 // var plugins = [
-//   require('/path/to/plugin1/gatsby-browser.js'),
-//   require('/path/to/plugin2/gatsby-browser.js'),
+//   {
+//     plugin: require("/path/to/plugin1/gatsby-browser.js"),
+//     options: { ... },
+//   },
+//   {
+//     plugin: require("/path/to/plugin2/gatsby-browser.js"),
+//     options: { ... },
+//   },
 // ]
 
 export function apiRunner(api, args, defaultReturn) {

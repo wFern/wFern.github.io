@@ -3,6 +3,13 @@
         "componentChunkName": "component---src-templates-blog-post-js",
         "layout": "layout---index",
         "layoutComponentChunkName": "component---src-layouts-index-js",
+        "jsonName": "en-hello-world-2.json",
+        "path": "/en/hello-world2"
+    },
+    {
+        "componentChunkName": "component---src-templates-blog-post-js",
+        "layout": "layout---index",
+        "layoutComponentChunkName": "component---src-layouts-index-js",
         "jsonName": "en-hello-world.json",
         "path": "/en/hello-world"
     },
@@ -12,6 +19,13 @@
         "layoutComponentChunkName": "component---src-layouts-index-js",
         "jsonName": "ru-hello-world.json",
         "path": "/ru/hello-world"
+    },
+    {
+        "componentChunkName": "component---src-templates-blog-post-js",
+        "layout": "layout---index",
+        "layoutComponentChunkName": "component---src-layouts-index-js",
+        "jsonName": "ru-hello-world-2.json",
+        "path": "/ru/hello-world2"
     },
     {
         "componentChunkName": "component---cache-dev-404-page-js",
@@ -28,18 +42,18 @@
         "path": "/404/"
     },
     {
-        "componentChunkName": "component---src-pages-blog-en-js",
+        "componentChunkName": "component---src-pages-about-en-js",
         "layout": "layout---index",
         "layoutComponentChunkName": "component---src-layouts-index-js",
-        "jsonName": "en-blog.json",
-        "path": "/en/blog/"
+        "jsonName": "en-about.json",
+        "path": "/en/about/"
     },
     {
-        "componentChunkName": "component---src-pages-blog-ru-js",
+        "componentChunkName": "component---src-pages-about-ru-js",
         "layout": "layout---index",
         "layoutComponentChunkName": "component---src-layouts-index-js",
-        "jsonName": "ru-blog.json",
-        "path": "/ru/blog/"
+        "jsonName": "ru-about.json",
+        "path": "/ru/about/"
     },
     {
         "componentChunkName": "component---src-pages-index-en-js",
@@ -61,5 +75,12 @@
         "layoutComponentChunkName": "component---src-layouts-index-js",
         "jsonName": "ru.json",
         "path": "/ru/"
+    },
+    {
+        "componentChunkName": "component---src-pages-404-js",
+        "layout": "layout---index",
+        "layoutComponentChunkName": "component---src-layouts-index-js",
+        "jsonName": "404-html.json",
+        "path": "/404.html"
     }
 ]

@@ -1,24 +1,49 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import { Grid, Image } from 'semantic-ui-react'
-import PersonalPic from '../assets/img/personal-pic.jpg'
+import React from "react";
+import Link from "gatsby-link";
+import Helmet from "react-helmet";
 
-const IndexPage = () => (
-    <div>
-        <Grid columns={2} verticalAlign='middle' centered>
-            <Grid.Row>
-                <Grid.Column>
-                    <h1>О себе</h1>
-                    <p>Привет.</p>
-                    <p>Меня зовут Андрей и, в основном, я программист.</p>
-                    <p>Так же я интересуюсь музыкой, велосипедами и еще некоторыми вещами.</p>
-                </Grid.Column>
-                <Grid.Column>
-                    <Image src={PersonalPic} size='small' circular/>
-                </Grid.Column>
-            </Grid.Row>
-        </Grid>
-    </div>
-)
+// import '../css/index.scss'; // add some style if you want!
 
-export default IndexPage
+export default function Index({ data }) {
+    const { edges: posts } = data.allMarkdownRemark;
+    return (
+        <div className="blog-posts">
+            {posts
+                .filter(post => post.node.frontmatter.title.length > 0)
+                .map(({ node: post }) => {
+                    return (
+                        <div className="blog-post-preview" key={post.id}>
+                            <h1>
+                                <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+                            </h1>
+                            <h2>{post.frontmatter.date}</h2>
+                            <p>{post.excerpt}</p>
+                        </div>
+                    );
+                })}
+        </div>
+    );
+}
+
+export const postRUQuery = graphql`
+  query IndexRUBlogQuery {
+    allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] },
+        filter: {
+            fields: { langKey: { regex: "/(ru|any)/" } }
+        }
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 250)
+          id
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+            path
+          }
+        }
+      }
+    }
+  }
+`;

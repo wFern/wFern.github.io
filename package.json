@@ -4,14 +4,15 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "d3": "^5.5.0",
     "gatsby": "^1.9.127",
     "gatsby-link": "^1.6.30",
     "gatsby-plugin-catch-links": "^1.0.19",
     "gatsby-plugin-i18n": "^0.4.1",
     "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-sass": "^1.0.25",
     "gatsby-source-filesystem": "^1.5.27",
     "gatsby-transformer-remark": "^1.7.37",
-    "gh-pages": "^1.1.0",
     "semantic-ui-css": "^2.2.12",
     "semantic-ui-react": "^0.77.0"
   },
@@ -28,6 +29,7 @@
     "deploy": "gatsby build && gh-pages -d public --branch master"
   },
   "devDependencies": {
+    "gh-pages": "^1.1.0",
     "prettier": "^1.8.2"
   }
 }

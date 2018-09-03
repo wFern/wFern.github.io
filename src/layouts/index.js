@@ -2,55 +2,76 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import { Icon, Grid } from 'semantic-ui-react'
-
+import { Icon, Grid, Container, Menu } from 'semantic-ui-react'
+import { getCurrentLangKey, getUrlForLang, getLangs } from 'ptz-i18n'
 import 'semantic-ui-css/semantic.min.css'
+import './index.scss'
 
-const Header = () => (
-  <header
-    style={{
-      borderBottom: '2px solid #c5c3b5',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/ru/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
+const languages = require('../data/languages');
+
+const Header = (props) => {
+
+    const links = props.langs.map((lang, i) => {
+        return (
+            <Menu.Item>
+                <Link key={lang.link} to={lang.link} className={lang.selected ? 'active' : ''}>
+                    <span>{lang.langKey}</span>
+                </Link>
+            </Menu.Item>
+        )
+    })
+
+    return (
+        <header
+            style={{
+                padding: '1.45rem 1.0875rem'
+            }}
         >
-          wFern
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+            <Container>
+                <Grid centered divided='vertically'>
+                    <Grid.Row columns={2}>
+                        <Grid.Column>
+                            <Link
+                                to={`/${props.langKey}/`}
+                                style={{
+                                    color: '#3f325a',
+                                    textDecoration: 'none',
+                                    fontSize: '2em',
+                                    fontWeight: 'bold'
+                                }}
+                            >
+                                wFern
+                            </Link>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Menu secondary size='large'>
+                                <Menu.Item>
+                                    <Link exact to={`/${props.langKey}/`} activeClassName="active">Blog</Link>
+                                </Menu.Item>
+                                <Menu.Item>
+                                    <Link to={`/${props.langKey}/about`} activeClassName="active">About</Link>
+                                </Menu.Item>
+                                <Menu.Menu position='right' secondary size='small' className="lang-selector">
+                                    {links}
+                                </Menu.Menu>
+                            </Menu>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </Container>
+        </header>
+    )
+}
 
 const Footer = () => (
     <footer
         style={{
-            borderTop: '2px solid #c5c3b5',
-            marginTop: '1.45rem',
             padding: '1em 1rem'
         }}
     >
-        <Grid centered divided='vertically'>
-            <Grid.Row columns={2}>
-                <Grid.Column textAlign={'right'}>
-                    <Link to="/ru/">RU</Link>
-                    &nbsp;/&nbsp;
-                    <a href="/en/">EN</a>
-                </Grid.Column>
-                <Grid.Column>
+        <Container>
+            <Grid centered divided='vertically'>
+                <Grid.Row>
                     <a href="https://www.facebook.com/andrey.wrd.frn" target="_blank">
                         <Icon circular link name='facebook square'/>
                     </a>
@@ -66,45 +87,70 @@ const Footer = () => (
                     <a href="https://bandcamp.com/w_fern/" target="_blank">
                         <Icon circular link name='bandcamp'/>
                     </a>
-                </Grid.Column>
-            </Grid.Row>
-        </Grid>
+                    <a href="https://www.mixcloud.com/andrey-ivanov19/" target="_blank">
+                        <Icon circular link name='mixcloud'/>
+                    </a>
+                    <a href="https://www.strava.com/athletes/brn_fern" target="_blank">
+                        <Icon circular link name='strava'/>
+                    </a>
+
+                </Grid.Row>
+            </Grid>
+        </Container>
     </footer>
 )
 
-const TemplateWrapper = ({ children }) => (
-  <div
-    style={{
-        display: 'flex',
-        minHeight: '100vh',
-        flexDirection: 'column'
-    }}
-  >
-    <Helmet
-      title="wFern"
-      meta={[
-        { name: 'description', content: 'Personal website about programing, music, photo etc' },
-        { name: 'keywords', content: 'wfern, programing, music, photo' },
-      ]}
-    />
-    <Header />
-    <div
-      style={{
-          margin: '0 auto',
-          maxWidth: 960,
-          padding: '0px 1.0875rem 1.45rem',
-          paddingTop: 0,
-          flex: 1
-      }}
-    >
-      {children()}
-    </div>
-    <Footer/>
-  </div>
-)
+const TemplateWrapper = (props) => {
+
+    const { children, location } = props;
+    const url = location.pathname;
+    const {langs, defaultLangKey} = languages;
+    const langKey = getCurrentLangKey(langs, defaultLangKey, url);
+    const homeLink = `/${langKey}/`;
+    const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
+
+    return (
+        <div
+            style={{
+                display: 'flex',
+                minHeight: '100vh',
+                flexDirection: 'column',
+            }}
+        >
+            <Helmet
+                title="wFern"
+                meta={[
+                    {name: 'description', content: 'Personal website about programing, music, photo etc'},
+                    {name: 'keywords', content: 'wfern, programing, music, photo'},
+                ]}
+            />
+            <Header langs={langsMenu} langKey={langKey}/>
+            <div
+                style={{
+                    padding: '1.45rem 1.0875rem',
+                    flex: 1,
+                    color: '#000',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                }}
+            >
+                <Container>
+                    {children()}
+                </Container>
+            </div>
+            <Footer/>
+        </div>
+    )
+}
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
-}
+};
+
+Header.propTypes = {
+    langs: PropTypes.array,
+    langKey: PropTypes.string,
+};
 
 export default TemplateWrapper

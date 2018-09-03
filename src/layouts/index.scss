@@ -1,0 +1,21 @@
+a {
+  color: #2a2338;
+
+  &:hover, &:focus{
+    color: #352b48;
+  }
+
+  &:active{
+    color: #201c29;
+  }
+}
+
+.menu > .item > .active{
+  font-weight: bold;
+}
+
+.lang-selector{
+  a.active{
+    font-weight: bold;
+  }
+}
