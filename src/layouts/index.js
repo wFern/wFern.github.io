@@ -49,9 +49,12 @@ const Header = (props) => {
                                     <Link exact to={`/${props.langKey}/`} activeClassName="active">Blog</Link>
                                 </Menu.Item>
                                 <Menu.Item>
+                                    <Link to={`/${props.langKey}/summerside`} activeClassName="active">Summerside</Link>
+                                </Menu.Item>
+                                <Menu.Item>
                                     <Link to={`/${props.langKey}/about`} activeClassName="active">About</Link>
                                 </Menu.Item>
-                                <Menu.Menu position='right' secondary size='small' className="lang-selector">
+                                <Menu.Menu position='right' size='small' className="lang-selector">
                                     {links}
                                 </Menu.Menu>
                             </Menu>

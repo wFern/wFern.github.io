@@ -48,3 +48,16 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                 });
         });
 };
+
+exports.onCreatePage = async ({ page, boundActionCreators }) => {
+    const { createPage } = boundActionCreators;
+
+    return new Promise((resolve, reject) => {
+        if (page.path.match(/^\/summerside/)) {
+            page.layout = "summersideLayout";
+            createPage(page);
+        }
+
+        resolve();
+    });
+};
