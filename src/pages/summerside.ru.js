@@ -39,13 +39,17 @@ class SummersidePage extends React.PureComponent {
             <div
                 style={{
                     width: '100%',
+                    backgroundColor: '#63806C',
+                    color: '#FCECC3'
                 }}
             >
                 <div
                     style={{
                         width: '100%',
                         height: '100vh',
-                        overflow: 'hidden'
+                        overflow: 'hidden',
+                        backgroundColor: '#3D5958',
+                        boxShadow: 'inset 2px -30px 15px -15px rgba(99,128,108,1)'
                     }}
                     ref={this.setContainerTopRef}
                 >
@@ -58,7 +62,7 @@ class SummersidePage extends React.PureComponent {
                     >
                         <h2>Summerside</h2>
                         <p>
-                            Двух этапное велопутешествие по Европе. <br/>
+                            Двухэтапное велопутешествие по Европе. <br/>
                             2000 км, 24 дня езды, &#8734; впечатлений.
                         </p>
                     </div>
@@ -67,6 +71,9 @@ class SummersidePage extends React.PureComponent {
                         height={this.state.containerTopHeight}
                     />
                 </div>
+                <section>
+                    Летом 2018 мы с женой отправились в велопутешествие.
+                </section>
                 <Gallery/>
             </div>
 

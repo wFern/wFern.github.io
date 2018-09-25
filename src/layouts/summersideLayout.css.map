@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,OAAO;EACL,OAAO,EAAE,GAAG",
+"sources": ["summersideLayout.scss"],
+"names": [],
+"file": "summersideLayout.css"
+}

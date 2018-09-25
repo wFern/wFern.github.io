@@ -45,11 +45,6 @@ class RouteMap extends React.PureComponent {
                     long: 13.41
                 },
                 {
-                    label: 'Magdeburg',
-                    lat: 52.14,
-                    long: 11.62
-                },
-                {
                     label: 'Hannover',
                     lat: 52.38,
                     long: 9.72
@@ -65,11 +60,6 @@ class RouteMap extends React.PureComponent {
                     long: 12.57
                 },
                 {
-                    label: 'Helsingborg',
-                    lat: 56.06,
-                    long: 12.71
-                },
-                {
                     label: 'Jönköping',
                     lat: 57.77,
                     long: 14.16
@@ -81,8 +71,8 @@ class RouteMap extends React.PureComponent {
                 },
                 {
                     label: 'Stockholm',
-                    lat: 59.32,
-                    long: 18.07
+                    lat: 59.30,
+                    long: 18.02
                 },
             ]
         }
@@ -131,8 +121,8 @@ class RouteMap extends React.PureComponent {
                                 d={ geoPath().projection(this.projection())(d) }
                                 className="country"
                                 // fill={ `rgba(38,50,56,${1 / this.state.mapData.length * i})` }
-                                fill="rgb(104, 190, 222)"
-                                stroke="#FFFFFF"
+                                fill="#63806C"
+                                stroke="#8D9D81"
                                 strokeWidth={ 0.5 }
                             />
                         ))
@@ -169,7 +159,14 @@ class RouteMap extends React.PureComponent {
                                 cx={ this.projection()([d.long, d.lat])[0] }
                                 cy={ this.projection()([d.long, d.lat])[1] }
                                 r={ 4 }
-                                fill="#ffff66"
+                                fill="#F1DB8E"
+                                className="city__marker"
+                            />
+                            <circle
+                                cx={ this.projection()([d.long, d.lat])[0] }
+                                cy={ this.projection()([d.long, d.lat])[1] }
+                                r={ 2 }
+                                fill="#63806C"
                                 className="city__marker"
                             />
                             <text
