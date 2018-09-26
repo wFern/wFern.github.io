@@ -42,38 +42,63 @@
   display: block;
   width: 100%;
   text-align: center;
+  margin: 1em;
 }
-.lds-ripple {
-  display: inline-block;
-  position: relative;
-  width: 64px;
-  height: 64px;
+
+.lds-css{
+  width: 40px;
+  margin: 0 auto;
 }
-.lds-ripple div {
-  position: absolute;
-  border: 4px solid #cef;
-  opacity: 1;
-  border-radius: 50%;
-  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-}
-.lds-ripple div:nth-child(2) {
-  animation-delay: -0.5s;
-}
-@keyframes lds-ripple {
+
+@keyframes lds-eclipse {
   0% {
-    top: 28px;
-    left: 28px;
-    width: 0;
-    height: 0;
-    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
   }
   100% {
-    top: -1px;
-    left: -1px;
-    width: 58px;
-    height: 58px;
-    opacity: 0;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
+}
+@-webkit-keyframes lds-eclipse {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.lds-eclipse {
+  position: relative;
+}
+.lds-eclipse div {
+  position: absolute;
+  -webkit-animation: lds-eclipse 1s linear infinite;
+  animation: lds-eclipse 1s linear infinite;
+  width: 160px;
+  height: 160px;
+  top: 20px;
+  left: 20px;
+  border-radius: 50%;
+  box-shadow: 0 8px 0 0 #3D5958;
+  -webkit-transform-origin: 80px 84px;
+  transform-origin: 80px 84px;
+}
+.lds-eclipse {
+  width: 40px !important;
+  height: 40px !important;
+  -webkit-transform: translate(-20px, -20px) scale(0.2) translate(20px, 20px);
+  transform: translate(-20px, -20px) scale(0.2) translate(20px, 20px);
 }
 
 .modal{
@@ -89,10 +114,21 @@
   &__close{
     z-index: 99999;
     position: absolute;
-    color: red;
-    top: 0;
-    right: 0;
+    top: .5em;
+    right: .5em;
     cursor: pointer;
+    width: 20px;
+    height: 20px;
+
+    path{
+      fill: #FCECC3;
+    }
+
+    &:hover, &:focus{
+      path{
+        fill: #F1DB8E;
+      }
+    }
   }
 
   &_show{
@@ -113,4 +149,35 @@
 .swiper-item{
   max-height: 90vh;
   max-width: 90%;
+}
+.swiper-button-next, .swiper-button-prev{
+  background-image: none;
+  width: 20px;
+  height: 40px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none !important;
+
+  &:focus{
+    outline: none !important;
+  }
+  path{
+    fill: #FCECC3
+  }
+  &:hover, &:focus{
+    path{
+      fill: #F1DB8E
+    }
+  }
+}
+
+.swiper-lazy-preloader{
+  background: none;
+  animation: none;
+  position: absolute;
+  top: calc(50% - 3vh);
+
+  &:before, &:after{
+    display: none;
+  }
 }

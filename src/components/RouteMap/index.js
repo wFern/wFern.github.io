@@ -120,7 +120,6 @@ class RouteMap extends React.PureComponent {
                                 key={ `path-${ i }` }
                                 d={ geoPath().projection(this.projection())(d) }
                                 className="country"
-                                // fill={ `rgba(38,50,56,${1 / this.state.mapData.length * i})` }
                                 fill="#63806C"
                                 stroke="#8D9D81"
                                 strokeWidth={ 0.5 }
