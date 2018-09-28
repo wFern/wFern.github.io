@@ -8,6 +8,7 @@
     position: relative;
     flex: auto;
     width: calc(100%/5);
+    max-width: calc(100%/4);
     transition: transform .25s ease 0s;
     cursor: pointer;
     margin: 1px;
