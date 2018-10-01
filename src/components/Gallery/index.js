@@ -40,8 +40,8 @@ class Gallery extends React.PureComponent {
         };
 
         this.comments = [
-            {id: '43723819035', msg: 'Берлин'},
-            {id: '30763205378', msg: 'Амстердам'}
+            {id: '43723819035', msg: (<h3>Берлин</h3>)},
+            {id: '30763205378', msg: (<h3>Амстердам</h3>)}
         ];
     }
 
@@ -55,7 +55,7 @@ class Gallery extends React.PureComponent {
 
             let photoItem = this.comments.find(comment => comment.id === item.id);
             if(photoItem !== undefined){
-                console.log(photoItem);
+
                 nextSet.splice(i, 0, {comment: true, msg: photoItem.msg});
                 commentCounter = commentCounter + 1;
             }
@@ -155,6 +155,7 @@ class Gallery extends React.PureComponent {
                         }
                     </Swiper>
                 </div>
+                <h3>Калининград</h3>
                 <InfiniteScroll
                     className='masonry'
                     loadMore={this.loadPhotos}
