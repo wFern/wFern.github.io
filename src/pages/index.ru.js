@@ -2,7 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
 
-// import '../css/index.scss'; // add some style if you want!
+// import '../css/Gallery.scss'; // add some style if you want!
 
 export default function Index({ data }) {
     const { edges: posts } = data.allMarkdownRemark;

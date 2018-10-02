@@ -6,7 +6,14 @@ import Swiper from 'react-id-swiper';
 import photoSizes from "../../data/photo_sizes.json";
 
 import './swiper.css';
-import './index.scss';
+import './Gallery.scss';
+
+const comments = [
+  {id: '42823041980', msg: (<h4>Калининград</h4>)},
+  {id: '43723829485', msg: (<h4>Польша, Фромборк</h4>)},
+  {id: '29694624077', msg: (<h4>Мальборк</h4>)},
+  {id: '42823050820', msg: (<h4>Валч</h4>)},
+];
 
 class Gallery extends React.PureComponent {
     constructor(props) {
@@ -38,30 +45,24 @@ class Gallery extends React.PureComponent {
             },
             showModal: false
         };
-
-        this.comments = [
-            {id: '43723819035', msg: (<h3>Берлин</h3>)},
-            {id: '30763205378', msg: (<h3>Амстердам</h3>)}
-        ];
     }
 
     loadPhotos = () => {
         let nextSet = photoSizes.slice(this.state.pagePhotoCounter * 10, this.state.pagePhotoCounter * 10 + 10);
         let commentCounter = this.state.commentCounter;
 
-        const currentSet = [...nextSet];
+        const set = [...nextSet];
 
-        currentSet.map((item, i) => {
-
-            let photoItem = this.comments.find(comment => comment.id === item.id);
+        set.map((item, i) => {
+            let photoItem = comments.find(comment => comment.id === item.id);
             if(photoItem !== undefined){
-
                 nextSet.splice(i, 0, {comment: true, msg: photoItem.msg});
                 commentCounter = commentCounter + 1;
             }
         });
 
         if(nextSet.length !== 0){
+            console.log(nextSet);
             this.setState((prevState) => {
                 return {
                     pagePhotoCounter: prevState.pagePhotoCounter + 1,
@@ -101,10 +102,12 @@ class Gallery extends React.PureComponent {
             if(item.comment){
                 items.push(
                     <div
-                        style={{width: '100%'}}
+                        className="masonry__comment"
                         key={i}
                     >
-                        {item.msg}
+                        <div>
+                          {item.msg}
+                        </div>
                     </div>
                 );
             } else {
@@ -120,8 +123,6 @@ class Gallery extends React.PureComponent {
                     />
                 );
             }
-
-            return items;
         });
 
         return (
@@ -155,7 +156,6 @@ class Gallery extends React.PureComponent {
                         }
                     </Swiper>
                 </div>
-                <h3>Калининград</h3>
                 <InfiniteScroll
                     className='masonry'
                     loadMore={this.loadPhotos}

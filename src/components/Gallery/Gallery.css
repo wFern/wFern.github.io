@@ -3,6 +3,14 @@
   flex-flow: row wrap;
   align-content: stretch;
   max-width: 100%; }
+  .masonry__comment {
+    width: 100%; }
+    .masonry__comment div {
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 1.4em 1em .8em; }
+      .masonry__comment div h4 {
+        font-size: 1.5em; }
   .masonry__item {
     position: relative;
     flex: auto;
@@ -142,4 +150,4 @@
   .swiper-lazy-preloader:before, .swiper-lazy-preloader:after {
     display: none; }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=Gallery.css.map */
