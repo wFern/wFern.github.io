@@ -10,9 +10,20 @@ import './Gallery.scss';
 
 const comments = [
   {id: '42823041980', msg: (<h4>Калининград</h4>)},
-  {id: '43723829485', msg: (<h4>Польша, Фромборк</h4>)},
+  {id: '43723829485', msg: (<div>
+      <h3>Польша</h3>
+      <h4>Фромборк</h4>
+    </div>)},
   {id: '29694624077', msg: (<h4>Мальборк</h4>)},
   {id: '42823050820', msg: (<h4>Валч</h4>)},
+  {id: '44633251481', msg: (<h3>Германия</h3>)},
+  {id: '43914302014', msg: (<h4>Берлин</h4>)},
+  {id: '44583236272', msg: (<h4>Потсдам</h4>)},
+  {id: '42823070450', msg: (<h3>Нидерланды</h3>)},
+  {id: '43914313914', msg: (<h4>Амстердам</h4>)},
+  {id: '43723854595', msg: (<h3>Дания</h3>)},
+  {id: '44633261371', msg: (<h3>Швеция</h3>)},
+  {id: '30763233938', msg: (<h4>Стокгольм</h4>)},
 ];
 
 class Gallery extends React.PureComponent {
@@ -21,7 +32,7 @@ class Gallery extends React.PureComponent {
 
         this.state = {
             pagePhotoCounter: 0,
-            commentCounter: 0,
+            // commentCounter: 0,
             hasMore: true,
             photoSizes: [],
             swiperParams: {
@@ -48,82 +59,79 @@ class Gallery extends React.PureComponent {
     }
 
     loadPhotos = () => {
-        let nextSet = photoSizes.slice(this.state.pagePhotoCounter * 10, this.state.pagePhotoCounter * 10 + 10);
-        let commentCounter = this.state.commentCounter;
+      let nextSet = photoSizes.slice(this.state.pagePhotoCounter * 10, this.state.pagePhotoCounter * 10 + 10);
 
-        const set = [...nextSet];
+      const set = [...nextSet];
+      let setCommentCounter = 0;
 
-        set.map((item, i) => {
-            let photoItem = comments.find(comment => comment.id === item.id);
-            if(photoItem !== undefined){
-                nextSet.splice(i, 0, {comment: true, msg: photoItem.msg});
-                commentCounter = commentCounter + 1;
-            }
-        });
-
-        if(nextSet.length !== 0){
-            console.log(nextSet);
-            this.setState((prevState) => {
-                return {
-                    pagePhotoCounter: prevState.pagePhotoCounter + 1,
-                    photoSizes: prevState.photoSizes.concat(nextSet),
-                    commentCounter: commentCounter
-                };
-            });
-        } else{
-            this.setState({
-                hasMore: false
-            });
+      nextSet.map((item, i) => {
+        let photoItem = comments.find(comment => comment.id === item.id);
+        if(photoItem !== undefined){
+          set.splice(i + setCommentCounter, 0, {comment: true, msg: photoItem.msg});
+          setCommentCounter++;
         }
+      });
+
+      if(nextSet.length !== 0){
+        this.setState((prevState) => {
+          return {
+              pagePhotoCounter: prevState.pagePhotoCounter + 1,
+              photoSizes: prevState.photoSizes.concat(set),
+              // commentCounter: this.state.commentCounter + setCommentCounter
+          };
+        });
+      } else {
+        this.setState({
+            hasMore: false
+        });
+      }
     };
 
-    photoClickHandler = (event, i) => {
+    photoClickHandler = (event, index) => {
 
-        let swiperParams = {...this.state.swiperParams};
-        swiperParams.initialSlide = i;
+      let swiperParams = {...this.state.swiperParams};
+      swiperParams.initialSlide = index;
 
-        this.setState({
-            showModal: true,
-            swiperParams: swiperParams
-        });
+      this.setState({
+        showModal: true,
+        swiperParams: swiperParams
+      });
     };
 
     closeModal = () => {
-        this.setState({
-            showModal: false
-        });
+      this.setState({
+          showModal: false
+      });
     };
 
     render() {
 
-        let items = [];
+      let items = [];
 
-        this.state.photoSizes.map((item, i) => {
-            if(item.comment){
-                items.push(
-                    <div
-                        className="masonry__comment"
-                        key={i}
-                    >
-                        <div>
-                          {item.msg}
-                        </div>
-                    </div>
-                );
-            } else {
-                items.push(
-                    <div
-                        className='masonry__item'
-                        key={item.id}
-                        style={{
-                            background: `url('${item.medium}') no-repeat center`,
-                            backgroundSize: 'cover'
-                        }}
-                        onClick={(e) => this.photoClickHandler(e, i - this.state.commentCounter)}
-                    />
-                );
-            }
-        });
+      this.state.photoSizes.map((item, i) => {
+        if(item.comment){
+          items.push(
+            <div
+              className="masonry__comment"
+              key={i}
+            >
+              {item.msg}
+            </div>
+          );
+        } else {
+          items.push(
+            <div
+              className='masonry__item'
+              key={item.id}
+              onClick={(e) => this.photoClickHandler(e, item.index)}
+              style={{
+                background: `url('${item.medium}') no-repeat center`,
+                backgroundSize: 'cover'
+              }}
+            />
+          );
+        }
+      });
 
         return (
             <div>

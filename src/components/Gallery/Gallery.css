@@ -4,21 +4,19 @@
   align-content: stretch;
   max-width: 100%; }
   .masonry__comment {
-    width: 100%; }
-    .masonry__comment div {
-      max-width: 650px;
-      margin: 0 auto;
-      padding: 1.4em 1em .8em; }
-      .masonry__comment div h4 {
-        font-size: 1.5em; }
+    width: 100%;
+    padding: 1.4em 1em .8em; }
+    .masonry__comment h3 {
+      font-size: 1.8em; }
+    .masonry__comment h4 {
+      font-size: 1.5em; }
   .masonry__item {
     position: relative;
-    flex: auto;
-    width: calc(100%/5);
+    flex: 1 1 calc(100%/4);
     max-width: calc(100%/4);
     transition: transform .25s ease 0s;
     cursor: pointer;
-    margin: 1px; }
+    border: 1px solid #63806C; }
     .masonry__item:after {
       content: '';
       position: absolute;
@@ -30,7 +28,7 @@
     .masonry__item:hover {
       transform: scale(0.99); }
       .masonry__item:hover:after {
-        opacity: .2; }
+        opacity: .1; }
     @media screen and (orientation: landscape) {
       .masonry__item {
         height: calc(100vh/4); } }
