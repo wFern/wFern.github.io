@@ -4,9 +4,7 @@ import 'semantic-ui-css/semantic.min.css';
 import './index.scss';
 import './summersideLayout.scss';
 
-const summersideLayout = (props) => {
-
-    const { children } = props;
+const summersideLayout = ({children}) => {
 
     return (
         <div
@@ -32,7 +30,7 @@ const summersideLayout = (props) => {
                     justifyContent: 'center'
                 }}
             >
-                {children()}
+                {children}
             </div>
         </div>
     )

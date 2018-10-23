@@ -7,7 +7,7 @@ import { getCurrentLangKey, getUrlForLang, getLangs } from 'ptz-i18n'
 import 'semantic-ui-css/semantic.min.css'
 import './index.scss'
 
-const languages = require('../data/languages');
+const languages = require('../../data/languages');
 
 const Header = (props) => {
 
@@ -96,16 +96,14 @@ const Footer = () => (
                     <a href="https://www.strava.com/athletes/brn_fern" target="_blank">
                         <Icon circular link name='strava'/>
                     </a>
-
                 </Grid.Row>
             </Grid>
         </Container>
     </footer>
 )
 
-const TemplateWrapper = (props) => {
+const TemplateWrapper = ({ children, location }) => {
 
-    const { children, location } = props;
     const url = location.pathname;
     const {langs, defaultLangKey} = languages;
     const langKey = getCurrentLangKey(langs, defaultLangKey, url);
@@ -139,7 +137,7 @@ const TemplateWrapper = (props) => {
                 }}
             >
                 <Container>
-                    {children()}
+                    {children}
                 </Container>
             </div>
             <Footer/>
@@ -148,7 +146,8 @@ const TemplateWrapper = (props) => {
 }
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.object,
+  location: PropTypes.object
 };
 
 Header.propTypes = {

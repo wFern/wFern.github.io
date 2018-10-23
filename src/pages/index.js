@@ -1,5 +1,5 @@
 import React from 'react';
-import graphql from 'graphql';
+import { graphql } from 'gatsby';
 import { getUserLangKey } from 'ptz-i18n';
 import { withPrefix } from "gatsby-link";
 
@@ -24,7 +24,9 @@ class RedirectIndex extends React.PureComponent {
     }
 
     render() {
-        return (<div />);
+      return (
+        <div />
+      );
     }
 }
 
