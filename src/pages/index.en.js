@@ -1,49 +1,33 @@
-import React from "react";
-import Link from "gatsby-link";
-import Helmet from "react-helmet";
+import React from 'react'
+import Link from 'gatsby-link'
+import { Grid, Image, Header } from 'semantic-ui-react'
+import PersonalPic from '../assets/img/personal-pic.jpg'
+import SkillChart from '../components/SkillChart/'
 
-// import '../css/Gallery.scss'; // add some style if you want!
+const IndexPage = () => (
+    <div>
+        <Grid columns={2} centered>
+            <Grid.Row>
+                <Grid.Column textAlign={'right'}>
+                    <h1>Hello</h1>
+                    <p>My name is Andrey and mostly I'm a web developer</p>
+                </Grid.Column>
+                <Grid.Column>
+                    <Image src={PersonalPic} size='small' circular/>
+                </Grid.Column>
+            </Grid.Row>
+            <Grid.Row>
+                <Grid.Column textAlign={'right'}>
+                    <Header as='h2'>
+                         There are my skills
+                    </Header>
+                </Grid.Column>
+                <Grid.Column>
+                    <SkillChart/>
+                </Grid.Column>
+            </Grid.Row>
+        </Grid>
+    </div>
+)
 
-export default function Index({ data }) {
-    const { edges: posts } = data.allMarkdownRemark;
-    return (
-        <div className="blog-posts">
-            {posts
-                .filter(post => post.node.frontmatter.title.length > 0)
-                .map(({ node: post }) => {
-                    return (
-                        <div className="blog-post-preview" key={post.id}>
-                            <h1>
-                                <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-                            </h1>
-                            <h2>{post.frontmatter.date}</h2>
-                            <p>{post.excerpt}</p>
-                        </div>
-                    );
-                })}
-        </div>
-    );
-}
-
-export const postENQuery = graphql`
-  query IndexENBlogQuery {
-    allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] },
-        filter: {
-            fields: { langKey: { regex: "/(en|any)/" } }
-        }
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 250)
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-            path
-          }
-        }
-      }
-    }
-  }
-`;
+export default IndexPage

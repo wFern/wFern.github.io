@@ -1,51 +1,22 @@
-import React from "react";
-import Link from "gatsby-link";
-import Layout from '../components/layouts/index';
+import React from 'react'
+import Layout from '../components/layouts/index'
+import { Grid, Image } from 'semantic-ui-react'
+import PersonalPic from '../assets/img/personal-pic.jpg'
 
-// import '../css/Gallery.scss'; // add some style if you want!
-
-export default function Index({ data, location }) {
-  const { edges: posts } = data.allMarkdownRemark;
-  return (
+const IndexPage = ({location}) => (
     <Layout location={location}>
-      <div className="blog-posts">
-        {posts
-          .filter(post => post.node.frontmatter.title.length > 0)
-          .map(({ node: post }) => {
-            return (
-              <div className="blog-post-preview" key={post.id}>
-                <h1>
-                  <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-                </h1>
-                <h2>{post.frontmatter.date}</h2>
-                <p>{post.excerpt}</p>
-              </div>
-            );
-          })}
-      </div>
+        <Grid columns={2} centered>
+            <Grid.Row>
+                <Grid.Column textAlign={'right'}>
+                    <h1>Привет</h1>
+                    <p>Меня зовут Андрей и в основном я web-разработчик.</p>
+                </Grid.Column>
+                <Grid.Column>
+                    <Image src={PersonalPic} size='small' circular/>
+                </Grid.Column>
+            </Grid.Row>
+        </Grid>
     </Layout>
-  );
-}
+);
 
-export const postRUQuery = graphql`
-  query IndexRUBlogQuery {
-    allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] },
-        filter: {
-            fields: { langKey: { regex: "/(ru|any)/" } }
-        }
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 250)
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-            path
-          }
-        }
-      }
-    }
-  }
-`;
+export default IndexPage

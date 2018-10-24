@@ -1,0 +1,26 @@
+.Wrapper{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #000506;
+}
+
+.Header{
+  color: #FEF2AB;
+  padding: 1.45rem 1.0875rem;
+}
+
+.Logo{
+  color: #FEF2AB;
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: bold;
+
+  &:hover, &:focus{
+    color: #4F7379;
+  }
+
+  &:active{
+    color: #385A5C;
+  }
+}

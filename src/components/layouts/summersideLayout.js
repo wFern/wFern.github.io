@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import 'semantic-ui-css/semantic.min.css';
-import './index.scss';
+import './index.module.scss';
 import './summersideLayout.scss';
 
 const summersideLayout = ({children}) => {

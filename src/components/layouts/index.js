@@ -2,60 +2,74 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import { Icon, Grid, Container, Menu } from 'semantic-ui-react'
+import { push } from "gatsby-link"
+import { Icon, Grid, Container, Menu, Dropdown } from 'semantic-ui-react'
 import { getCurrentLangKey, getUrlForLang, getLangs } from 'ptz-i18n'
 import 'semantic-ui-css/semantic.min.css'
-import './index.scss'
+import classes from './index.module.scss'
 
 const languages = require('../../data/languages');
 
 const Header = (props) => {
 
-    const links = props.langs.map((lang, i) => {
-        return (
-            <Menu.Item>
-                <Link key={lang.link} to={lang.link} className={lang.selected ? 'active' : ''}>
-                    <span>{lang.langKey}</span>
-                </Link>
-            </Menu.Item>
-        )
-    })
+    // const langs = props.langs.map(lang => {
+    //     return (
+    //         <Menu.Item>
+    //             <Link key={lang.link} to={lang.link} className={classes.LangSelectorItem + ' ' + (lang.selected ? classes.active : '')}>
+    //                 <span>{lang.langKey}</span>
+    //             </Link>
+    //         </Menu.Item>
+    //     )
+    // });
+    const langOptions = props.langs.map(lang => {
+      let active = false;
+      if(lang.selected){
+        active = true
+      }
+      return ({
+        text: lang.langKey,
+        value: lang.langKey,
+        active: active
+      });
+    });
+    const langs = (
+      <span>
+        <Icon name='language' size='large'/>{' '}
+        <Dropdown
+          inline
+          options={langOptions}
+          defaultValue={langOptions[0].value}
+          onChange={(e, data) => {push(`/${data.value}/`)}}
+        />
+      </span>
+    );
 
     return (
-        <header
-            style={{
-                padding: '1.45rem 1.0875rem'
-            }}
-        >
+        <header className={classes.Header}>
             <Container>
                 <Grid centered divided='vertically'>
                     <Grid.Row columns={2}>
                         <Grid.Column>
                             <Link
-                                to={`/${props.langKey}/`}
-                                style={{
-                                    color: '#3f325a',
-                                    textDecoration: 'none',
-                                    fontSize: '2em',
-                                    fontWeight: 'bold'
-                                }}
+                              to={`/${props.langKey}/`}
+                              className={classes.Logo}
                             >
-                                wFern
+                              salad_nights
                             </Link>
                         </Grid.Column>
                         <Grid.Column>
                             <Menu secondary size='large'>
-                                <Menu.Item>
-                                    <Link exact to={`/${props.langKey}/`} activeClassName="active">Blog</Link>
-                                </Menu.Item>
-                                <Menu.Item>
-                                    <Link to={`/${props.langKey}/summerside`} activeClassName="active">Summerside</Link>
-                                </Menu.Item>
-                                <Menu.Item>
-                                    <Link to={`/${props.langKey}/about`} activeClassName="active">About</Link>
-                                </Menu.Item>
-                                <Menu.Menu position='right' size='small' className="lang-selector">
-                                    {links}
+                                {/*<Menu.Item>*/}
+                                    {/*<Link exact to={`/${props.langKey}/`} activeClassName="active">Blog</Link>*/}
+                                {/*</Menu.Item>*/}
+                                {/*<Menu.Item>*/}
+                                    {/*<Link to={`/${props.langKey}/summerside`} activeClassName="active">Summerside</Link>*/}
+                                {/*</Menu.Item>*/}
+                                {/*<Menu.Item>*/}
+                                    {/*<Link to={`/${props.langKey}/about`} activeClassName="active">About</Link>*/}
+                                {/*</Menu.Item>*/}
+                                <Menu.Menu position='right' size='small'>
+                                    {langs}
                                 </Menu.Menu>
                             </Menu>
                         </Grid.Column>
@@ -64,7 +78,7 @@ const Header = (props) => {
             </Container>
         </header>
     )
-}
+};
 
 const Footer = () => (
     <footer
@@ -100,9 +114,9 @@ const Footer = () => (
             </Grid>
         </Container>
     </footer>
-)
+);
 
-const TemplateWrapper = ({ children, location }) => {
+const Layout = ({ children, location }) => {
 
     const url = location.pathname;
     const {langs, defaultLangKey} = languages;
@@ -111,13 +125,7 @@ const TemplateWrapper = ({ children, location }) => {
     const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
 
     return (
-        <div
-            style={{
-                display: 'flex',
-                minHeight: '100vh',
-                flexDirection: 'column',
-            }}
-        >
+        <div className={classes.Wrapper}>
             <Helmet
                 title="wFern"
                 meta={[
@@ -145,7 +153,7 @@ const TemplateWrapper = ({ children, location }) => {
     )
 }
 
-TemplateWrapper.propTypes = {
+Layout.propTypes = {
   children: PropTypes.object,
   location: PropTypes.object
 };
@@ -155,4 +163,4 @@ Header.propTypes = {
     langKey: PropTypes.string,
 };
 
-export default TemplateWrapper
+export default Layout;
