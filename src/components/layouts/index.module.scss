@@ -1,48 +1,47 @@
-@value colors: "../../styles/colors.css";
-@value text, darkBackground, linkHover, linkActive, cuttySark from colors;
+@import "../../styles/colors.scss";
 
 .Wrapper{
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: darkBackground !important;
+  background-color: $darkBackground !important;
 }
 
 .Header{
-  color: text;
+  color: $text;
   padding: 1.45rem 1.0875rem;
 }
 
 .Logo{
-  color: text;
+  color: $text;
   text-decoration: none;
   font-size: 2em;
   font-weight: bold;
 
   &:hover, &:focus{
-    color: linkHover;
+    color: $linkHover;
   }
 
   &:active{
-    color: linkActive;
+    color: $linkActive;
   }
 }
 
 .CustomDropdown{
   &:hover, &:focus{
-    color: linkHover;
+    color: $linkHover;
   }
 
   &:active{
-    color: linkActive;
+    color: $linkActive;
   }
 
   :global {
     .menu{
-      background-color: cuttySark !important;
+      background-color: $cuttySark !important;
 
       .text{
-        color: text;
+        color: $text;
       }
     }
   }
@@ -51,7 +50,7 @@
 .ContentContainer {
   padding: 1.45rem 1.0875rem;
   flex: 1;
-  color: text;
+  color: $text;
   display: flex;
   align-items: center;
   justify-content: center;

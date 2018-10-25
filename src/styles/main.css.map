@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,6BAA6B;AAC7B,qCAAqC;AAErC,CAAC;EACC,KAAK,EAAE,OAAO;EAEd,0BAA0B;IACxB,KAAK,EAAE,SAAS",
-"sources": ["global-elements.scss"],
+"mappings": "AAEA,CAAC;EACC,KAAK,ECOK,OAAQ;EDLlB,0BAA0B;IACxB,KAAK,ECHG,OAAO",
+"sources": ["global-elements.scss","colors.scss"],
 "names": [],
 "file": "main.css"
 }

@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AACA,0BAA0B;AAC1B,sBAAsB;AACtB,yBAAyB;AACzB,uBAAuB;AACvB,uBAAuB;AAGvB,iCAAiC;AACjC,mBAAmB;AACnB,yBAAyB;AACzB,0BAA0B",
-"sources": ["colors.scss"],
+"mappings": "",
+"sources": [],
 "names": [],
 "file": "colors.css"
 }

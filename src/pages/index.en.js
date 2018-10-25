@@ -19,13 +19,13 @@ const IndexPage = ({location}) => (
           </Responsive>
           <p>
             During my last years in university, I became interested in programming.
-            I've worked in different fields of web developing for 5 years.
+            I've been working in different fields of web developing for 5 years.
             Last two years my passions are front-end developing and data visualization.
           </p>
           <p>
             Sometimes I close my code editor and go to take <a rel="noopener noreferrer" target="_blank" href="https://500px.com/salad_nights">photos on film</a>,
             make <a rel="noopener noreferrer" target="_blank" href="https://www.mixcloud.com/andrey-ivanov19/">mixtapes for my wife</a> or ride a bicycle.
-            Or go on a weird journey and then <a rel="noopener noreferrer" target="_blank" href="https://journal.tinkoff.ru/work_exchange/">write about it</a>.
+            Or I go on a weird journey and then <a rel="noopener noreferrer" target="_blank" href="https://journal.tinkoff.ru/work_exchange/">write about it</a>.
             Formerly I played punk in different bands and we even recorded something. One day I'll share it.
           </p>
           <p>

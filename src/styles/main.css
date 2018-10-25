@@ -1,8 +1,6 @@
-@value colors: "./colors.css";
-@value equator, cuttySark from colors;
 a {
-  color: equator; }
+  color: #DCAE61; }
   a:hover, a:focus, a:active {
-    color: cuttySark; }
+    color: #4F7379; }
 
 /*# sourceMappingURL=main.css.map */
