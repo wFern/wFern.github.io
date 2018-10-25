@@ -61,7 +61,3 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
         resolve();
     });
 };
-
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-});

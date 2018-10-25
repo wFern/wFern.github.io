@@ -1,9 +1,13 @@
 const languages = require('./src/data/languages');
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
-    title: `Personal website`,
-    languages
+    languages,
+    yandexVerificationCode: process.env.YANDEX_VERIFICATION_KEY
   },
   plugins: [
       `gatsby-plugin-react-helmet`,

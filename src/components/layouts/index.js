@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import { StaticQuery, graphql } from 'gatsby'
 import { navigate } from "gatsby-link"
 import { Icon, Grid, Container, Menu, Dropdown } from 'semantic-ui-react'
 import { getCurrentLangKey, getUrlForLang, getLangs } from 'ptz-i18n'
@@ -11,63 +12,63 @@ import classes from './index.module.scss'
 const languages = require('../../data/languages');
 
 const Header = (props) => {
-    const langOptions = props.langs.map(lang => {
-      let active = false;
-      if(lang.selected){
-        active = true
-      }
-      return ({
-        text: lang.langKey,
-        value: lang.langKey,
-        active: active
-      });
+  const langOptions = props.langs.map(lang => {
+    let active = false;
+    if(lang.selected){
+      active = true
+    }
+    return ({
+      text: lang.langKey,
+      value: lang.langKey,
+      active: active
     });
-    const langs = (
-      <span className={classes.CustomDropdown}>
-        <Icon name='language' size='large'/>{' '}
-        <Dropdown
-          inline
-          options={langOptions}
-          defaultValue={props.langKey}
-          onChange={(e, data) => {navigate(`/${data.value}/`)}}
-        />
-      </span>
-    );
+  });
+  const langs = (
+    <span className={classes.CustomDropdown}>
+      <Icon name='language' size='large'/>{' '}
+      <Dropdown
+        inline
+        options={langOptions}
+        defaultValue={props.langKey}
+        onChange={(e, data) => {navigate(`/${data.value}/`)}}
+      />
+    </span>
+  );
 
-    return (
-        <header className={classes.Header}>
-            <Container>
-                <Grid centered divided='vertically'>
-                    <Grid.Row columns={2}>
-                        <Grid.Column>
-                            <Link
-                              to={`/${props.langKey}/`}
-                              className={classes.Logo}
-                            >
-                              salad_nights
-                            </Link>
-                        </Grid.Column>
-                        <Grid.Column>
-                            <Menu secondary size='large'>
-                                {/*<Menu.Item>*/}
-                                    {/*<Link exact to={`/${props.langKey}/`} activeClassName="active">Blog</Link>*/}
-                                {/*</Menu.Item>*/}
-                                {/*<Menu.Item>*/}
-                                    {/*<Link to={`/${props.langKey}/summerside`} activeClassName="active">Summerside</Link>*/}
-                                {/*</Menu.Item>*/}
-                                {/*<Menu.Item>*/}
-                                    {/*<Link to={`/${props.langKey}/about`} activeClassName="active">About</Link>*/}
-                                {/*</Menu.Item>*/}
-                                <Menu.Menu position='right' size='small'>
-                                    {langs}
-                                </Menu.Menu>
-                            </Menu>
-                        </Grid.Column>
-                    </Grid.Row>
-                </Grid>
-            </Container>
-        </header>
-    )
+  return (
+    <header className={classes.Header}>
+      <Container>
+        <Grid centered divided='vertically'>
+          <Grid.Row columns={2}>
+            <Grid.Column>
+              <Link
+                to={`/${props.langKey}/`}
+                className={classes.Logo}
+              >
+                salad_nights
+              </Link>
+            </Grid.Column>
+            <Grid.Column>
+              <Menu secondary size='large'>
+                {/*<Menu.Item>*/}
+                    {/*<Link exact to={`/${props.langKey}/`} activeClassName="active">Blog</Link>*/}
+                {/*</Menu.Item>*/}
+                {/*<Menu.Item>*/}
+                    {/*<Link to={`/${props.langKey}/summerside`} activeClassName="active">Summerside</Link>*/}
+                {/*</Menu.Item>*/}
+                {/*<Menu.Item>*/}
+                    {/*<Link to={`/${props.langKey}/about`} activeClassName="active">About</Link>*/}
+                {/*</Menu.Item>*/}
+                <Menu.Menu position='right' size='small'>
+                    {langs}
+                </Menu.Menu>
+              </Menu>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Container>
+    </header>
+  )
 };
 
 const Footer = () => (
@@ -112,34 +113,48 @@ const Footer = () => (
   </footer>
 );
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children, location, data }) => {
+  const url = location.pathname;
+  const {langs, defaultLangKey} = languages;
+  const langKey = getCurrentLangKey(langs, defaultLangKey, url);
+  const homeLink = `/${langKey}/`;
+  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
 
-    const url = location.pathname;
-    const {langs, defaultLangKey} = languages;
-    const langKey = getCurrentLangKey(langs, defaultLangKey, url);
-    const homeLink = `/${langKey}/`;
-    const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
-
-    return (
-        <div className={classes.Wrapper}>
-            <Helmet
-                title="salad_nights"
-                meta={[
-                  {name: 'description', content: 'Personal website about programing, music, travels, photo etc'},
-                  {name: 'keywords', content: 'salad_nights, programing, cycling, music, photo'},
-                  {name: 'yandex-verification', content: `${process.env.YANDEX_VERIFICATION_KEY}`}
-                ]}
-            />
-            <Header langs={langsMenu} langKey={langKey}/>
-            <main className={classes.ContentContainer}>
-                <Container>
-                    {children}
-                </Container>
-            </main>
-            <Footer/>
-        </div>
-    )
+  return (
+    <div className={classes.Wrapper}>
+      <Helmet
+        title="salad_nights"
+        meta={[
+          {name: 'description', content: 'Personal website about programing, music, travels, photo etc'},
+          {name: 'keywords', content: 'salad_nights, programing, cycling, music, photo'},
+          {name: 'yandex-verification', content: `${data.site.siteMetadata.yandexVerificationCode}`}
+        ]}
+      />
+      <Header langs={langsMenu} langKey={langKey}/>
+      <main className={classes.ContentContainer}>
+        <Container>
+          {children}
+        </Container>
+      </main>
+      <Footer/>
+    </div>
+  )
 };
+
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query LayoutQuery {
+        site{
+          siteMetadata{
+            yandexVerificationCode
+          }
+        }
+      }
+    `}
+    render={data => <Layout data={data} {...props}/>}
+  />
+)
 
 Layout.propTypes = {
   children: PropTypes.object,
@@ -147,8 +162,6 @@ Layout.propTypes = {
 };
 
 Header.propTypes = {
-    langs: PropTypes.array,
-    langKey: PropTypes.string,
+  langs: PropTypes.array,
+  langKey: PropTypes.string,
 };
-
-export default Layout;
