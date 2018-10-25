@@ -1,7 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { getUserLangKey } from 'ptz-i18n';
-import { withPrefix, push } from "gatsby-link";
+import { withPrefix, navigate } from "gatsby-link";
+import '../styles/main.scss';
 
 class RedirectIndex extends React.PureComponent {
     constructor(args) {
@@ -20,7 +21,7 @@ class RedirectIndex extends React.PureComponent {
           // This redirect is dynamic, It needs to know the user browser language.
           // Any ideias? Join the issue: https://github.com/angeloocana/gatsby-starter-default-i18n/issues/4
           // window.___history.replace(homeUrl);
-          push(homeUrl);
+          navigate(homeUrl);
         }
     }
 

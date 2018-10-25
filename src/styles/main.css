@@ -1,0 +1,8 @@
+@value colors: "./colors.css";
+@value equator, cuttySark from colors;
+a {
+  color: equator; }
+  a:hover, a:focus, a:active {
+    color: cuttySark; }
+
+/*# sourceMappingURL=main.css.map */

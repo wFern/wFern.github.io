@@ -1,21 +1,42 @@
+@value colors: "../../styles/colors.css";
+@value text, darkBackground, linkHover, linkActive, cuttySark from colors;
 .Wrapper {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: #000506; }
+  background-color: darkBackground !important; }
 
 .Header {
-  color: #FEF2AB;
+  color: text;
   padding: 1.45rem 1.0875rem; }
 
 .Logo {
-  color: #FEF2AB;
+  color: text;
   text-decoration: none;
   font-size: 2em;
   font-weight: bold; }
   .Logo:hover, .Logo:focus {
-    color: #4F7379; }
+    color: linkHover; }
   .Logo:active {
-    color: #385A5C; }
+    color: linkActive; }
+
+.CustomDropdown:hover, .CustomDropdown:focus {
+  color: linkHover; }
+.CustomDropdown:active {
+  color: linkActive; }
+.CustomDropdown :global .menu {
+  background-color: cuttySark !important; }
+  .CustomDropdown :global .menu .text {
+    color: text; }
+
+.ContentContainer {
+  padding: 1.45rem 1.0875rem;
+  flex: 1;
+  color: text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 650px;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=index.module.css.map */

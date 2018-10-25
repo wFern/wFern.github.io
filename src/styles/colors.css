@@ -1,0 +1,11 @@
+@value lightBlack: #000506;
+@value drover: #FEF2AB;
+@value cuttySark: #4F7379;
+@value equator: #DCAE61;
+@value spectra: #385A5C;
+@value darkBackground: lightBlack;
+@value text: drover;
+@value linkHover: equator;
+@value linkActive: spectra;
+
+/*# sourceMappingURL=colors.css.map */

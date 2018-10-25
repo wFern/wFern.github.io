@@ -1,0 +1,10 @@
+@value colors: "./colors.css";
+@value equator, cuttySark from colors;
+
+a{
+  color: equator;
+
+  &:hover, &:focus, &:active{
+    color: cuttySark;
+  }
+}
