@@ -1,5 +1,5 @@
 a {
-  color: #DCAE61; }
+  color: #DCAE61 !important; }
   a:hover, a:focus, a:active {
     color: #4F7379; }
 

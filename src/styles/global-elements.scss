@@ -1,9 +1,9 @@
 @import "./colors.scss";
 
 a{
-  color: $equator;
+  color: $equator !important;
 
   &:hover, &:focus, &:active{
-    color: $cuttySark;
+    color: $cuttySark !important;
   }
 }
