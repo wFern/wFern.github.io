@@ -127,7 +127,7 @@ const Layout = ({ children, location, data }) => {
         meta={[
           {name: 'description', content: 'Personal website about programing, music, travels, photo etc'},
           {name: 'keywords', content: 'salad_nights, programing, cycling, music, photo'},
-          {name: 'yandex-verification', content: `${data.site.siteMetadata.yandexVerificationCode}`}
+          {name: 'yandex-verification', content: `${data.site.siteMetadata.yandexVerificationCode.code}`}
         ]}
       />
       <Header langs={langsMenu} langKey={langKey}/>
@@ -147,7 +147,9 @@ export default props => (
       query LayoutQuery {
         site{
           siteMetadata{
-            yandexVerificationCode
+            yandexVerificationCode{
+              code
+            }
           }
         }
       }

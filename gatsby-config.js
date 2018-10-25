@@ -7,7 +7,9 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     languages,
-    yandexVerificationCode: process.env.YANDEX_VERIFICATION_KEY
+    yandexVerificationCode: {
+      code: process.env.YANDEX_VERIFICATION_KEY
+    }
   },
   plugins: [
       `gatsby-plugin-react-helmet`,
