@@ -123,10 +123,11 @@ const Layout = ({ children, location }) => {
     return (
         <div className={classes.Wrapper}>
             <Helmet
-                title="wFern"
+                title="salad_nights"
                 meta={[
-                    {name: 'description', content: 'Personal website about programing, music, photo etc'},
-                    {name: 'keywords', content: 'wfern, programing, music, photo'},
+                  {name: 'description', content: 'Personal website about programing, music, travels, photo etc'},
+                  {name: 'keywords', content: 'salad_nights, programing, cycling, music, photo'},
+                  {name: 'yandex-verification', content: `${process.env.YANDEX_VERIFICATION_KEY}`}
                 ]}
             />
             <Header langs={langsMenu} langKey={langKey}/>
