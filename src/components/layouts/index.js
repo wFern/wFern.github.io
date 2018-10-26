@@ -6,6 +6,7 @@ import { navigate } from "gatsby-link"
 import { Icon, Grid, Container, Menu, Dropdown } from 'semantic-ui-react'
 import { getCurrentLangKey, getUrlForLang, getLangs } from 'ptz-i18n'
 import 'semantic-ui-css/semantic.min.css'
+import '../../styles/main.scss'
 import classes from './index.module.scss'
 
 const languages = require('../../data/languages');

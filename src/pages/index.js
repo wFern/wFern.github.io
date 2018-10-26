@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { getUserLangKey } from 'ptz-i18n';
 import { withPrefix, navigate } from "gatsby-link";
-import '../styles/main.scss';
 
 class RedirectIndex extends React.PureComponent {
     constructor(args) {

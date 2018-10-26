@@ -11,7 +11,7 @@ const IndexPage = ({location}) => (
         <Grid.Column>
           <h1>Hello</h1>
           <Responsive minWidth={480}>
-            <Image src={PersonalPic} size='small' rounded floated='right'/>
+            <Image className="margined" src={PersonalPic} size='small' rounded floated='right'/>
           </Responsive>
           <p>My name is Andrey and mostly I'm a web developer located in Bryansk, Russia.</p>
           <Responsive as="p" maxWidth={479}>
