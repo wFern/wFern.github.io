@@ -1,6 +1,12 @@
 a {
   color: #DCAE61 !important; }
   a:hover, a:focus, a:active {
-    color: #4F7379; }
+    color: #4F7379 !important; }
+
+h4 {
+  font-size: 1.6rem; }
+
+.margined {
+  margin: 1em !important; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAEA,CAAC;EACC,KAAK,EAAE,kBAAmB;EAE1B,0BAA0B;IACxB,KAAK,ECHG,OAAO",
-"sources": ["global-elements.scss","colors.scss"],
+"mappings": "AAEA,CAAC;EACC,KAAK,EAAE,kBAAmB;EAE1B,0BAA0B;IACxB,KAAK,EAAE,kBAAqB;;AAIhC,EAAE;EACA,SAAS,EAAE,MAAM;;AAGnB,SAAU;EACR,MAAM,EAAE,cAAc",
+"sources": ["global-elements.scss"],
 "names": [],
 "file": "main.css"
 }

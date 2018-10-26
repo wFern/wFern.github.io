@@ -10,7 +10,7 @@ const IndexPage = ({location}) => (
         <Grid.Column>
           <h1>Привет</h1>
           <Responsive minWidth={480}>
-            <Image src={PersonalPic} size='small' rounded floated='right'/>
+            <Image className="margined" src={PersonalPic} size='small' rounded bordered floated='right'/>
           </Responsive>
           <p>Меня зовут Андрей и в основном я web-разработчик.</p>
           <Responsive as="p" maxWidth={479}>
