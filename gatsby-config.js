@@ -6,8 +6,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    languages,
-    googleVerificationCode: process.env.GOOGLE_VERIFICATION_KEY,
+    languages
   },
   plugins: [
       `gatsby-plugin-react-helmet`,

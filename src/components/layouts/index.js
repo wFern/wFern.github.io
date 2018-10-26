@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
 import { navigate } from "gatsby-link"
 import { Icon, Grid, Container, Menu, Dropdown } from 'semantic-ui-react'
 import { getCurrentLangKey, getUrlForLang, getLangs } from 'ptz-i18n'
@@ -113,7 +112,7 @@ const Footer = () => (
   </footer>
 );
 
-const Layout = ({ children, location, data }) => {
+const Layout = ({ children, location }) => {
   const url = location.pathname;
   const {langs, defaultLangKey} = languages;
   const langKey = getCurrentLangKey(langs, defaultLangKey, url);
@@ -127,7 +126,8 @@ const Layout = ({ children, location, data }) => {
         meta={[
           {name: 'description', content: 'Personal website about programing, music, travels, photo etc'},
           {name: 'keywords', content: 'salad_nights, programing, cycling, music, photo'},
-          {name: 'google-site-verification', content: `${data.site.siteMetadata.googleVerificationCode}`}
+          {name: 'google-site-verification', content: 'tWU-UkQ8xYnFI-yN9VscdZhq3YBXjtLNKz_04-8iipE'}
+          {name: 'yandex-verification', content: 'b096def4ace8d53c'}
         ]}
       />
       <Header langs={langsMenu} langKey={langKey}/>
@@ -141,20 +141,7 @@ const Layout = ({ children, location, data }) => {
   )
 };
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query LayoutQuery {
-        site{
-          siteMetadata{
-            googleVerificationCode
-          }
-        }
-      }
-    `}
-    render={data => <Layout data={data} {...props}/>}
-  />
-)
+export default Layout;
 
 Layout.propTypes = {
   children: PropTypes.object,
