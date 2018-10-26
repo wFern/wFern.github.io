@@ -126,10 +126,10 @@ const Layout = ({ children, location }) => {
         meta={[
           {name: 'description', content: 'Personal website about programing, music, travels, photo etc'},
           {name: 'keywords', content: 'salad_nights, programing, cycling, music, photo'},
-          {name: 'google-site-verification', content: 'tWU-UkQ8xYnFI-yN9VscdZhq3YBXjtLNKz_04-8iipE'},
-          {name: 'yandex-verification', content: 'b096def4ace8d53c'}
         ]}
-      />
+      >
+        <html lang={langKey} />
+      </Helmet>
       <Header langs={langsMenu} langKey={langKey}/>
       <main className={classes.ContentContainer}>
         <Container>
