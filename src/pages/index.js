@@ -39,7 +39,10 @@ export const pageQuery = graphql`
       siteMetadata{
         languages {
           defaultLangKey
-          langs{ ... }
+          langs{
+            ru,
+            en
+          }
         }
       }
     }
