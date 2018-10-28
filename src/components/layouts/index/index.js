@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import { navigate } from "gatsby-link"
 import { Icon, Grid, Container, Menu, Dropdown } from 'semantic-ui-react'
@@ -15,39 +14,33 @@ const Footer = () => (
   <footer
     className={classes.Footer}
   >
-    <Container>
-      <Grid divided='vertically'>
-        <Grid.Row>
-          <a href="https://www.facebook.com/salad.nights" target="_blank" rel="noopener noreferrer">
-            <Icon link name='facebook' size="huge"/>
-          </a>
-          <a href="https://twitter.com/salad_nights" target="_blank" rel="noopener noreferrer">
-            <Icon link name='twitter' size="huge"/>
-          </a>
-          <a href="https://www.linkedin.com/in/andrei-tarasov" target="_blank" rel="noopener noreferrer">
-            <Icon link name='linkedin' size="huge"/>
-          </a>
-          <a href="https://github.com/saladNights" target="_blank" rel="noopener noreferrer">
-            <Icon link name='github' size="huge"/>
-          </a>
-          <a href="https://codepen.io/salad_nights/" target="_blank" rel="noopener noreferrer">
-            <Icon link name='codepen' size="huge"/>
-          </a>
-          <a href="https://bandcamp.com/salad_nights/" target="_blank" rel="noopener noreferrer">
-            <Icon link name='bandcamp' size="huge"/>
-          </a>
-          <a href="https://www.mixcloud.com/andrey-ivanov19/" target="_blank" rel="noopener noreferrer">
-            <Icon link name='mixcloud' size="huge"/>
-          </a>
-          <a href="https://500px.com/salad_nights" target="_blank" rel="noopener noreferrer">
-            <Icon link name='500px' size="huge"/>
-          </a>
-          <a href="https://www.strava.com/athletes/salad_nights" target="_blank">
-            <Icon link name='strava' size="huge"/>
-          </a>
-        </Grid.Row>
-      </Grid>
-    </Container>
+    <a href="https://www.facebook.com/salad.nights" target="_blank" rel="noopener noreferrer">
+      <Icon link name='facebook' size="huge" className={classes.spacedIcon}/>
+    </a>
+    <a href="https://twitter.com/salad_nights" target="_blank" rel="noopener noreferrer">
+      <Icon link name='twitter' size="huge" className={classes.spacedIcon}/>
+    </a>
+    <a href="https://www.linkedin.com/in/andrei-tarasov" target="_blank" rel="noopener noreferrer">
+      <Icon link name='linkedin' size="huge" className={classes.spacedIcon}/>
+    </a>
+    <a href="https://github.com/saladNights" target="_blank" rel="noopener noreferrer">
+      <Icon link name='github' size="huge" className={classes.spacedIcon}/>
+    </a>
+    <a href="https://codepen.io/salad_nights/" target="_blank" rel="noopener noreferrer">
+      <Icon link name='codepen' size="huge" className={classes.spacedIcon}/>
+    </a>
+    <a href="https://bandcamp.com/salad_nights/" target="_blank" rel="noopener noreferrer">
+      <Icon link name='bandcamp' size="huge" className={classes.spacedIcon}/>
+    </a>
+    <a href="https://www.mixcloud.com/andrey-ivanov19/" target="_blank" rel="noopener noreferrer">
+      <Icon link name='mixcloud' size="huge" className={classes.spacedIcon}/>
+    </a>
+    <a href="https://500px.com/salad_nights" target="_blank" rel="noopener noreferrer">
+      <Icon link name='500px' size="huge" className={classes.spacedIcon}/>
+    </a>
+    <a href="https://www.strava.com/athletes/salad_nights" target="_blank">
+      <Icon link name='strava' size="huge" className={classes.spacedIcon}/>
+    </a>
   </footer>
 );
 
@@ -102,6 +95,6 @@ const Layout = ({ children, location }) => {
 export default Layout;
 
 Layout.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.array,
   location: PropTypes.object
 };
