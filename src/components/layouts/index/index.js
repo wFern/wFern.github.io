@@ -105,8 +105,3 @@ Layout.propTypes = {
   children: PropTypes.object,
   location: PropTypes.object
 };
-
-// Header.propTypes = {
-//   langs: PropTypes.array,
-//   langKey: PropTypes.string,
-// };

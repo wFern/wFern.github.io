@@ -59,8 +59,8 @@ module.exports = {
         name: "salad_nights",
         short_name: "salad_nights",
         start_url: "/",
-        background_color: "#000506",
-        theme_color: "#DCAE61",
+        background_color: "#ffffff",
+        theme_color: "#2611E3",
         display: "minimal-ui",
         icon: "src/assets/img/salad_nights_icon.png", // This path is relative to the root of the site.
       },
