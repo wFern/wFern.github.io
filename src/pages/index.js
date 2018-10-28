@@ -10,7 +10,7 @@ class RedirectIndex extends React.PureComponent {
         // Skip build, Browsers only
         if (typeof window !== 'undefined') {
           const { langs, defaultLangKey } = args.data.site.siteMetadata.languages;
-          const langKey = getUserLangKey(langs, defaultLangKey);
+          const langKey = getUserLangKey(Object.keys(langs), defaultLangKey);
           const homeUrl = withPrefix(`/${langKey}/`);
 
           // I don`t think this is the best solution

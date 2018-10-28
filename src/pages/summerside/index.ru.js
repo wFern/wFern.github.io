@@ -1,8 +1,8 @@
-import React from 'react';
-import { CSSTransition } from 'react-transition-group';
-import Layout from '../components/layouts/summersideLayout';
-import RouteMap from '../components/RouteMap';
-import Gallery from '../components/Gallery';
+import React from 'react'
+import { CSSTransition } from 'react-transition-group'
+import Layout from '../../components/layouts/summerside/summerside'
+import RouteMap from '../../components/RouteMap/index'
+import Gallery from '../../components/Gallery/index'
 
 class SummersidePage extends React.PureComponent {
   constructor(props) {

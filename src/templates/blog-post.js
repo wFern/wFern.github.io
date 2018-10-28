@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 
-// import '../css/blog-post.css'; // make it pretty!
+// import '../css/blog-posts-post.css'; // make it pretty!
 
 export default function Template({
                                      data, // this prop will be injected by the GraphQL query we'll write in a bit

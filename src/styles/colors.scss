@@ -1,12 +1,15 @@
 //Names
-$lightBlack: #000506;
-$drover: #FEF2AB;
-$cuttySark: #4F7379;
-$equator: #DCAE61;
-$spectra: #385A5C;
+$black: #000;
+$white: #fff;
+$blue: #2611E3;
+$chetwodeBlue: #758ED7;
+$nandor: #49514E;
+
 
 //Roles
-$darkBackground: $lightBlack;
-$text: $drover;
-$linkHover: $equator;
-$linkActive: $spectra;
+$darkBackground: $black;
+$lightBackground: $white;
+$text: $black;
+$link: $blue;
+$linkHover: $chetwodeBlue;
+$linkActive: $nandor;

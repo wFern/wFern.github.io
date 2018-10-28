@@ -54,7 +54,7 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
 
     return new Promise((resolve, reject) => {
         if (page.path.match(/^\/summerside/)) {
-            page.layout = "summersideLayout";
+            page.layout = "summerside";
             createPage(page);
         }
 

@@ -1,17 +1,14 @@
 @import "./colors.scss";
 
 a{
-  color: $equator !important;
+  color: $link !important;
+  text-decoration: none !important;
 
-  &:hover, &:focus, &:active{
-    color: $cuttySark !important;
+  &:hover, &:focus{
+    color: $linkHover !important;
   }
-}
 
-h4{
-  font-size: 1.6rem !important;
-}
-
-.margined {
-  margin: 1em !important;
+  &:active{
+    color: $linkActive !important;
+  }
 }

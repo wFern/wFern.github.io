@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
-import Layout from '../components/layouts/index';
+import Layout from '../../components/layouts/index/index';
 
 // import '../css/Gallery.scss'; // add some style if you want!
 
