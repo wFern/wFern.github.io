@@ -1,6 +1,7 @@
 .title {
   font-weight: 300 !important;
-  font-size: 3em; }
+  font-size: 3em;
+  line-height: .9; }
   @media (max-width: 768px) {
     .title {
       font-size: 2.6em; } }
@@ -10,7 +11,9 @@
 
 .subTitle {
   font-weight: 300 !important;
-  font-size: 2.8em; }
+  font-size: 2.8em;
+  line-height: .9;
+  margin-bottom: 1.2em; }
   @media (max-width: 768px) {
     .subTitle {
       font-size: 2em; } }

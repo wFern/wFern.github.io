@@ -1,0 +1,42 @@
+@import "./colors.scss";
+
+.Link{
+  color: $link !important;
+  text-decoration: none !important;
+  position: relative;
+
+  &:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -8%;
+    left: 0;
+    background: $link;
+    opacity: 0;
+    transition: all .25s linear;
+  }
+  &:after{
+    content: "";
+    position: absolute;
+    bottom: calc(-8% - 3px);
+    left: 0;
+    border: solid $link;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    opacity: 0;
+    transition: all .25s linear;
+  }
+
+  &:hover:before, &:focus:before{
+    width: 99%;
+    opacity: 1;
+  }
+
+  &:hover:after, &:focus:after{
+    left: calc(99% - 7px);
+    opacity: 1;
+  }
+}

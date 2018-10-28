@@ -45,6 +45,20 @@
   margin-bottom: .3em !important;
 }
 
+.IconLink{
+  :global{
+    i{
+      opacity: 1 !important;
+    }
+  }
+  &:before{
+    bottom: -1.5em !important;
+  }
+  &:after{
+    bottom: calc(-1.5em - 3px) !important;
+  }
+}
+
 .Footer{
   padding: 25px 45px;
 }

@@ -7,6 +7,7 @@ import { getCurrentLangKey, getUrlForLang, getLangs } from 'ptz-i18n'
 import 'semantic-ui-css/semantic.min.css'
 import '../../../styles/main.scss'
 import classes from './index.module.scss'
+import commonClasses from '../../../styles/elements.module.scss'
 
 const languages = require('../../../data/languages');
 
@@ -14,31 +15,31 @@ const Footer = () => (
   <footer
     className={classes.Footer}
   >
-    <a href="https://www.facebook.com/salad.nights" target="_blank" rel="noopener noreferrer">
+    <a className={[classes.IconLink, commonClasses.Link].join(' ')} href="https://www.facebook.com/salad.nights" target="_blank" rel="noopener noreferrer">
       <Icon link name='facebook' size="huge" className={classes.spacedIcon}/>
     </a>
-    <a href="https://twitter.com/salad_nights" target="_blank" rel="noopener noreferrer">
+    <a className={[classes.IconLink, commonClasses.Link].join(' ')} href="https://twitter.com/salad_nights" target="_blank" rel="noopener noreferrer">
       <Icon link name='twitter' size="huge" className={classes.spacedIcon}/>
     </a>
-    <a href="https://www.linkedin.com/in/andrei-tarasov" target="_blank" rel="noopener noreferrer">
+    <a className={[classes.IconLink, commonClasses.Link].join(' ')} href="https://www.linkedin.com/in/andrei-tarasov" target="_blank" rel="noopener noreferrer">
       <Icon link name='linkedin' size="huge" className={classes.spacedIcon}/>
     </a>
-    <a href="https://github.com/saladNights" target="_blank" rel="noopener noreferrer">
+    <a className={[classes.IconLink, commonClasses.Link].join(' ')} href="https://github.com/saladNights" target="_blank" rel="noopener noreferrer">
       <Icon link name='github' size="huge" className={classes.spacedIcon}/>
     </a>
-    <a href="https://codepen.io/salad_nights/" target="_blank" rel="noopener noreferrer">
+    <a className={[classes.IconLink, commonClasses.Link].join(' ')} href="https://codepen.io/salad_nights/" target="_blank" rel="noopener noreferrer">
       <Icon link name='codepen' size="huge" className={classes.spacedIcon}/>
     </a>
-    <a href="https://bandcamp.com/salad_nights/" target="_blank" rel="noopener noreferrer">
+    <a className={[classes.IconLink, commonClasses.Link].join(' ')} href="https://bandcamp.com/salad_nights/" target="_blank" rel="noopener noreferrer">
       <Icon link name='bandcamp' size="huge" className={classes.spacedIcon}/>
     </a>
-    <a href="https://www.mixcloud.com/andrey-ivanov19/" target="_blank" rel="noopener noreferrer">
+    <a className={[classes.IconLink, commonClasses.Link].join(' ')} href="https://www.mixcloud.com/andrey-ivanov19/" target="_blank" rel="noopener noreferrer">
       <Icon link name='mixcloud' size="huge" className={classes.spacedIcon}/>
     </a>
-    <a href="https://500px.com/salad_nights" target="_blank" rel="noopener noreferrer">
+    <a className={[classes.IconLink, commonClasses.Link].join(' ')} href="https://500px.com/salad_nights" target="_blank" rel="noopener noreferrer">
       <Icon link name='500px' size="huge" className={classes.spacedIcon}/>
     </a>
-    <a href="https://www.strava.com/athletes/salad_nights" target="_blank">
+    <a className={[classes.IconLink, commonClasses.Link].join(' ')} href="https://www.strava.com/athletes/salad_nights" target="_blank">
       <Icon link name='strava' size="huge" className={classes.spacedIcon}/>
     </a>
   </footer>
@@ -59,7 +60,7 @@ const Layout = ({ children, location }) => {
   });
   const langsMenuElement = (
     <a
-      className={classes.langSwitcher}
+      className={[classes.langSwitcher, commonClasses.Link].join(' ')}
       onClick={(e) => {e.preventDefault(); navigate(`/${langOption[0].key}/`)}}
     >
       {langOption[0].label}
