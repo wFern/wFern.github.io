@@ -1,16 +1,25 @@
 .title {
+  font-weight: 300 !important;
   font-size: 3em; }
   @media (max-width: 768px) {
     .title {
       font-size: 2.6em; } }
+  @media (max-width: 425px) {
+    .title {
+      font-size: 2.3em; } }
 
 .subTitle {
+  font-weight: 300 !important;
   font-size: 2.8em; }
   @media (max-width: 768px) {
     .subTitle {
       font-size: 2em; } }
+  @media (max-width: 425px) {
+    .subTitle {
+      font-size: 1.7em; } }
 
 .heading {
+  font-weight: 300 !important;
   font-size: 2em; }
 
 .List {

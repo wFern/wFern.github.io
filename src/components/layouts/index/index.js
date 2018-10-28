@@ -78,14 +78,12 @@ const Layout = ({ children, location }) => {
         <html lang={langKey} />
       </Helmet>
       <main className={classes.ContentContainer}>
-        <Container>
-          <Menu secondary size='large' className={classes.langSwitcherMenu}>
-            <Menu.Menu position='right' size='small'>
-              {langsMenuElement}
-            </Menu.Menu>
-          </Menu>
-          {children}
-        </Container>
+        <Menu secondary size='large' className={classes.langSwitcherMenu}>
+          <Menu.Menu position='right' size='small'>
+            {langsMenuElement}
+          </Menu.Menu>
+        </Menu>
+        {children}
       </main>
       <Footer/>
     </div>
