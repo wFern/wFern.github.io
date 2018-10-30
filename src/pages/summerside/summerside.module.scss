@@ -1,9 +1,30 @@
-//section{
-//  padding: 1em;
-//  max-width: 650px;
-//  margin: 0 auto;
-//}
-//
+@import url('https://fonts.googleapis.com/css?family=PT+Mono&amp;subset=cyrillic,cyrillic-ext,latin-ext');
+
+.wrapper{
+  padding: 1em;
+  max-width: 70%;
+  font-size: 1.8em;
+}
+
+.mapWrapper{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #3D5958;
+  box-shadow: inset 2px -30px 15px -15px #fff;
+}
+.mapHeader{
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  color: #fff;
+  :global {
+    h2{
+      color: #fff;
+      font-family: 'PT Mono', monospace;
+    }
+  }
+}
 //a{
 //  color: #F1DB8E;
 //  text-decoration: underline;

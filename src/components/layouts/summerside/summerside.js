@@ -1,39 +1,39 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import 'semantic-ui-css/semantic.min.css';
-import '../index/index.module.scss';
-import './summerside.scss';
+import React from 'react'
+import Helmet from 'react-helmet'
+import 'semantic-ui-css/semantic.min.css'
+import '../index/index.module.scss'
+import classes from './summersideLayout.module.scss'
+import PropTypes from "prop-types"
+import { getCurrentLangKey } from "ptz-i18n";
 
-const summerside = ({children}) => {
+const languages = require('../../../data/languages');
 
-    return (
-        <div
-            style={{
-                display: 'flex',
-                minHeight: '100vh',
-                flexDirection: 'column',
-            }}
-        >
-            <Helmet
-                title="wFern"
-                meta={[
-                    {name: 'description', content: 'Personal website about programing, music, photo etc'},
-                    {name: 'keywords', content: 'wfern, programing, music, photo'},
-                ]}
-            />
-            <div
-                style={{
-                    flex: 1,
-                    color: '#000',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                }}
-            >
-                {children}
-            </div>
-        </div>
-    )
-}
+const Summerside = ({ children, location }) => {
 
-export default summerside;
+  const url = location.pathname;
+  const {langs, defaultLangKey} = languages;
+  const langsKeys = Object.keys(langs);
+  const langKey = getCurrentLangKey(langsKeys, defaultLangKey, url);
+
+  return (
+    <div className={classes.wrapper}>
+      <Helmet
+        title="Summerside. Велопутешествие"
+        meta={[
+          {name: 'description', content: 'Summerside. Двухэтапное велопутешествие по Европе. 2000 км, 24 дня езды, бесконечное количество впечатлений.'},
+          {name: 'keywords', content: 'salad_nights, велотур, велопутешествие, европа, велотрип'},
+        ]}
+      >
+        <html lang={langKey} />
+      </Helmet>
+      {children}
+    </div>
+  )
+};
+
+export default Summerside;
+
+Summerside.propTypes = {
+  children: PropTypes.object,
+  location: PropTypes.object
+};

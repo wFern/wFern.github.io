@@ -3,6 +3,7 @@ import { CSSTransition } from 'react-transition-group'
 import Layout from '../../components/layouts/summerside/summerside'
 import RouteMap from '../../components/RouteMap/index'
 import Gallery from '../../components/Gallery/index'
+import classes from './summerside.module.scss'
 
 class SummersidePage extends React.PureComponent {
   constructor(props) {
@@ -44,31 +45,10 @@ class SummersidePage extends React.PureComponent {
 
   render(){
     return (
-      <Layout>
-        <div
-          style={{
-            width: '100%',
-            backgroundColor: '#63806C',
-            color: '#FCECC3'
-          }}
-        >
-          <div
-            style={{
-              width: '100%',
-              height: '100vh',
-              overflow: 'hidden',
-              backgroundColor: '#3D5958',
-              boxShadow: 'inset 2px -30px 15px -15px rgba(99,128,108,1)'
-            }}
-            ref={this.setContainerTopRef}
-          >
-            <div
-              style={{
-                position: 'absolute',
-                top: '10%',
-                left: '5%'
-              }}
-            >
+      <Layout location={this.props.location}>
+        <main>
+          <div className={classes.mapWrapper} ref={this.setContainerTopRef}>
+            <div className={classes.mapHeader}>
               <h2>Summerside</h2>
               <p>
                 Двухэтапное велопутешествие по Европе. <br/>
@@ -80,7 +60,7 @@ class SummersidePage extends React.PureComponent {
               height={this.state.containerTopHeight}
             />
           </div>
-          <section>
+          <div className={classes.wrapper}>
             <p>
               Мы - Алена и Андрей. Летом 2018 мы отправились с велосипедами в Европу. Путешествие заняло 44 дня, 24 из которых - в седле. Заезд разделился на два этапа, Калининград - Амстердам и Копенгаген - Стокгольм. В сумме на велосипедах мы проехали более 2000 км. Здесь наша короткая история с маршрутом, фотографиями и некоторыми комментариями.
             </p>
@@ -212,7 +192,7 @@ class SummersidePage extends React.PureComponent {
             <p>
               После нескольких часов на вокзале велосипеды были собраны и началось.
             </p>
-          </section>
+          </div>
           <Gallery/>
           <section>
             <p>
@@ -220,7 +200,7 @@ class SummersidePage extends React.PureComponent {
             </p>
             <p>Больше фотографий дорог, полей и ветрогенераторов в альбоме на <a href="https://photos.app.goo.gl/3uWWih4ncY8uQAMw5">Google Photos</a></p>
           </section>
-        </div>
+        </main>
       </Layout>
     )
   }
