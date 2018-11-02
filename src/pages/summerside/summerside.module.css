@@ -1,8 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;subset=cyrillic");
 .wrapper {
-  padding: 1em;
-  max-width: 70%;
-  font-size: 1.8em; }
+  font-size: 1.5em; }
+  .wrapper :global section {
+    line-height: 1.4285em; }
+
+.textContainer {
+  padding: 50px;
+  max-width: 75%; }
+
+.textHighlighted {
+  background-color: rgba(200, 73, 48, 0.75);
+  padding: .2em; }
 
 .mapWrapper {
   width: 100%;
@@ -12,10 +20,10 @@
   .mapWrapper:after {
     content: '';
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 15px;
     box-shadow: inset 2px -30px 15px -15px #fff; }
 
 .mapHeader {
@@ -26,12 +34,19 @@
   .mapHeader :global h2 {
     max-width: 50%;
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.125em;
+    font-size: 2.43em;
     text-transform: uppercase; }
   .mapHeader :global h3 {
     max-width: 50%;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.3125em;
+    font-size: 1.5em;
     text-transform: uppercase; }
+
+.intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover; }
 
 /*# sourceMappingURL=summerside.module.css.map */
