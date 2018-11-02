@@ -6,20 +6,16 @@ import Gallery from '../../components/Gallery/index'
 import classes from './summerside.module.scss'
 
 class SummersidePage extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.containerTop = null;
 
-    this.setContainerTopRef = element => {
-      this.containerTop = element;
-    };
+  state = {
+    containerTopWidth: 0,
+    containerTopHeight: 0,
+    showGear: false
+  };
 
-    this.state = {
-      containerTopWidth: 0,
-      containerTopHeight: 0,
-      showGear: false
-    }
-  }
+  setContainerTopRef = element => {
+    this.containerTop = element;
+  };
 
   componentDidMount(){
     window.addEventListener('resize', this.resizeMap);
@@ -37,10 +33,12 @@ class SummersidePage extends React.PureComponent {
 
   resizeMap = () => {
     const containerTopNode = this.containerTop;
-    this.setState({
-      containerTopWidth: containerTopNode.clientWidth,
-      containerTopHeight: containerTopNode.clientHeight,
-    });
+    if(window !== undefined){
+      this.setState({
+        containerTopWidth: window.innerWidth,
+        containerTopHeight: containerTopNode.clientHeight,
+      });
+    }
   };
 
   render(){
@@ -49,11 +47,12 @@ class SummersidePage extends React.PureComponent {
         <main>
           <div className={classes.mapWrapper} ref={this.setContainerTopRef}>
             <div className={classes.mapHeader}>
-              <h2>Summerside</h2>
-              <p>
-                Двухэтапное велопутешествие по Европе. <br/>
-                2000 км, 24 дня езды, &#8734; впечатлений.
-              </p>
+              <h2>
+                Двухэтапное велопутешествие по&nbsp;Европе.
+              </h2>
+              <h3>
+                2000&nbsp;км, 24&nbsp;дня&nbsp;езды, &#8734;&nbsp;впечатлений.
+              </h3>
             </div>
             <RouteMap
               width={this.state.containerTopWidth}

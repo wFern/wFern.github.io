@@ -4,12 +4,19 @@ $white: #fff;
 $blue: #2611E3;
 $chetwodeBlue: #758ED7;
 $nandor: #49514E;
+$mojo: #C84930;
 
 
-//Roles
+
+
+//-- Roles
+//- Common
 $darkBackground: $black;
 $lightBackground: $white;
 $text: $black;
 $link: $blue;
 $linkHover: $chetwodeBlue;
 $linkActive: $nandor;
+
+//- Map
+$track: $mojo;

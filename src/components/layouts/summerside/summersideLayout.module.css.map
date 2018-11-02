@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AACQ,yGAAiG;AAEzG,QAAQ;EACN,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,KAAK;EACjB,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,oBAAoB",
+"mappings": "AAAQ,iGAAyF;AAEjG,QAAQ;EACN,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,KAAK;EACjB,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,wBAAwB;EACrC,KAAK,EAAE,IAAI",
 "sources": ["summersideLayout.module.scss"],
 "names": [],
 "file": "summersideLayout.module.css"

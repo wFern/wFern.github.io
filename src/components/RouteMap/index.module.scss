@@ -1,0 +1,22 @@
+@import '../../styles/colors';
+
+.land{
+  fill: $white;
+  stroke: $black;
+  stroke-width: 0.5;
+}
+.track{
+  stroke: $track;
+  stroke-width: 2px;
+}
+.cityMarkOuter{
+  fill: $track;
+}
+.cityMarkInner{
+  fill: $white;
+}
+.cityLabel{
+  fill: $black;
+  font-weight: bold;
+  font-size: .8125em;
+}

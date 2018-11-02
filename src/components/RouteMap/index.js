@@ -8,7 +8,7 @@ import mapData from "../../data/route_map.json";
 import trackData from "../../data/tracks.json";
 import trackData2 from "../../data/tracks2.json";
 
-import './index.scss';
+import classes from './index.module.scss';
 
 class RouteMap extends React.Component {
     constructor(props) {
@@ -123,10 +123,7 @@ class RouteMap extends React.Component {
                             <path
                                 key={ `path-${ i }` }
                                 d={ geoPath().projection(this.projection())(d) }
-                                className="country"
-                                fill="#63806C"
-                                stroke="#8D9D81"
-                                strokeWidth={ 0.5 }
+                                className={classes.land}
                             />
                         ))
                     }
@@ -137,7 +134,7 @@ class RouteMap extends React.Component {
                             <path
                                 key={ `path-${ i }` }
                                 d={ geoPath().projection(this.projection())(d) }
-                                className="track"
+                                className={classes.track}
                                 fill="none"
                             />
                         ))
@@ -149,7 +146,7 @@ class RouteMap extends React.Component {
                             <path
                                 key={ `path-${ i }` }
                                 d={ geoPath().projection(this.projection())(d) }
-                                className="track"
+                                className={classes.track}
                                 fill="none"
                             />
                         ))
@@ -167,21 +164,18 @@ class RouteMap extends React.Component {
                             cx={ projectionVal[0] }
                             cy={ projectionVal[1] }
                             r={ 4 }
-                            fill="#F1DB8E"
-                            className="city__marker"
+                            className={classes.cityMarkOuter}
                           />
                           <circle
                             cx={ projectionVal[0] }
                             cy={ projectionVal[1] }
                             r={ 2 }
-                            fill="#63806C"
-                            className="city__marker"
+                            className={classes.cityMarkInner}
                           />
                           <text
                             dx={ projectionValForLabel1[0] }
                             dy={ projectionValForLabel2[1] }
-                            fill="#000"
-                            className="city__lable"
+                            className={classes.cityLabel}
                           >
                             {d.label}
                           </text>

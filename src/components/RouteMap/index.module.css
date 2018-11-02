@@ -1,0 +1,21 @@
+.land {
+  fill: #fff;
+  stroke: #000;
+  stroke-width: 0.5; }
+
+.track {
+  stroke: #C84930;
+  stroke-width: 2px; }
+
+.cityMarkOuter {
+  fill: #C84930; }
+
+.cityMarkInner {
+  fill: #fff; }
+
+.cityLabel {
+  fill: #000;
+  font-weight: bold;
+  font-size: .8125em; }
+
+/*# sourceMappingURL=index.module.css.map */
