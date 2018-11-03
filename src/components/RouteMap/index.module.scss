@@ -1,8 +1,16 @@
 @import '../../styles/colors';
 
+.link{
+  fill: $mojo;
+  text-decoration: underline;
+
+  &:hover, &:focus{
+    fill: $white;
+  }
+}
 .land{
-  fill: $white;
-  stroke: $black;
+  fill: $black;
+  stroke: $white;
   stroke-width: 0.5;
 }
 .track{
@@ -13,10 +21,10 @@
   fill: $track;
 }
 .cityMarkInner{
-  fill: $white;
+  fill: $black;
 }
 .cityLabel{
-  fill: $black;
+  fill: $white;
   font-weight: bold;
-  font-size: .93em;
+  font-size: 1.5rem;
 }

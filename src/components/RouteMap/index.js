@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import { geoMercator, geoPath } from "d3-geo";
-import { feature } from "topojson-client";
+import { geoMercator, geoPath } from "d3-geo"
+import { feature } from "topojson-client"
 
-import mapData from "../../data/route_map.json";
-import trackData from "../../data/tracks.json";
-import trackData2 from "../../data/tracks2.json";
+import mapData from "../../data/route_map.json"
+import trackData from "../../data/tracks.json"
+import trackData2 from "../../data/tracks2.json"
 
-import classes from './index.module.scss';
+import classes from './index.module.scss'
 
 class RouteMap extends React.Component {
     constructor(props) {
@@ -20,17 +20,17 @@ class RouteMap extends React.Component {
           trackData2: [],
           citiesData: [
               {
-                  label: 'Kaliningrad',
+                  label: <a href="#" className={classes.link}>Kaliningrad</a>, //TODO сделать ссылки на карте и их стили
                   lat: 54.7,
                   long: 20.5
               },
               {
-                  label: 'Malbork',
+                label: <a href="#" className={classes.link}>Malbork</a>,
                   lat: 54.03,
                   long: 19.03
               },
               {
-                  label: 'Wałcz',
+                label: <a href="#" className={classes.link}>Wałcz</a>,
                   lat: 53.27,
                   long: 16.48
               },
@@ -40,22 +40,22 @@ class RouteMap extends React.Component {
                   long: 15.23
               },
               {
-                  label: 'Berlin',
+                label: <a href="#" className={classes.link}>Berlin</a>,
                   lat: 52.52,
                   long: 13.41
               },
               {
-                  label: 'Hannover',
+                label: 'Hannover',
                   lat: 52.38,
                   long: 9.72
               },
               {
-                  label: 'Amsterdam',
+                label: <a href="#" className={classes.link}>Amsterdam</a>,
                   lat: 52.37,
                   long: 4.9
               },
               {
-                  label: 'Copenhagen',
+                label: <a href="#" className={classes.link}>Copenhagen</a>,
                   lat: 55.68,
                   long: 12.57
               },
@@ -70,7 +70,7 @@ class RouteMap extends React.Component {
                   long: 16.18
               },
               {
-                  label: 'Stockholm',
+                label: <a href="#" className={classes.link}>Stockholm</a>,
                   lat: 59.30,
                   long: 18.02
               },

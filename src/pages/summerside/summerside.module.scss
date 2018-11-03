@@ -1,8 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;subset=cyrillic');
 @import '../../styles/colors';
 
-.wrapper{
+//Common
+.textContainer{
+  padding: 50px;
+  max-width: 75%;
+}
+.textHighlighted{
+  background-color: $mojo-75opaque;
+  padding: .2em;
+}
+
+.link{
+  color: $mojo;
+  text-decoration: underline;
+
+  &:hover, &:focus{
+    color: $white;
+  }
+}
+
+//Blocks
+.main{
   font-size: 1.5em;
+  background-color: $black;
+  color: $white;
 
   :global{
     section{
@@ -10,22 +32,14 @@
     }
   }
 }
-
-.textContainer{
-  padding: 50px;
-  max-width: 75%;
-}
-
-.textHighlighted{
-  background-color: $mojo-75opaque;
-  padding: .2em;
-}
-
 .mapWrapper{
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background-color: $white;
+  height: 220vh;
+  background-color: $black;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 
   &:after{
     content: '';
@@ -33,30 +47,57 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 15px;
-    box-shadow: inset 2px -30px 15px -15px $white;
+    height: 30px;
+    box-shadow: inset 2px -30px 15px -15px $black;
   }
 }
-
 .mapHeader{
   position: absolute;
-  top: 50px;
-  left: 50px;
+  padding: 50px 0 0 50px;
   color: $black;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, .75);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   :global {
     h2{
       max-width: 50%;
       font-family: 'Montserrat', sans-serif;
-      font-size: 2.43em;
+      font-size: 3.93rem;
       text-transform: uppercase;
     }
     h3{
       max-width: 50%;
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.5em;
+      font-size: 2.43rem;
       text-transform: uppercase;
     }
   }
+}
+.contentTableSection{
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+}
+.contentTable{
+  list-style: none;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+
+  :global{
+    li {
+      font-weight: bold;
+      margin-bottom: 1em;
+    }
+  }
+}
+.map{
+  position: sticky;
+  top: 0;
 }
 .intro{
   height: 100vh;
@@ -64,8 +105,8 @@
   flex-direction: column;
   justify-content: center;
   background-size: cover;
+  position: relative;
 }
-
 //.spoiler{
 //  margin: 1em 0;
 //  background-color: #8D9D81;

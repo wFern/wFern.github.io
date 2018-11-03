@@ -1,6 +1,12 @@
+.link {
+  fill: #C84930;
+  text-decoration: underline; }
+  .link:hover, .link:focus {
+    fill: #fff; }
+
 .land {
-  fill: #fff;
-  stroke: #000;
+  fill: #000;
+  stroke: #fff;
   stroke-width: 0.5; }
 
 .track {
@@ -11,11 +17,11 @@
   fill: #C84930; }
 
 .cityMarkInner {
-  fill: #fff; }
+  fill: #000; }
 
 .cityLabel {
-  fill: #000;
+  fill: #fff;
   font-weight: bold;
-  font-size: .93em; }
+  font-size: 1.5rem; }
 
 /*# sourceMappingURL=index.module.css.map */
