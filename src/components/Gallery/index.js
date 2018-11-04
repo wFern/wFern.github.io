@@ -181,7 +181,6 @@ class Gallery extends React.PureComponent {
                     {items}
                 </InfiniteScroll>
             </div>
-
         );
     }
 }

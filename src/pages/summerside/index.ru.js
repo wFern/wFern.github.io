@@ -79,15 +79,17 @@ class SummersidePage extends React.PureComponent {
           </div>
           <section id="intro" className={classes.intro}>
             <div className={classes.textContainer}>
-              Мы &mdash; Алена и Андрей. Летом 2018 мы отправились с велосипедами в Европу. <br/>
-              Путешествие заняло 44 дня, 24 из которых &mdash; в седле. Заезд разделился на два этапа, Калининград&nbsp;&mdash;&nbsp;Амстердам и Копенгаген&nbsp;&mdash;&nbsp;Стокгольм. В сумме на велосипедах мы проехали более 2000 км. Здесь наша история с маршрутом, фотографиями и комментариями.
+              <p>
+                Мы &mdash; Алена и Андрей. Летом 2018 мы отправились с велосипедами в Европу. <br/>
+                Путешествие заняло 44 дня, 24 из которых &mdash; в седле. Заезд разделился на два этапа, Калининград&nbsp;&mdash;&nbsp;Амстердам и Копенгаген&nbsp;&mdash;&nbsp;Стокгольм. В сумме на велосипедах мы проехали более 2000 км. Здесь наша история с маршрутом, фотографиями и комментариями.
+              </p>
+              <img
+                className={classes.fullWidth}
+                src={introImg}
+                alt="cyclists bikepacking"
+              />
             </div>
           </section>
-          <img
-            className={classes.fullWidth}
-            src={introImg}
-            alt="cyclists bikepacking"
-          />
           <section id="why">
             <div className={classes.textContainer}>
               <h3>Зачем и как готовились</h3>
@@ -225,7 +227,7 @@ class SummersidePage extends React.PureComponent {
                 (обычные мусорные, но с широкой горловиной) и пищевую пленку.
                 Вот так мы отправились на поезде в Калининград
                 <img
-                  style={{display: 'block', width: '100%', margin: '1em 0'}}
+                  style={{display: 'block', width: '50%', margin: '1em 0'}}
                   src="https://farm2.staticflickr.com/1899/43723828275_7709b7573f_h.jpg"
                   alt="packed bicycles"/>
               </p>

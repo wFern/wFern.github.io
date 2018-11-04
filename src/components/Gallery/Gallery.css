@@ -15,8 +15,7 @@
     flex: 1 1 calc(100%/4);
     max-width: calc(100%/4);
     transition: transform .25s ease 0s;
-    cursor: pointer;
-    border: 1px solid #63806C; }
+    cursor: pointer; }
     .masonry__item:after {
       content: '';
       position: absolute;
@@ -25,10 +24,8 @@
       top: 0;
       bottom: 0;
       opacity: 0; }
-    .masonry__item:hover {
-      transform: scale(0.99); }
-      .masonry__item:hover:after {
-        opacity: .1; }
+    .masonry__item:hover:after {
+      opacity: .1; }
     @media screen and (orientation: landscape) {
       .masonry__item {
         height: calc(100vh/4); } }

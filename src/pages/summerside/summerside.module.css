@@ -92,6 +92,7 @@
   position: relative; }
 
 .spoiler {
+  display: inline-block;
   margin: 1em 0;
   background-color: rgba(200, 73, 48, 0.75);
   border-radius: 4px;

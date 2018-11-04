@@ -115,6 +115,7 @@
 }
 
 .spoiler {
+  display: inline-block;
   margin: 1em 0;
   background-color: $mojo-75opaque;
   border-radius: 4px;
