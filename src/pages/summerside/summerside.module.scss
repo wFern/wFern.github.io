@@ -10,7 +10,6 @@
   background-color: $mojo-75opaque;
   padding: .2em;
 }
-
 .link{
   color: $mojo;
   text-decoration: underline;
@@ -19,9 +18,13 @@
     color: $white;
   }
 }
+.fullWidth{
+  width: 100%;
+}
 
 //Blocks
 .main{
+  width: 100%;
   font-size: 1.5em;
   background-color: $black;
   color: $white;
@@ -29,6 +32,9 @@
   :global{
     section{
       line-height: 1.4285em;
+    }
+    h3{
+      font-size: 2.43rem;
     }
   }
 }
@@ -100,48 +106,50 @@
   top: 0;
 }
 .intro{
-  height: 100vh;
+  min-height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-size: cover;
   position: relative;
 }
-//.spoiler{
-//  margin: 1em 0;
-//  background-color: #8D9D81;
-//  border-radius: 4px;
-//  padding: .5em;
-//
-//  &__title, &__title:active, &__title:focus{
-//    cursor: pointer;
-//    color: #F1DB8E;
-//    font-weight: 600;
-//    text-decoration: underline;
-//    &:hover{
-//      color: inherit;
-//    }
-//  }
-//  &__body{
-//    overflow: hidden;
-//
-//    &-enter{
-//      max-height: 0;
-//      opacity: 0;
-//    }
-//    &-enter-active{
-//      max-height: 1500px;
-//      opacity: 1;
-//      transition: all 500ms linear;
-//    }
-//    &-exit{
-//      max-height: 1500px;
-//      opacity: 1;
-//      transition: all 500ms linear;
-//    }
-//    &-exit-active{
-//      max-height: 0;
-//      opacity: 0;
-//    }
-//  }
-//}
+
+.spoiler {
+  margin: 1em 0;
+  background-color: $mojo-75opaque;
+  border-radius: 4px;
+  padding: .5em;
+  :global{
+    .enter{
+      max-height: 0;
+      opacity: 0;
+    }
+    .enter-active{
+      max-height: 1500px;
+      opacity: 1;
+      transition: all 500ms linear;
+    }
+    .exit{
+      max-height: 1500px;
+      opacity: 1;
+      transition: all 500ms linear;
+    }
+    .exit-active{
+      max-height: 0;
+      opacity: 0;
+    }
+  }
+}
+
+.spoilerTitle, .spoilerTitle:active, .spoilerTitle:focus{
+  cursor: pointer;
+  color: $white;
+  font-weight: bold;
+  text-decoration: underline;
+  &:hover{
+    text-decoration: none;
+  }
+}
+.spoilerBody{
+  overflow: hidden;
+}

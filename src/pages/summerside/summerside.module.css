@@ -13,12 +13,18 @@
   .link:hover, .link:focus {
     color: #fff; }
 
+.fullWidth {
+  width: 100%; }
+
 .main {
+  width: 100%;
   font-size: 1.5em;
   background-color: #000;
   color: #fff; }
   .main :global section {
     line-height: 1.4285em; }
+  .main :global h3 {
+    font-size: 2.43rem; }
 
 .mapWrapper {
   width: 100%;
@@ -78,11 +84,42 @@
   top: 0; }
 
 .intro {
-  height: 100vh;
+  min-height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-size: cover;
   position: relative; }
+
+.spoiler {
+  margin: 1em 0;
+  background-color: rgba(200, 73, 48, 0.75);
+  border-radius: 4px;
+  padding: .5em; }
+  .spoiler :global .enter {
+    max-height: 0;
+    opacity: 0; }
+  .spoiler :global .enter-active {
+    max-height: 1500px;
+    opacity: 1;
+    transition: all 500ms linear; }
+  .spoiler :global .exit {
+    max-height: 1500px;
+    opacity: 1;
+    transition: all 500ms linear; }
+  .spoiler :global .exit-active {
+    max-height: 0;
+    opacity: 0; }
+
+.spoilerTitle, .spoilerTitle:active, .spoilerTitle:focus {
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline; }
+  .spoilerTitle:hover, .spoilerTitle:active:hover, .spoilerTitle:focus:hover {
+    text-decoration: none; }
+
+.spoilerBody {
+  overflow: hidden; }
 
 /*# sourceMappingURL=summerside.module.css.map */
