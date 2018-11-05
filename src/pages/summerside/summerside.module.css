@@ -7,14 +7,46 @@
   background-color: rgba(200, 73, 48, 0.75);
   padding: .2em; }
 
+.fullWidth {
+  width: 100%; }
+
 .link {
   color: #C84930;
   text-decoration: underline; }
   .link:hover, .link:focus {
     color: #fff; }
 
-.fullWidth {
-  width: 100%; }
+.spoiler {
+  display: inline-block;
+  margin: 1em 0;
+  background-color: rgba(200, 73, 48, 0.75);
+  border-radius: 4px;
+  padding: .5em; }
+  .spoiler :global .enter {
+    max-height: 0;
+    opacity: 0; }
+  .spoiler :global .enter-active {
+    max-height: 1500px;
+    opacity: 1;
+    transition: all 500ms linear; }
+  .spoiler :global .exit {
+    max-height: 1500px;
+    opacity: 1;
+    transition: all 500ms linear; }
+  .spoiler :global .exit-active {
+    max-height: 0;
+    opacity: 0; }
+
+.spoilerTitle, .spoilerTitle:active, .spoilerTitle:focus {
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline; }
+  .spoilerTitle:hover, .spoilerTitle:active:hover, .spoilerTitle:focus:hover {
+    text-decoration: none; }
+
+.spoilerBody {
+  overflow: hidden; }
 
 .main {
   width: 100%;
@@ -99,39 +131,10 @@
   background-size: cover;
   position: relative; }
 
+.stickyRouteContainer {
+  height: 100%; }
+
 .end {
   padding-top: 1em; }
-
-.spoiler {
-  display: inline-block;
-  margin: 1em 0;
-  background-color: rgba(200, 73, 48, 0.75);
-  border-radius: 4px;
-  padding: .5em; }
-  .spoiler :global .enter {
-    max-height: 0;
-    opacity: 0; }
-  .spoiler :global .enter-active {
-    max-height: 1500px;
-    opacity: 1;
-    transition: all 500ms linear; }
-  .spoiler :global .exit {
-    max-height: 1500px;
-    opacity: 1;
-    transition: all 500ms linear; }
-  .spoiler :global .exit-active {
-    max-height: 0;
-    opacity: 0; }
-
-.spoilerTitle, .spoilerTitle:active, .spoilerTitle:focus {
-  cursor: pointer;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: underline; }
-  .spoilerTitle:hover, .spoilerTitle:active:hover, .spoilerTitle:focus:hover {
-    text-decoration: none; }
-
-.spoilerBody {
-  overflow: hidden; }
 
 /*# sourceMappingURL=summerside.module.css.map */

@@ -121,7 +121,7 @@ class Gallery extends React.Component {
       } else {
         items.push(
           <div
-            className={classes.item}
+            className={classes.item}key={i}
             key={item.id}
             onClick={(e) => this.photoClickHandler(e, item.index)}
             style={{
@@ -182,7 +182,7 @@ class Gallery extends React.Component {
           loadMore={this.loadPhotos}
           hasMore={this.state.hasMore}
           loader={
-            <div key={0} className={classes.loader}>
+            <div key={'loader'} className={classes.loader}>
               <div className={classes.ldsCss}>
                 <div className={classes.ldsEclipse}>
                   <div/>

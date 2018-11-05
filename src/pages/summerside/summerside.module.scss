@@ -10,6 +10,11 @@
   background-color: $mojo-75opaque;
   padding: .2em;
 }
+.fullWidth{
+  width: 100%;
+}
+
+//Elements
 .link{
   color: $mojo;
   text-decoration: underline;
@@ -18,8 +23,44 @@
     color: $white;
   }
 }
-.fullWidth{
-  width: 100%;
+.spoiler {
+  display: inline-block;
+  margin: 1em 0;
+  background-color: $mojo-75opaque;
+  border-radius: 4px;
+  padding: .5em;
+  :global{
+    .enter{
+      max-height: 0;
+      opacity: 0;
+    }
+    .enter-active{
+      max-height: 1500px;
+      opacity: 1;
+      transition: all 500ms linear;
+    }
+    .exit{
+      max-height: 1500px;
+      opacity: 1;
+      transition: all 500ms linear;
+    }
+    .exit-active{
+      max-height: 0;
+      opacity: 0;
+    }
+  }
+}
+.spoilerTitle, .spoilerTitle:active, .spoilerTitle:focus{
+  cursor: pointer;
+  color: $white;
+  font-weight: bold;
+  text-decoration: underline;
+  &:hover{
+    text-decoration: none;
+  }
+}
+.spoilerBody{
+  overflow: hidden;
 }
 
 //Blocks
@@ -122,46 +163,9 @@
   background-size: cover;
   position: relative;
 }
+.stickyRouteContainer{
+  height: 100%;
+}
 .end{
   padding-top: 1em;
-}
-.spoiler {
-  display: inline-block;
-  margin: 1em 0;
-  background-color: $mojo-75opaque;
-  border-radius: 4px;
-  padding: .5em;
-  :global{
-    .enter{
-      max-height: 0;
-      opacity: 0;
-    }
-    .enter-active{
-      max-height: 1500px;
-      opacity: 1;
-      transition: all 500ms linear;
-    }
-    .exit{
-      max-height: 1500px;
-      opacity: 1;
-      transition: all 500ms linear;
-    }
-    .exit-active{
-      max-height: 0;
-      opacity: 0;
-    }
-  }
-}
-
-.spoilerTitle, .spoilerTitle:active, .spoilerTitle:focus{
-  cursor: pointer;
-  color: $white;
-  font-weight: bold;
-  text-decoration: underline;
-  &:hover{
-    text-decoration: none;
-  }
-}
-.spoilerBody{
-  overflow: hidden;
 }
