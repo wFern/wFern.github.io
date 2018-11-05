@@ -2,7 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import Layout from '../../components/layouts/index/index';
 
-// import '../css/Gallery.scss'; // add some style if you want!
+// import '../css/Gallery.module.scss'; // add some style if you want!
 
 export default function Index({ data, location }) {
   const { edges: posts } = data.allMarkdownRemark;

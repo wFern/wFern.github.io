@@ -3,7 +3,7 @@
 
 //Common
 .textContainer{
-  padding: 50px;
+  padding: 0 50px;
   max-width: 75%;
 }
 .textHighlighted{
@@ -32,9 +32,14 @@
   :global{
     section{
       line-height: 1.4285em;
+      margin-bottom: 2em;
     }
     h3{
-      font-size: 2.43rem;
+      font-size: 3.93rem;
+      margin: 1em 0 .6em;
+    }
+    h4{
+      margin: .8em 0 .5em;
     }
   }
 }
@@ -87,6 +92,10 @@
   position: absolute;
   top: 50%;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
 }
 .contentTable{
   list-style: none;
@@ -106,14 +115,16 @@
   top: 0;
 }
 .intro{
-  min-height: 110vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-size: cover;
   position: relative;
 }
-
+.end{
+  padding-top: 1em;
+}
 .spoiler {
   display: inline-block;
   margin: 1em 0;
