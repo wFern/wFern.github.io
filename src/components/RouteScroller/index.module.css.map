@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,cAAc;EACZ,IAAI,ECYE,OAAK;;ADVb,cAAc;EACZ,IAAI,ECKC,IAAM;;ADHb,UAAU;EACR,IAAI,ECCY,IAAM;EDAtB,WAAW,EAAE,IAAI;EACjB,SAAS,EAAE,MAAM;;AAEnB,MAAM;EACJ,MAAM,ECCA,OAAK;EDAX,YAAY,EAAE,GAAG",
+"sources": ["index.module.scss","../../styles/colors.scss"],
+"names": [],
+"file": "index.module.css"
+}

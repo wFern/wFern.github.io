@@ -1,0 +1,17 @@
+@import '../../styles/colors';
+
+.cityMarkOuter{
+  fill: $track;
+}
+.cityMarkInner{
+  fill: $black;
+}
+.cityLabel{
+  fill: $white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.track{
+  stroke: $track;
+  stroke-width: 4px;
+}

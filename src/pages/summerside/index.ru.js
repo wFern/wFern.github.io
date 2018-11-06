@@ -6,6 +6,7 @@ import Sticker from 'react-stickyfill'
 import Layout from '../../components/layouts/summerside/summerside'
 import RouteMap from '../../components/RouteMap/index'
 import Gallery from '../../components/Gallery/index'
+import RouteScroller from '../../components/RouteScroller'
 
 import classes from './summerside.module.scss'
 
@@ -414,13 +415,20 @@ class SummersidePage extends React.PureComponent {
             </div>
             <Grid columns={2}>
               <Grid.Row>
-                <Grid.Column width={12}>
+                <Grid.Column width={11}>
                   <Gallery comments={comments}/>
                 </Grid.Column>
-                <Grid.Column width={4}>
+                <Grid.Column width={5}>
                   <div className={classes.stickyRouteContainer} ref={this.setScrollRouterRef}>
                     <Sticky context={this.scrollRouterBlock}>
-                      Route
+                      {
+                        this.scrollRouterBlock ?
+                          <RouteScroller
+                            width={this.scrollRouterBlock.offsetWidth}
+                            height={window ? window.innerHeight : null}
+                            // scrollLength={}
+                          /> : null
+                      }
                     </Sticky>
                   </div>
                 </Grid.Column>
@@ -430,7 +438,7 @@ class SummersidePage extends React.PureComponent {
           <section id="end" className={classes.end}>
             <div className={classes.textContainer}>
               <p>
-                Конечно, за 44 дня произошло намного больше событий. Нам нравится рассказывать о них, но не хочется никого утомлять длинными повествованиями. Здесь мы хотели сделать небольшой обзор нашего путешествия чтобы показать, как это может быть. Если вас интересуют какие-то подробности, пишите на почту, в fb или любые другие социалки (ссылки)
+                Конечно, за 44 дня произошло намного больше событий. Нам нравится рассказывать о них, но не хочется утомлять длинными повествованиями. Здесь мы хотели сделать небольшой обзор нашего путешествия чтобы показать, как это может быть. Если вас интересуют какие-то подробности, пишите на почту, в fb или любые другие социалки (ссылки)
               </p>
               <p>
                 Посмотреть больше фотографий дорог, полей и ветрогенераторов можно в альбоме на <a target="_blank" rel="noopener noreferrer" href="https://photos.app.goo.gl/3uWWih4ncY8uQAMw5">Google Photos</a>

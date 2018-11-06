@@ -19,61 +19,61 @@ class RouteMap extends React.Component {
           trackData: [],
           trackData2: [],
           citiesData: [
-              {
-                  label: <a href="#" className={classes.link}>Kaliningrad</a>, //TODO сделать ссылки на карте и их стили
-                  lat: 54.7,
-                  long: 20.5
-              },
-              {
-                label: <a href="#" className={classes.link}>Malbork</a>,
-                  lat: 54.03,
-                  long: 19.03
-              },
-              {
-                label: <a href="#" className={classes.link}>Wałcz</a>,
-                  lat: 53.27,
-                  long: 16.48
-              },
-              {
-                  label: 'Gorzów Wielkopolski',
-                  lat: 52.73,
-                  long: 15.23
-              },
-              {
-                label: <a href="#" className={classes.link}>Berlin</a>,
-                  lat: 52.52,
-                  long: 13.41
-              },
-              {
-                label: 'Hannover',
-                  lat: 52.38,
-                  long: 9.72
-              },
-              {
-                label: <a href="#" className={classes.link}>Amsterdam</a>,
-                  lat: 52.37,
-                  long: 4.9
-              },
-              {
-                label: <a href="#" className={classes.link}>Copenhagen</a>,
-                  lat: 55.68,
-                  long: 12.57
-              },
-              {
-                  label: 'Jönköping',
-                  lat: 57.77,
-                  long: 14.16
-              },
-              {
-                  label: 'Norrköping',
-                  lat: 58.6,
-                  long: 16.18
-              },
-              {
-                label: <a href="#" className={classes.link}>Stockholm</a>,
-                  lat: 59.30,
-                  long: 18.02
-              },
+            {
+                label: <a href="#" className={classes.link}>Kaliningrad</a>, //TODO сделать ссылки на карте и их стили
+                lat: 54.7,
+                long: 20.5
+            },
+            {
+              label: <a href="#" className={classes.link}>Malbork</a>,
+                lat: 54.03,
+                long: 19.03
+            },
+            {
+              label: <a href="#" className={classes.link}>Wałcz</a>,
+                lat: 53.27,
+                long: 16.48
+            },
+            {
+                label: 'Gorzów Wielkopolski',
+                lat: 52.73,
+                long: 15.23
+            },
+            {
+              label: <a href="#" className={classes.link}>Berlin</a>,
+                lat: 52.52,
+                long: 13.41
+            },
+            {
+              label: 'Hannover',
+                lat: 52.38,
+                long: 9.72
+            },
+            {
+              label: <a href="#" className={classes.link}>Amsterdam</a>,
+                lat: 52.37,
+                long: 4.9
+            },
+            {
+              label: <a href="#" className={classes.link}>Copenhagen</a>,
+                lat: 55.68,
+                long: 12.57
+            },
+            {
+                label: 'Jönköping',
+                lat: 57.77,
+                long: 14.16
+            },
+            {
+                label: 'Norrköping',
+                lat: 58.6,
+                long: 16.18
+            },
+            {
+              label: <a href="#" className={classes.link}>Stockholm</a>,
+                lat: 59.30,
+                long: 18.02
+            },
           ]
       };
 
@@ -154,34 +154,32 @@ class RouteMap extends React.Component {
                 </g>
                 {
                   this.state.citiesData.map((d,i) => {
-                    if (typeof this.projection() === 'function') {
-                      let projectionVal = this.projection()([d.long, d.lat]);
-                      let projectionValForLabel1 = this.projection()([d.long - 0.85, d.lat]);
-                      let projectionValForLabel2 = this.projection()([d.long, d.lat + 0.15]);
-                      return (
-                        <g className="city" key={ `g-${ i }` }>
-                          <circle
-                            cx={ projectionVal[0] }
-                            cy={ projectionVal[1] }
-                            r={ 4 }
-                            className={classes.cityMarkOuter}
-                          />
-                          <circle
-                            cx={ projectionVal[0] }
-                            cy={ projectionVal[1] }
-                            r={ 2 }
-                            className={classes.cityMarkInner}
-                          />
-                          <text
-                            dx={ projectionValForLabel1[0] }
-                            dy={ projectionValForLabel2[1] }
-                            className={classes.cityLabel}
-                          >
-                            {d.label}
-                          </text>
-                        </g>
-                      )
-                    }
+                    let projectionVal = this.projection()([d.long, d.lat]);
+                    let projectionValForLabel1 = this.projection()([d.long - 0.85, d.lat]);
+                    let projectionValForLabel2 = this.projection()([d.long, d.lat + 0.15]);
+                    return (
+                      <g className="city" key={ `g-${ i }` }>
+                        <circle
+                          cx={ projectionVal[0] }
+                          cy={ projectionVal[1] }
+                          r={ 4 }
+                          className={classes.cityMarkOuter}
+                        />
+                        <circle
+                          cx={ projectionVal[0] }
+                          cy={ projectionVal[1] }
+                          r={ 2 }
+                          className={classes.cityMarkInner}
+                        />
+                        <text
+                          dx={ projectionValForLabel1[0] }
+                          dy={ projectionValForLabel2[1] }
+                          className={classes.cityLabel}
+                        >
+                          {d.label}
+                        </text>
+                      </g>
+                    )
                   })
                 }
             </svg>

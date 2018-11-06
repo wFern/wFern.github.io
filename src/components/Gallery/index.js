@@ -70,6 +70,7 @@ class Gallery extends React.Component {
         set.splice(i + setCommentCounter, 0, {comment: true, msg: photoItem.msg});
         setCommentCounter++;
       }
+      return null;
     });
 
     if(nextSet.length !== 0){
@@ -121,7 +122,7 @@ class Gallery extends React.Component {
       } else {
         items.push(
           <div
-            className={classes.item}key={i}
+            className={classes.item}
             key={item.id}
             onClick={(e) => this.photoClickHandler(e, item.index)}
             style={{
@@ -131,6 +132,7 @@ class Gallery extends React.Component {
           />
         );
       }
+      return null;
     });
 
     return (
