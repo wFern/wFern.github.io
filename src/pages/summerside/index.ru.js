@@ -421,14 +421,11 @@ class SummersidePage extends React.PureComponent {
                 <Grid.Column width={5}>
                   <div className={classes.stickyRouteContainer} ref={this.setScrollRouterRef}>
                     <Sticky context={this.scrollRouterBlock}>
-                      {
-                        this.scrollRouterBlock ?
-                          <RouteScroller
-                            width={this.scrollRouterBlock.offsetWidth}
-                            height={window ? window.innerHeight : null}
-                            // scrollLength={}
-                          /> : null
-                      }
+                      <RouteScroller
+                        width={window ? (window.innerWidth / 16) * 5 : null}
+                        height={window ? window.innerHeight : null}
+                        // scrollLength={}
+                      />
                     </Sticky>
                   </div>
                 </Grid.Column>

@@ -65,6 +65,7 @@ class RouteScroller extends Component {
   };
 
   projection(){
+    console.log(this.props.width, this.props.height);
     return geoMercator()
       .scale(2500)
       .translate([this.props.width / 2, this.props.height / 2])
