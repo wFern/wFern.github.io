@@ -32,6 +32,11 @@ class RouteScroller extends Component {
         long: 13.41
       },
       {
+        label: 'Магдебург',
+        lat: 52.14,
+        long: 11.62
+      },
+      {
         label: 'Hannover',
         lat: 52.38,
         long: 9.72
@@ -65,7 +70,6 @@ class RouteScroller extends Component {
   };
 
   projection(){
-    console.log(this.props.width, this.props.height);
     return geoMercator()
       .scale(2500)
       .translate([this.props.width / 2, this.props.height / 2])

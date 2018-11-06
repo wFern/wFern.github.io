@@ -11,6 +11,7 @@
 
 .track {
   stroke: #C84930;
-  stroke-width: 4px; }
+  stroke-width: 4px;
+  stroke-dashoffset: 100; }
 
 /*# sourceMappingURL=index.module.css.map */

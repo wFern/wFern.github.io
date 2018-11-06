@@ -11,7 +11,6 @@ import classes from './Gallery.module.scss';
 class Gallery extends React.Component {
   state = {
     pagePhotoCounter: 0,
-    // commentCounter: 0,
     hasMore: true,
     photoSizes: [],
     swiperParams: {
@@ -78,7 +77,6 @@ class Gallery extends React.Component {
         return {
             pagePhotoCounter: prevState.pagePhotoCounter + 1,
             photoSizes: prevState.photoSizes.concat(set),
-            // commentCounter: this.state.commentCounter + setCommentCounter
         };
       });
     } else {
