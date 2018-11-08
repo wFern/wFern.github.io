@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
-import ReactDOM from "react-dom"
-import { geoMercator, geoPath } from "d3"
-import { feature } from "topojson-client"
-import trackData from "../../data/tracks.json"
+import * as d3 from "d3"
+import { geoPath } from "d3-geo"
+import { mesh } from "topojson-client"
+import trackData from "../../data/track1"
 import classes from "./index.module.scss"
 
 
@@ -10,6 +10,9 @@ class RouteScroller extends Component {
 
   state = {
     trackData: [],
+    trackPosition: null,
+    totalLength: 0,
+    calcTrackPosition: 0,
     citiesData: [
       {
         label: 'Kaliningrad',
@@ -69,40 +72,65 @@ class RouteScroller extends Component {
     ]
   };
 
+  setTrackRef = element => {
+    this.track = element;
+  };
+
   projection(){
-    return geoMercator()
+    return d3.geoMercator()
       .scale(2500)
       .translate([this.props.width / 2, this.props.height / 2])
       .center([-41, 38.5])
       .rotate([0, 0, 50])
   }
 
+  drawPath = (trackPosition) => {
+
+    let calcTrackPosition = this.state.totalLength - (this.state.totalLength / 100) * trackPosition;
+
+    this.setState({
+      trackPosition: trackPosition,
+      calcTrackPosition: calcTrackPosition,
+    })
+  };
+
   componentDidMount(){
     if(trackData){
+      const path = geoPath().projection(this.projection());
+      const d = path(mesh(trackData, trackData.objects.track1));
       this.setState({
-        trackData: feature(trackData, trackData.objects.episode1).features,
+        trackData: d,
       })
     }
   }
 
+  componentDidUpdate(prevProps, prevState, snapshot){
+    if(this.state.totalLength === 0){
+      this.setState({
+        totalLength: d3.select(this.track).node().getTotalLength()
+      })
+    }
+    if(this.props.trackPosition !== this.state.trackPosition){
+      this.drawPath(this.props.trackPosition);
+    }
+  }
+
+
   render(){
+
     return (
       <svg
         id="routeScroller"
         width={this.props.width}
         height={this.props.height}
       >
-        <g className="tracks">
-          {
-            this.state.trackData.map((d,i) => (
-              <path
-                key={ `path-${ i }` }
-                d={ geoPath().projection(this.projection())(d) }
-                className={classes.track}
-              />
-            ))
-          }
-        </g>
+        <path
+          ref={this.setTrackRef}
+          d={this.state.trackData}
+          className={classes.track}
+          strokeDasharray={this.state.totalLength}
+          strokeDashoffset={this.state.calcTrackPosition}
+        />
         {
           this.state.citiesData.map((d,i) => {
             let projectionVal = this.projection()([d.long, d.lat]);

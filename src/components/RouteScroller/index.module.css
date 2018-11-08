@@ -12,6 +12,6 @@
 .track {
   stroke: #C84930;
   stroke-width: 4px;
-  stroke-dashoffset: 100; }
+  transition: all 1s linear; }
 
 /*# sourceMappingURL=index.module.css.map */

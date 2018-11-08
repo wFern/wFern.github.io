@@ -14,5 +14,5 @@
 .track{
   stroke: $track;
   stroke-width: 4px;
-  stroke-dashoffset: 100;
+  transition: all 1s linear;
 }
