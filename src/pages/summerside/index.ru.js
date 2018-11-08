@@ -19,13 +19,15 @@ class SummersidePage extends React.PureComponent {
     containerTopWidth: 0,
     containerTopHeight: 0,
     showGear: false,
-    trackPosition: null
+    trackPosition: null,
+    track: 1
   };
 
-  elementVisible = (isVisible, trackPosition) => {
+  elementVisible = (isVisible, trackPosition, track) => {
     if(isVisible){
       this.setState({
-        trackPosition: trackPosition
+        trackPosition: trackPosition,
+        track: track
       });
     }
   };
@@ -35,7 +37,7 @@ class SummersidePage extends React.PureComponent {
       id: '42823041980',
       msg: (
         <VisibilitySensor
-          onChange={(e, trackPosition) => this.elementVisible(e, 0)}
+          onChange={(e) => this.elementVisible(e, 0, 1)}
           partialVisibility={true}
         >
           <div>
@@ -51,7 +53,7 @@ class SummersidePage extends React.PureComponent {
       id: '43723829485',
       msg: (
         <VisibilitySensor
-          onChange={(e, trackPosition) => this.elementVisible(e, 8)}
+          onChange={(e) => this.elementVisible(e, 8, 1)}
           partialVisibility={true}
         >
           <div>
@@ -69,7 +71,7 @@ class SummersidePage extends React.PureComponent {
       id: '29694624077',
       msg: (
         <VisibilitySensor
-          onChange={(e, trackPosition) => this.elementVisible(e, 11)}
+          onChange={(e) => this.elementVisible(e, 11, 1)}
           partialVisibility={true}
         >
           <div>
@@ -85,7 +87,7 @@ class SummersidePage extends React.PureComponent {
       id: '42823050820',
       msg: (
         <VisibilitySensor
-          onChange={(e, trackPosition) => this.elementVisible(e, 27.9)}
+          onChange={(e) => this.elementVisible(e, 27.9, 1)}
           partialVisibility={true}
         >
           <div>
@@ -104,7 +106,7 @@ class SummersidePage extends React.PureComponent {
       id: '44633251481',
       msg: (
         <VisibilitySensor
-          onChange={(e, trackPosition) => this.elementVisible(e, 43.7)}
+          onChange={(e) => this.elementVisible(e, 43.7, 1)}
           partialVisibility={true}
         >
           <div>
@@ -120,7 +122,7 @@ class SummersidePage extends React.PureComponent {
       id: '43914302014',
       msg: (
         <VisibilitySensor
-          onChange={(e, trackPosition) => this.elementVisible(e, 50.55)}
+          onChange={(e) => this.elementVisible(e, 50.55, 1)}
           partialVisibility={true}
         >
           <div>
@@ -136,7 +138,7 @@ class SummersidePage extends React.PureComponent {
       id: '44583236272',
       msg: (
         <VisibilitySensor
-          onChange={(e, trackPosition) => this.elementVisible(e, 73.53)}
+          onChange={(e) => this.elementVisible(e, 73.53, 1)}
           partialVisibility={true}
         >
           <div>
@@ -158,7 +160,7 @@ class SummersidePage extends React.PureComponent {
       id: '42823070450',
       msg: (
         <VisibilitySensor
-          onChange={(e, trackPosition) => this.elementVisible(e, 89.7)}
+          onChange={(e) => this.elementVisible(e, 89.7, 1)}
           partialVisibility={true}
         >
           <div>
@@ -174,7 +176,7 @@ class SummersidePage extends React.PureComponent {
       id: '43914313914',
       msg: (
         <VisibilitySensor
-          onChange={(e, trackPosition) => this.elementVisible(e, 100)}
+          onChange={(e) => this.elementVisible(e, 100, 1)}
           partialVisibility={true}
         >
           <div>
@@ -195,40 +197,55 @@ class SummersidePage extends React.PureComponent {
     {
       id: '43723854595',
       msg: (
-        <div>
-          <h3>Дания</h3>
-          <p>
-            Мы купили билеты на FlixBus до Копенгагена. На некоторых их автобусах есть специальный багажник для велосипедов. Но пользуйтесь этой компанией только в крайних случаях. В момент пересадки наш следующий автобус просто не пришел. Нам пришлось самим искать, как добираться дальше. Все закончилось хорошо, но никакой компенсации мы до сих пор не получили, несмотря на десяток отправленных писем в поддержку.
-          </p>
-          <p>
-            Копенгаген нам не удалось посмотреть, оставалось не так много времени до окончания действия визы. Поэтому мы переночевали одну ночь и двинулись в Швецию.
-          </p>
-        </div>
+        <VisibilitySensor
+          onChange={(e) => this.elementVisible(e, 0, 2)}
+          partialVisibility={true}
+        >
+          <div>
+            <h3>Дания</h3>
+            <p>
+              Мы купили билеты на FlixBus до Копенгагена. На некоторых их автобусах есть специальный багажник для велосипедов. Но пользуйтесь этой компанией только в крайних случаях. В момент пересадки наш следующий автобус просто не пришел. Нам пришлось самим искать, как добираться дальше. Все закончилось хорошо, но никакой компенсации мы до сих пор не получили, несмотря на десяток отправленных писем в поддержку.
+            </p>
+            <p>
+              Копенгаген нам не удалось посмотреть, оставалось не так много времени до окончания действия визы. Поэтому мы переночевали одну ночь и двинулись в Швецию.
+            </p>
+          </div>
+        </VisibilitySensor>
       )
     },
     {
       id: '44633261371',
       msg: (
-        <div>
-          <h3>Швеция</h3>
-          <p>
-            На территории Швеции разрешен дикий кемпинг. Но дело даже не в том, что это официально разрешено, а в том, что здесь очень много красивых и безлюдных мест для этого. Мы почти не останавливались в кемпингах и ставили палатку возле какого-нибудь озера.
-          </p>
-          <p>
-            Здесь не так много велодорожек, но зато дороги почти безлюдные. Стало больше подъемов, повсюду камни и озера. Из всей поездки природа Швеции понравилась больше всего. Мы просто ехали и сутками наслаждались пейзажами.
-          </p>
-        </div>
+        <VisibilitySensor
+          onChange={(e) => this.elementVisible(e, 8.98, 2)}
+          partialVisibility={true}
+        >
+          <div>
+            <h3>Швеция</h3>
+            <p>
+              На территории Швеции разрешен дикий кемпинг. Но дело даже не в том, что это официально разрешено, а в том, что здесь очень много красивых и безлюдных мест для этого. Мы почти не останавливались в кемпингах и ставили палатку возле какого-нибудь озера.
+            </p>
+            <p>
+              Здесь не так много велодорожек, но зато дороги почти безлюдные. Стало больше подъемов, повсюду камни и озера. Из всей поездки природа Швеции понравилась больше всего. Мы просто ехали и сутками наслаждались пейзажами.
+            </p>
+          </div>
+        </VisibilitySensor>
       )
     },
     {
       id: '30763233938',
       msg: (
-        <div>
-          <h4>Стокгольм</h4>
-          <p>
-            К сожалению и здесь у нас не оказалось возможности посмотреть город. Мы просто проехали через центральную часть и загрузились в наш паром. На этом велосипедное приключение закончилось и остальную часть пути мы пробирались домой паромами, автобусами и машинами.
-          </p>
-        </div>
+        <VisibilitySensor
+          onChange={(e) => this.elementVisible(e, 100, 2)}
+          partialVisibility={true}
+        >
+          <div>
+            <h4>Стокгольм</h4>
+            <p>
+              К сожалению и здесь у нас не оказалось возможности посмотреть город. Мы просто проехали через центральную часть и загрузились в наш паром. На этом велосипедное приключение закончилось и остальную часть пути мы пробирались домой паромами, автобусами и машинами.
+            </p>
+          </div>
+        </VisibilitySensor>
       )
     },
   ];
@@ -480,7 +497,7 @@ class SummersidePage extends React.PureComponent {
                         width={window ? (window.innerWidth / 16) * 5 : null}
                         height={window ? window.innerHeight : null}
                         trackPosition={this.state.trackPosition}
-                        // scrollLength={}
+                        track={this.state.track}
                       />
                     </Sticky>
                   </div>
