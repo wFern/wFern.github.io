@@ -14,5 +14,6 @@
 .track{
   stroke: $track;
   stroke-width: 4px;
+  stroke-linejoin: round;
   transition: all 1s linear;
 }
