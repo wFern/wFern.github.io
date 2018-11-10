@@ -11,6 +11,7 @@
   width: 100%; }
 
 .link {
+  cursor: pointer;
   color: #C84930;
   text-decoration: underline; }
   .link:hover, .link:focus {

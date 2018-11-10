@@ -58,7 +58,7 @@ class Gallery extends React.Component {
   };
 
   loadPhotos = () => {
-    let nextSet = photoSizes.slice(this.state.pagePhotoCounter * 10, this.state.pagePhotoCounter * 10 + 10);
+    let nextSet = photoSizes.slice(this.state.pagePhotoCounter * 5, this.state.pagePhotoCounter * 5 + 5);
 
     const set = [...nextSet];
     let setCommentCounter = 0;

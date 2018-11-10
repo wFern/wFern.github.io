@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, animateScroll as scroll } from "react-scroll"
 import { CSSTransition } from 'react-transition-group'
 import { Grid, Sticky } from 'semantic-ui-react'
 import Sticker from 'react-stickyfill'
@@ -321,7 +322,7 @@ class SummersidePage extends React.PureComponent {
           <div className={classes.mapWrapper} ref={this.setContainerTopRef}>
             <div className={classes.mapHeader}>
               <h2>
-                Двухэтапное велопутешествие по&nbsp;Европе.
+                Двухэтапное велопутешествие в&nbsp;Европе.
               </h2>
               <h3>
                 2000&nbsp;км, 24&nbsp;дня&nbsp;езды, &#8734;&nbsp;впечатлений.
@@ -330,11 +331,55 @@ class SummersidePage extends React.PureComponent {
             <section className={classes.contentTableSection}>
               <div className={classes.textContainer}>
                 <ul className={classes.contentTable}>
-                  <li><a className={classes.link} href="#intro">Кто&nbsp;мы</a></li>
-                  <li><a className={classes.link} href="#why">Как&nbsp;собирались</a></li>
-                  <li><a className={classes.link} href="#">Что&nbsp;получилось</a></li>
-                  <li><a className={classes.link} href="#">Как&nbsp;прошло</a></li>
-                  <li><a className={classes.link} href="#">Конец</a></li>
+                  <li>
+                    <Link
+                      to="intro"
+                      className={classes.link}
+                      smooth={true}
+                    >
+                      Кто&nbsp;мы
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="why"
+                      className={classes.link}
+                      smooth={true}
+                      offset={-20}
+                    >
+                      Как&nbsp;собирались
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="get"
+                      className={classes.link}
+                      smooth={true}
+                      offset={-20}
+                    >
+                      Что&nbsp;получилось
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="gallery"
+                      className={classes.link}
+                      smooth={true}
+                      offset={-20}
+                    >
+                      Как&nbsp;прошло
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="end"
+                      className={classes.link}
+                      smooth={true}
+                      offset={-20}
+                    >
+                      Конец
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </section>
@@ -408,7 +453,7 @@ class SummersidePage extends React.PureComponent {
               </div>
             </div>
           </section>
-          <section>
+          <section id="get">
             <div className={classes.textContainer}>
               <h3>Что получилось</h3>
             </div>
@@ -540,6 +585,7 @@ class SummersidePage extends React.PureComponent {
           </section>
           <section id="end" className={classes.end}>
             <div className={classes.textContainer}>
+              <h3>Конец</h3>
               <p>
                 Конечно, за 44 дня произошло намного больше событий. Нам нравится рассказывать о них, но не хочется утомлять длинными повествованиями. Здесь мы хотели сделать небольшой обзор нашего путешествия чтобы показать, как это может быть. Если вас интересуют какие-то подробности, пишите на почту, в fb или любые другие социалки (ссылки)
               </p>
