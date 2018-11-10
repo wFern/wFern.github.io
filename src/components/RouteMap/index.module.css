@@ -1,4 +1,5 @@
 .link {
+  cursor: pointer;
   fill: #C84930;
   text-decoration: underline; }
   .link:hover, .link:focus {

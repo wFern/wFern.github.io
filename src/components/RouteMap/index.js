@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import { geoMercator, geoPath } from "d3-geo"
 import { feature } from "topojson-client"
 
+import { Link } from "react-scroll"
+
 import mapData from "../../data/route_map.json"
 import trackData from "../../data/tracks.json"
 import trackData2 from "../../data/tracks2.json"
@@ -20,57 +22,47 @@ class RouteMap extends React.Component {
           trackData2: [],
           citiesData: [
             {
-                label: <a href="#" className={classes.link}>Kaliningrad</a>, //TODO сделать ссылки на карте и их стили
+                label: <Link to="kaliningrad" smooth={true} offset={-20} className={classes.link}>Kaliningrad</Link>,
                 lat: 54.7,
                 long: 20.5
             },
             {
-              label: <a href="#" className={classes.link}>Malbork</a>,
+              label: <Link to="malbork" smooth={true} offset={-20} className={classes.link}>Malbork</Link>,
                 lat: 54.03,
                 long: 19.03
             },
             {
-              label: <a href="#" className={classes.link}>Wałcz</a>,
+              label: <Link to="walcz" smooth={true} offset={-20} className={classes.link}>Wałcz</Link>,
                 lat: 53.27,
                 long: 16.48
             },
             {
-                label: 'Gorzów Wielkopolski',
-                lat: 52.73,
-                long: 15.23
-            },
-            {
-              label: <a href="#" className={classes.link}>Berlin</a>,
+              label: <Link to="berlin" smooth={true} offset={-20} className={classes.link}>Berlin</Link>,
                 lat: 52.52,
                 long: 13.41
             },
             {
-              label: 'Hannover',
-                lat: 52.38,
-                long: 9.72
-            },
-            {
-              label: <a href="#" className={classes.link}>Amsterdam</a>,
+              label: <Link to="amsterdam" smooth={true} offset={-20} className={classes.link}>Amsterdam</Link>,
                 lat: 52.37,
                 long: 4.9
             },
             {
-              label: <a href="#" className={classes.link}>Copenhagen</a>,
+              label: <Link to="copenhagen" smooth={true} offset={-20} className={classes.link}>Copenhagen</Link>,
                 lat: 55.68,
                 long: 12.57
             },
             {
-                label: 'Jönköping',
+                label: <Link to="jonkoping" smooth={true} offset={-20} className={classes.link}>Jönköping</Link>,
                 lat: 57.77,
                 long: 14.16
             },
             {
-                label: 'Norrköping',
+                label: <Link to="norrkoping" smooth={true} offset={-20} className={classes.link}>Norrköping</Link>,
                 lat: 58.6,
                 long: 16.18
             },
             {
-              label: <a href="#" className={classes.link}>Stockholm</a>,
+              label: <Link to="stockholm" smooth={true} offset={-20} className={classes.link}>Stockholm</Link>,
                 lat: 59.30,
                 long: 18.02
             },

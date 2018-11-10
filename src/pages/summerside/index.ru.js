@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, animateScroll as scroll } from "react-scroll"
+import { Link } from "react-scroll"
 import { CSSTransition } from 'react-transition-group'
 import { Grid, Sticky } from 'semantic-ui-react'
 import Sticker from 'react-stickyfill'
@@ -41,7 +41,7 @@ class SummersidePage extends React.PureComponent {
           onChange={(e) => this.elementVisible(e, 0, 1)}
           partialVisibility={true}
         >
-          <div>
+          <div id="kaliningrad">
             <h4>Калининград</h4>
             <p>
               Чтобы стартовать со свежими силами, мы решили, что лучше переночевать в хостеле и выехать на следующее утро. Остаток дня мы просто гуляли по городу и в Плохом Охотнике(ссылка) нашли самый вкусный хэндмейд тофу.
@@ -75,7 +75,7 @@ class SummersidePage extends React.PureComponent {
           onChange={(e) => this.elementVisible(e, 11, 1)}
           partialVisibility={true}
         >
-          <div>
+          <div id='malbork'>
             <h4>Мальборк</h4>
             <p>
               Из-за дождя пришлось остановиться. Весь день мы провели в замке Мариенбург. Впечатляющее нагромождение красного кирпича площадью 20 га. История этого объекта слишком интересная и заслуживает отдельного рассказа. Начните с Википедии(ссылка на мариенбург)
@@ -91,7 +91,7 @@ class SummersidePage extends React.PureComponent {
           onChange={(e) => this.elementVisible(e, 27.9, 1)}
           partialVisibility={true}
         >
-          <div>
+          <div id='walcz'>
             <h4>Валч</h4>
             <p>
               Три дня в дороге и мы снова застряли. Дожди были слишком сильными и долгими, и мы не могли двигаться. Два дня укрывались от ливня с хостеле рядом с озером для байдарочников-олимпийцев. В Польше, как мы поняли, многие любят этот вид спорта/отдыха. Мы останавливались в нескольких специализированных кемпингах для байдарочников. И там всегда было много народа. Плавают большими группами, семьей, с детьми, по-всякому.
@@ -126,7 +126,7 @@ class SummersidePage extends React.PureComponent {
           onChange={(e) => this.elementVisible(e, 50.55, 1)}
           partialVisibility={true}
         >
-          <div>
+          <div id='berlin'>
             <h4>Берлин</h4>
             <p>
               Три дня мы гостили у нашего друга. Были здесь во второй раз, но хочется вернуться еще. Очень живой город. Всем кто интересуется стрит-артом, город и музей Urban Nation(ссылка) обязательны к посещению.
@@ -180,7 +180,7 @@ class SummersidePage extends React.PureComponent {
           onChange={(e) => this.elementVisible(e, 100, 1)}
           partialVisibility={true}
         >
-          <div>
+          <div id='amsterdam'>
             <h4>Амстердам</h4>
             <p>
               Здесь мы были впервые, хотя уже несколько раз планировали добраться. В этом городе смешиваются сразу несколько любимых штук: корабли, вода и велосипеды. В одно утро мы специально встали пораньше, чтобы объехать вдоль все центральные каналы.
@@ -202,7 +202,7 @@ class SummersidePage extends React.PureComponent {
           onChange={(e) => this.elementVisible(e, 0, 2)}
           partialVisibility={true}
         >
-          <div>
+          <div id='copenhagen'>
             <h3>Дания</h3>
             <p>
               Мы купили билеты на FlixBus до Копенгагена. На некоторых их автобусах есть специальный багажник для велосипедов. Но пользуйтесь этой компанией только в крайних случаях. В момент пересадки наш следующий автобус просто не пришел. Нам пришлось самим искать, как добираться дальше. Все закончилось хорошо, но никакой компенсации мы до сих пор не получили, несмотря на десяток отправленных писем в поддержку.
@@ -240,7 +240,7 @@ class SummersidePage extends React.PureComponent {
           onChange={(e) => this.elementVisible(e, 46.38, 2)}
           partialVisibility={true}
         >
-          <div>
+          <div id='jonkoping'>
             <h4>Йёнчёпинг</h4>
             <p>
               Огромное озеро Веттерн. Около 70 км мы двигались вдоль берега. Снова наблюдали за судами, но уже другими. Здесь не торговые баржи как на канале в Германии, а красивые яхты, парусники и прогулочные катера. И на всем побережьи традиционные красно-белые дома. Почти у каждого водоема стоит такой.
@@ -256,7 +256,7 @@ class SummersidePage extends React.PureComponent {
           onChange={(e) => this.elementVisible(e, 75.06, 2)}
           partialVisibility={true}
         >
-          <div>
+          <div id='norrkoping'>
             <h4>Норрчёпинг</h4>
             <p>
               Здесь уже выход к балтийскому морю и пахнет соленой водой. До Стокгольма оставалось совсем немного, поэтому мы больше фотографировали и отдыхали. <br/>
@@ -273,7 +273,7 @@ class SummersidePage extends React.PureComponent {
           onChange={(e) => this.elementVisible(e, 100, 2)}
           partialVisibility={true}
         >
-          <div>
+          <div id='stockholm'>
             <h4>Стокгольм</h4>
             <p>
               К сожалению и здесь у нас не оказалось возможности посмотреть город. Мы просто проехали через центральную часть и загрузились в наш паром. На этом велосипедное приключение закончилось и остальную часть пути мы пробирались домой паромами, автобусами и машинами.

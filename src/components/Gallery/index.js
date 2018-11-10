@@ -57,35 +57,6 @@ class Gallery extends React.Component {
     showModal: false
   };
 
-  // loadPhotos = () => {
-  //   let nextSet = photoSizes.slice(this.state.pagePhotoCounter * 5, this.state.pagePhotoCounter * 5 + 5);
-  //
-  //   const set = [...nextSet];
-  //   let setCommentCounter = 0;
-  //
-  //   nextSet.map((item, i) => {
-  //     let photoItem = this.props.comments.find(comment => comment.id === item.id);
-  //     if(photoItem !== undefined){
-  //       set.splice(i + setCommentCounter, 0, {comment: true, msg: photoItem.msg});
-  //       setCommentCounter++;
-  //     }
-  //     return null;
-  //   });
-  //
-  //   if(nextSet.length !== 0){
-  //     this.setState((prevState) => {
-  //       return {
-  //           pagePhotoCounter: prevState.pagePhotoCounter + 1,
-  //           photoSizes: prevState.photoSizes.concat(set),
-  //       };
-  //     });
-  //   } else {
-  //     this.setState({
-  //         hasMore: false
-  //     });
-  //   }
-  // };
-
   componentDidMount(){
     let photoWithComments = [...photoSizes];
     let photoItem = null;
