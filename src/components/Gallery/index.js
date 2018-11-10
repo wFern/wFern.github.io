@@ -57,34 +57,50 @@ class Gallery extends React.Component {
     showModal: false
   };
 
-  loadPhotos = () => {
-    let nextSet = photoSizes.slice(this.state.pagePhotoCounter * 5, this.state.pagePhotoCounter * 5 + 5);
+  // loadPhotos = () => {
+  //   let nextSet = photoSizes.slice(this.state.pagePhotoCounter * 5, this.state.pagePhotoCounter * 5 + 5);
+  //
+  //   const set = [...nextSet];
+  //   let setCommentCounter = 0;
+  //
+  //   nextSet.map((item, i) => {
+  //     let photoItem = this.props.comments.find(comment => comment.id === item.id);
+  //     if(photoItem !== undefined){
+  //       set.splice(i + setCommentCounter, 0, {comment: true, msg: photoItem.msg});
+  //       setCommentCounter++;
+  //     }
+  //     return null;
+  //   });
+  //
+  //   if(nextSet.length !== 0){
+  //     this.setState((prevState) => {
+  //       return {
+  //           pagePhotoCounter: prevState.pagePhotoCounter + 1,
+  //           photoSizes: prevState.photoSizes.concat(set),
+  //       };
+  //     });
+  //   } else {
+  //     this.setState({
+  //         hasMore: false
+  //     });
+  //   }
+  // };
 
-    const set = [...nextSet];
+  componentDidMount(){
+    let photoWithComments = [...photoSizes];
+    let photoItem = null;
     let setCommentCounter = 0;
-
-    nextSet.map((item, i) => {
-      let photoItem = this.props.comments.find(comment => comment.id === item.id);
+    photoSizes.map((item, i) => {
+      photoItem = this.props.comments.find(comment => comment.id === item.id);
       if(photoItem !== undefined){
-        set.splice(i + setCommentCounter, 0, {comment: true, msg: photoItem.msg});
+        photoWithComments.splice(i + setCommentCounter, 0, {comment: true, msg: photoItem.msg});
         setCommentCounter++;
       }
-      return null;
     });
-
-    if(nextSet.length !== 0){
-      this.setState((prevState) => {
-        return {
-            pagePhotoCounter: prevState.pagePhotoCounter + 1,
-            photoSizes: prevState.photoSizes.concat(set),
-        };
-      });
-    } else {
-      this.setState({
-          hasMore: false
-      });
-    }
-  };
+    this.setState({
+        photoSizes: photoWithComments
+    });
+  }
 
   photoClickHandler = (event, index) => {
 
@@ -177,22 +193,25 @@ class Gallery extends React.Component {
             }
           </Swiper>
         </div>
-        <InfiniteScroll
-          className={classes.masonry}
-          loadMore={this.loadPhotos}
-          hasMore={this.state.hasMore}
-          loader={
-            <div key={'loader'} className={classes.loader}>
-              <div className={classes.ldsCss}>
-                <div className={classes.ldsEclipse}>
-                  <div/>
-                </div>
-              </div>
-            </div>
-          }
-        >
+        {/*<InfiniteScroll*/}
+          {/*className={classes.masonry}*/}
+          {/*loadMore={this.loadPhotos}*/}
+          {/*hasMore={this.state.hasMore}*/}
+          {/*loader={*/}
+            {/*<div key={'loader'} className={classes.loader}>*/}
+              {/*<div className={classes.ldsCss}>*/}
+                {/*<div className={classes.ldsEclipse}>*/}
+                  {/*<div/>*/}
+                {/*</div>*/}
+              {/*</div>*/}
+            {/*</div>*/}
+          {/*}*/}
+        {/*>*/}
+          {/*{items}*/}
+        {/*</InfiniteScroll>*/}
+        <div className={classes.masonry}>
           {items}
-        </InfiniteScroll>
+        </div>
       </div>
     );
   }
