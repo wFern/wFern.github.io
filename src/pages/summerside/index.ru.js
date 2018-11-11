@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from "react-scroll"
 import { CSSTransition } from 'react-transition-group'
 import { Grid, Sticky } from 'semantic-ui-react'
-import Sticker from 'react-stickyfill'
 import VisibilitySensor from 'react-visibility-sensor'
 
 import Layout from '../../components/layouts/summerside/summerside'
@@ -383,14 +382,14 @@ class SummersidePage extends React.PureComponent {
                 </ul>
               </div>
             </section>
-            <Sticker>
+            <Sticky context={this.containerTop}>
               <div className={classes.map}>
                 <RouteMap
                   width={this.state.containerTopWidth}
                   height={this.state.containerTopHeight}
                 />
               </div>
-            </Sticker>
+            </Sticky>
           </div>
           <section id="intro" className={classes.intro}>
             <div className={classes.textContainer}>

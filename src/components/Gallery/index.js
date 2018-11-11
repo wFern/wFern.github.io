@@ -1,6 +1,5 @@
 import React from 'react'
 
-import InfiniteScroll from 'react-infinite-scroller'
 import Swiper from 'react-id-swiper'
 
 import photoSizes from "../../data/photo_sizes.json"
