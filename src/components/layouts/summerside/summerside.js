@@ -22,6 +22,10 @@ const Summerside = ({ children, location }) => {
         meta={[
           {name: 'description', content: 'Summerside. Двухэтапное велопутешествие по Европе. 2000 км, 24 дня езды, бесконечное количество впечатлений.'},
           {name: 'keywords', content: 'salad_nights, велотур, велопутешествие, европа, велотрип'},
+          {property:'og:title', content: 'Двухэтапное велопутешествие по Европе'},
+          {property:'og:description', content: 'Двухэтапное велопутешествие по Европе. 2000 км, 24 дня езды, бесконечное количество впечатлений.'},
+          {property:'og:type', content: 'article'},
+          {property:'og:url', content: `https://saladnights.site${url}`},
         ]}
       >
         <html lang={langKey} />

@@ -625,16 +625,30 @@ class SummersidePage extends React.PureComponent {
                 <div className={classes.shareTitle}>
                   Поделиться:
                 </div>
-                <FacebookShareButton url={'https://saladnights.site/ru/summerside/'}>
+                <FacebookShareButton
+                  url={'https://saladnights.site/ru/summerside/'}
+                  quote={'Двухэтапное велопутешествие по Европе. 2000 км, 24 дня езды, бесконечное количество впечатлений.'}
+                >
                   <FacebookIcon/>
                 </FacebookShareButton>
-                <VKShareButton url={'https://saladnights.site/ru/summerside/'}>
+                <VKShareButton
+                  url={'https://saladnights.site/ru/summerside/'}
+                  title={'Двухэтапное велопутешествие по Европе'}
+                  description={'Двухэтапное велопутешествие по Европе. 2000 км, 24 дня езды, бесконечное количество впечатлений.'}
+                  // image={}
+                >
                   <VKIcon/>
                 </VKShareButton>
-                <TelegramShareButton url={'https://saladnights.site/ru/summerside/'}>
+                <TelegramShareButton
+                  url={'https://saladnights.site/ru/summerside/'}
+                  title={'Двухэтапное велопутешествие по Европе'}
+                >
                   <TelegramIcon/>
                 </TelegramShareButton>
-                <TwitterShareButton url={'https://saladnights.site/ru/summerside/'}>
+                <TwitterShareButton
+                  url={'https://saladnights.site/ru/summerside/'}
+                  title={'Двухэтапное велопутешествие по Европе'}
+                >
                   <TwitterIcon/>
                 </TwitterShareButton>
               </div>
