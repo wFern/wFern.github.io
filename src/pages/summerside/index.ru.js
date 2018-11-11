@@ -423,23 +423,15 @@ class SummersidePage extends React.PureComponent {
           </div>
           <section id="intro" className={classes.intro}>
             <div className={classes.textContainer}>
-              <Grid verticalAlign='middle' columns={2}>
-                <Grid.Row>
-                  <Grid.Column>
-                    <img
-                      className={classes.fullWidth}
-                      src={introImg}
-                      alt="cyclists bikepacking"
-                    />
-                  </Grid.Column>
-                  <Grid.Column>
-                    <p>
-                      Мы &mdash; Алена и Андрей. Летом 2018 мы отправились с велосипедами в Европу. <br/>
-                      Путешествие заняло 44 дня, 24 из которых &mdash; в седле. Заезд разделился на два этапа, Калининград&nbsp;&mdash;&nbsp;Амстердам и Копенгаген&nbsp;&mdash;&nbsp;Стокгольм. В сумме на велосипедах мы проехали более 2000 км. Здесь наша история с маршрутом, фотографиями и комментариями.
-                    </p>
-                  </Grid.Column>
-                </Grid.Row>
-              </Grid>
+              <p>
+                Мы &mdash; Алена и Андрей. Летом 2018 мы отправились с велосипедами в Европу. <br/>
+                Путешествие заняло 44 дня, 24 из которых &mdash; в седле. Заезд разделился на два этапа, Калининград&nbsp;&mdash;&nbsp;Амстердам и Копенгаген&nbsp;&mdash;&nbsp;Стокгольм. В сумме на велосипедах мы проехали более 2000 км. Здесь наша история с маршрутом, фотографиями и комментариями.
+              </p>
+              <img
+                className={classes.fullWidth}
+                src={introImg}
+                alt="cyclists bikepacking"
+              />
             </div>
           </section>
           <section id="why">
