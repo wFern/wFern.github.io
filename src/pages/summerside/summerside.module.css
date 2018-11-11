@@ -10,34 +10,6 @@
 .fullWidth {
   width: 100%; }
 
-.goToIndex {
-  position: absolute;
-  top: 1em;
-  left: 1em;
-  width: 30px;
-  height: 15px;
-  z-index: 999; }
-  .goToIndex:hover path {
-    fill: #fff; }
-  .goToIndex path {
-    fill: #C84930; }
-
-.scrollTopBtn {
-  display: none;
-  position: fixed;
-  right: 2em;
-  bottom: 1.5em;
-  z-index: 999; }
-  .scrollTopBtn svg {
-    transform: rotate(-90deg);
-    width: 20px;
-    height: 20px;
-    cursor: pointer; }
-    .scrollTopBtn svg:hover path {
-      fill: #fff; }
-  .scrollTopBtn path {
-    fill: #C84930; }
-
 .link {
   cursor: pointer;
   color: #C84930;
@@ -76,6 +48,47 @@
 
 .spoilerBody {
   overflow: hidden; }
+
+.goToIndex {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 30px;
+  height: 15px;
+  z-index: 999; }
+  .goToIndex:hover path {
+    fill: #fff; }
+  .goToIndex path {
+    fill: #C84930; }
+
+.scrollTopBtn {
+  display: none;
+  position: fixed;
+  right: 2em;
+  bottom: 1.5em;
+  z-index: 999; }
+  .scrollTopBtn svg {
+    transform: rotate(-90deg);
+    width: 20px;
+    height: 20px;
+    cursor: pointer; }
+    .scrollTopBtn svg:hover path {
+      fill: #fff; }
+  .scrollTopBtn path {
+    fill: #C84930; }
+
+.shareBlock :global .SocialMediaShareButton {
+  display: inline-block;
+  cursor: pointer; }
+  .shareBlock :global .SocialMediaShareButton:hover, .shareBlock :global .SocialMediaShareButton:active, .shareBlock :global .SocialMediaShareButton:focus {
+    outline: none !important; }
+.shareBlock svg {
+  transition: all .1s linear; }
+  .shareBlock svg:hover {
+    transform: scale(1.1); }
+
+.shareTitle {
+  margin: 1.5em 0 1em; }
 
 .main {
   width: 100%;

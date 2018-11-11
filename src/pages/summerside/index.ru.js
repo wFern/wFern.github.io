@@ -1,10 +1,19 @@
 import React from 'react'
 import {Link as GatsbyLink} from 'gatsby'
-import ReactDOM from 'react-dom'
 import { Link, animateScroll as scroll } from "react-scroll"
 import { CSSTransition } from 'react-transition-group'
 import { Grid, Sticky } from 'semantic-ui-react'
 import VisibilitySensor from 'react-visibility-sensor'
+import {
+  FacebookShareButton,
+  VKShareButton,
+  TelegramShareButton,
+  TwitterShareButton,
+  FacebookIcon,
+  TwitterIcon,
+  TelegramIcon,
+  VKIcon
+} from 'react-share';
 
 import Layout from '../../components/layouts/summerside/summerside'
 import RouteMap from '../../components/RouteMap/index'
@@ -612,6 +621,23 @@ class SummersidePage extends React.PureComponent {
               <p>
                 Посмотреть больше фотографий дорог, полей и ветрогенераторов можно в альбоме на <a target="_blank" rel="noopener noreferrer" href="https://photos.app.goo.gl/3uWWih4ncY8uQAMw5">Google Photos</a>
               </p>
+              <div className={classes.shareBlock}>
+                <div className={classes.shareTitle}>
+                  Поделиться:
+                </div>
+                <FacebookShareButton url={'https://saladnights.site/ru/summerside/'}>
+                  <FacebookIcon/>
+                </FacebookShareButton>
+                <VKShareButton url={'https://saladnights.site/ru/summerside/'}>
+                  <VKIcon/>
+                </VKShareButton>
+                <TelegramShareButton url={'https://saladnights.site/ru/summerside/'}>
+                  <TelegramIcon/>
+                </TelegramShareButton>
+                <TwitterShareButton url={'https://saladnights.site/ru/summerside/'}>
+                  <TwitterIcon/>
+                </TwitterShareButton>
+              </div>
             </div>
           </section>
           <div className={classes.goToIndex}>
