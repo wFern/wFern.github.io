@@ -10,6 +10,18 @@
 .fullWidth {
   width: 100%; }
 
+.goToIndex {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 30px;
+  height: 15px;
+  z-index: 999; }
+  .goToIndex:hover path {
+    fill: #fff; }
+  .goToIndex path {
+    fill: #C84930; }
+
 .scrollTopBtn {
   display: none;
   position: fixed;

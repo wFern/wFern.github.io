@@ -13,6 +13,22 @@
 .fullWidth{
   width: 100%;
 }
+.goToIndex{
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 30px;
+  height: 15px;
+  z-index: 999;
+  &:hover{
+    path{
+      fill: #fff;
+    }
+  }
+  path{
+    fill: $mojo;
+  }
+}
 .scrollTopBtn{
   display: none;
   position: fixed;
