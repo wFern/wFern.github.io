@@ -13,6 +13,27 @@
 .fullWidth{
   width: 100%;
 }
+.scrollTopBtn{
+  display: none;
+  position: fixed;
+  right: 2em;
+  bottom: 1.5em;
+  z-index: 999;
+  svg{
+    transform: rotate(-90deg);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    &:hover{
+      path{
+        fill: #fff;
+      }
+    }
+  }
+  path{
+    fill: $mojo;
+  }
+}
 
 //Elements
 .link{
