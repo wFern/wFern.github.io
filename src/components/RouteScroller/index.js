@@ -81,7 +81,6 @@ const CITIES_DATA2 = [
     totalLength: 0,
     calcTrackPosition: 0,
     citiesData: [],
-    projection: () => {}
   };
 
   setTrackRef = element => {
