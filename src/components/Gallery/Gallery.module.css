@@ -6,7 +6,10 @@
 
 .comment {
   width: 100%;
-  padding: 0 1em 1em 50px; }
+  padding: 0 20px 50px; }
+  @media (min-width: 600px) {
+    .comment {
+      padding: 0 1em 1em 50px; } }
   .comment h3 {
     font-size: 1.8em; }
   .comment h4 {
@@ -14,18 +17,13 @@
 
 .item {
   position: relative;
-  flex: 1 1 calc(100%/4);
-  max-width: calc(100%/4);
-  transition: transform .25s ease 0s;
+  flex: 1 1 calc(100%/2);
+  max-width: calc(100%/2);
   cursor: pointer; }
-  .item:after {
-    content: '';
-    position: absolute;
-    background-color: #68bede;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    opacity: 0; }
+  @media (min-width: 600px) {
+    .item {
+      flex: 1 1 calc(100%/4);
+      max-width: calc(100%/4); } }
   .item:hover:after {
     opacity: .1; }
   @media screen and (orientation: landscape) {
@@ -120,12 +118,16 @@
   justify-content: center;
   align-items: center; }
 :global .swiper-button-next, :global .swiper-button-prev {
+  display: none;
   background-image: none;
   width: 20px;
   height: 40px;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   -webkit-tap-highlight-color: transparent;
   outline: none !important; }
+  @media (min-width: 600px) {
+    :global .swiper-button-next, :global .swiper-button-prev {
+      display: block; } }
   :global .swiper-button-next:focus, :global .swiper-button-prev:focus {
     outline: none !important; }
   :global .swiper-button-next path, :global .swiper-button-prev path {

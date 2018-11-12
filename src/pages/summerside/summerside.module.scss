@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;subset=cyrillic');
 @import '../../styles/colors';
+@import '../../styles/mixin.breakpoints';
 
 //Common
 .textContainer{
-  padding: 0 50px;
-  max-width: 75%;
+  padding: 0 20px;
+
+  @include  for-tablet-portrait-up {
+    padding: 0 50px;
+    max-width: 75%;
+  }
 }
 .textHighlighted{
   background-color: $mojo-75opaque;
@@ -18,7 +23,14 @@
 .link{
   cursor: pointer;
   color: $mojo;
-  text-decoration: underline;
+
+  &:hover, &:focus{
+    color: $black;
+  }
+}
+.linkInverse{
+  cursor: pointer;
+  color: $mojo;
 
   &:hover, &:focus{
     color: $white;
@@ -28,7 +40,7 @@
   display: inline-block;
   margin: 1em 0;
   background-color: $mojo-75opaque;
-  border-radius: 4px;
+  border-radius: 2px;
   padding: .5em;
   :global{
     .enter{
@@ -53,8 +65,7 @@
 }
 .spoilerTitle, .spoilerTitle:active, .spoilerTitle:focus{
   cursor: pointer;
-  color: $white;
-  font-weight: bold;
+  color: $black;
   text-decoration: underline;
   &:hover{
     text-decoration: none;
@@ -92,7 +103,7 @@
     cursor: pointer;
     &:hover{
       path{
-        fill: #fff;
+        fill: #000;
       }
     }
   }
@@ -123,18 +134,25 @@
 //Blocks
 .main{
   width: 100%;
-  font-size: 1.5em;
-  background-color: $black;
-  color: $white;
+  font-size: 1.4em;
+  background-color: $white;
+  color: $black;
+  @include  for-tablet-portrait-up {
+    font-size: 1.5em;
+  }
 
   :global{
     section{
       line-height: 1.4285em;
       margin-bottom: 2em;
     }
+
     h3{
-      font-size: 3.93rem;
+      font-size: 7.8vw;
       margin: 1em 0 .6em;
+      @include  for-tablet-portrait-up {
+        font-size: 3.93rem;
+      }
     }
     h4{
       margin: .8em 0 .5em;
@@ -143,65 +161,77 @@
 }
 .mapWrapper{
   width: 100%;
-  height: 220vh;
+  height: 320vh;
   background-color: $black;
   position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-
-  &:after{
-    content: '';
-    position: absolute;
-    z-index: 999;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    box-shadow: inset 2px -30px 15px -15px $black;
+  @include  for-tablet-portrait-up {
+    height: 230vh;
   }
 }
 .mapHeader{
   position: absolute;
-  padding: 50px 0 0 50px;
-  color: $black;
+  padding: 20px 0 0 20px;
+  color: $white;
   width: 100%;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, .75);
+  height: 110vh;
+  background: url(../../assets/img/pages/summerside/mapheader.jpg) no-repeat center;
+  background-size: cover;
   z-index: 991;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @include  for-tablet-portrait-up {
+    padding: 50px 0 0 50px;
+  }
   :global {
     h2{
       max-width: 50%;
       font-family: 'Montserrat', sans-serif;
-      font-size: 3.93rem;
+      font-size: 7.8vw;
       text-transform: uppercase;
+      @include  for-tablet-portrait-up {
+        font-size: 3.93rem;
+      }
     }
     h3{
       max-width: 50%;
       font-family: 'Montserrat', sans-serif;
-      font-size: 2.43rem;
+      font-size: 4.82vw;
       text-transform: uppercase;
+      @include  for-tablet-portrait-up {
+        font-size: 2.43rem;
+      }
     }
   }
 }
 .contentTableSection{
   position: absolute;
-  top: 50%;
+  top: 115vh;
+  width: 100%;
+  min-height: 110vh;
+  background-color: rgba(0,0,0,.5);
   z-index: 992;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 75vh;
+  @include  for-tablet-portrait-up {
+    background-color: transparent;
+    top: 60%;
+    min-height: auto;
+    width: auto;
+  }
 }
 .contentTable{
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 7.8vw;
   margin: 0;
   padding: 0;
-
+  @include  for-tablet-portrait-up {
+    font-size: 2.43rem;
+  }
   :global{
     li {
       font-weight: bold;
@@ -210,6 +240,8 @@
   }
 }
 .map{
+  width: 100%;
+  overflow: hidden;
   position: sticky;
   top: 0;
 }
@@ -224,6 +256,10 @@
 }
 .stickyRouteContainer{
   height: 100%;
+  overflow: hidden;
+}
+.stickyRouteCol{
+  padding: 0 !important;
 }
 .end{
   padding-top: 1em;

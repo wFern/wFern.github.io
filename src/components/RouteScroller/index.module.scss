@@ -1,17 +1,22 @@
 @import '../../styles/colors';
+@import '../../styles/mixin.breakpoints';
 
 .cityMarkOuter{
   fill: $track;
 }
 .cityMarkInner{
-  fill: $black;
+  fill: $white;
 }
 .cityLabel{
-  fill: $white;
+  fill: $black;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 3vw;
+  @include for-tablet-portrait-up {
+    font-size: 1.5rem;
+  }
 }
 .track{
+  fill: #fff;
   stroke: $track;
   stroke-width: 4px;
   stroke-linejoin: round;

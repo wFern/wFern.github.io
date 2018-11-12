@@ -89,16 +89,16 @@ const CITIES_DATA2 = [
 
   projection1(){
     return d3.geoMercator()
-      .scale(this.props.width * 6.25)
+      .scale(this.props.width * 6.3)
       .translate([this.props.width / 2, this.props.height / 2])
-      .center([-40.5, 38.5])
+      .center([-39.5, 38.5])
       .rotate([0, 0, 50])
   }
   projection2(){
     return d3.geoMercator()
-      .scale(this.props.width * 6.25)
+      .scale(this.props.width * 7)
       .translate([this.props.width / 2, this.props.height / 2])
-      .center([-28, 53])
+      .center([-27.6, 53])
       .rotate([0, 0, 30])
   }
 
@@ -140,7 +140,6 @@ const CITIES_DATA2 = [
   }
 
   render(){
-
     return (
       <svg
         id="routeScroller"

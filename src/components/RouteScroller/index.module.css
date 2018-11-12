@@ -2,14 +2,18 @@
   fill: #C84930; }
 
 .cityMarkInner {
-  fill: #000; }
+  fill: #fff; }
 
 .cityLabel {
-  fill: #fff;
+  fill: #000;
   font-weight: bold;
-  font-size: 1.5rem; }
+  font-size: 3vw; }
+  @media (min-width: 600px) {
+    .cityLabel {
+      font-size: 1.5rem; } }
 
 .track {
+  fill: #fff;
   stroke: #C84930;
   stroke-width: 4px;
   stroke-linejoin: round;

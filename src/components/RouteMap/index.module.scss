@@ -1,9 +1,12 @@
 @import '../../styles/colors';
+@import '../../styles/mixin.breakpoints';
 
 .link{
   cursor: pointer;
-  fill: $mojo;
-  text-decoration: underline;
+  fill: $white;
+  @include  for-tablet-portrait-up {
+    fill: $mojo;
+  }
 
   &:hover, &:focus{
     fill: $white;
@@ -27,5 +30,8 @@
 .cityLabel{
   fill: $white;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 3vw;
+  @include  for-tablet-portrait-up {
+    font-size: 1.5rem;
+  }
 }

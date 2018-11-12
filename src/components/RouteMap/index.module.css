@@ -1,7 +1,9 @@
 .link {
   cursor: pointer;
-  fill: #C84930;
-  text-decoration: underline; }
+  fill: #fff; }
+  @media (min-width: 600px) {
+    .link {
+      fill: #C84930; } }
   .link:hover, .link:focus {
     fill: #fff; }
 
@@ -23,6 +25,9 @@
 .cityLabel {
   fill: #fff;
   font-weight: bold;
-  font-size: 1.5rem; }
+  font-size: 3vw; }
+  @media (min-width: 600px) {
+    .cityLabel {
+      font-size: 1.5rem; } }
 
 /*# sourceMappingURL=index.module.css.map */

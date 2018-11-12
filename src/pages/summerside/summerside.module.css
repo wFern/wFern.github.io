@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;subset=cyrillic");
 .textContainer {
-  padding: 0 50px;
-  max-width: 75%; }
+  padding: 0 20px; }
+  @media (min-width: 600px) {
+    .textContainer {
+      padding: 0 50px;
+      max-width: 75%; } }
 
 .textHighlighted {
   background-color: rgba(200, 73, 48, 0.75);
@@ -12,16 +15,21 @@
 
 .link {
   cursor: pointer;
-  color: #C84930;
-  text-decoration: underline; }
+  color: #C84930; }
   .link:hover, .link:focus {
+    color: #000; }
+
+.linkInverse {
+  cursor: pointer;
+  color: #C84930; }
+  .linkInverse:hover, .linkInverse:focus {
     color: #fff; }
 
 .spoiler {
   display: inline-block;
   margin: 1em 0;
   background-color: rgba(200, 73, 48, 0.75);
-  border-radius: 4px;
+  border-radius: 2px;
   padding: .5em; }
   .spoiler :global .enter {
     max-height: 0;
@@ -40,8 +48,7 @@
 
 .spoilerTitle, .spoilerTitle:active, .spoilerTitle:focus {
   cursor: pointer;
-  color: #fff;
-  font-weight: bold;
+  color: #000;
   text-decoration: underline; }
   .spoilerTitle:hover, .spoilerTitle:active:hover, .spoilerTitle:focus:hover {
     text-decoration: none; }
@@ -73,7 +80,7 @@
     height: 20px;
     cursor: pointer; }
     .scrollTopBtn svg:hover path {
-      fill: #fff; }
+      fill: #000; }
   .scrollTopBtn path {
     fill: #C84930; }
 
@@ -92,77 +99,100 @@
 
 .main {
   width: 100%;
-  font-size: 1.5em;
-  background-color: #000;
-  color: #fff; }
+  font-size: 1.4em;
+  background-color: #fff;
+  color: #000; }
+  @media (min-width: 600px) {
+    .main {
+      font-size: 1.5em; } }
   .main :global section {
     line-height: 1.4285em;
     margin-bottom: 2em; }
   .main :global h3 {
-    font-size: 3.93rem;
+    font-size: 7.8vw;
     margin: 1em 0 .6em; }
+    @media (min-width: 600px) {
+      .main :global h3 {
+        font-size: 3.93rem; } }
   .main :global h4 {
     margin: .8em 0 .5em; }
 
 .mapWrapper {
   width: 100%;
-  height: 220vh;
+  height: 320vh;
   background-color: #000;
   position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start; }
-  .mapWrapper:after {
-    content: '';
-    position: absolute;
-    z-index: 999;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    box-shadow: inset 2px -30px 15px -15px #000; }
+  @media (min-width: 600px) {
+    .mapWrapper {
+      height: 230vh; } }
 
 .mapHeader {
   position: absolute;
-  padding: 50px 0 0 50px;
-  color: #000;
+  padding: 20px 0 0 20px;
+  color: #fff;
   width: 100%;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.75);
+  height: 110vh;
+  background: url(../../assets/img/pages/summerside/mapheader.jpg) no-repeat center;
+  background-size: cover;
   z-index: 991;
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  @media (min-width: 600px) {
+    .mapHeader {
+      padding: 50px 0 0 50px; } }
   .mapHeader :global h2 {
     max-width: 50%;
     font-family: 'Montserrat', sans-serif;
-    font-size: 3.93rem;
+    font-size: 7.8vw;
     text-transform: uppercase; }
+    @media (min-width: 600px) {
+      .mapHeader :global h2 {
+        font-size: 3.93rem; } }
   .mapHeader :global h3 {
     max-width: 50%;
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.43rem;
+    font-size: 4.82vw;
     text-transform: uppercase; }
+    @media (min-width: 600px) {
+      .mapHeader :global h3 {
+        font-size: 2.43rem; } }
 
 .contentTableSection {
   position: absolute;
-  top: 50%;
+  top: 115vh;
+  width: 100%;
+  min-height: 110vh;
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 992;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  min-height: 75vh; }
+  justify-content: center; }
+  @media (min-width: 600px) {
+    .contentTableSection {
+      background-color: transparent;
+      top: 60%;
+      min-height: auto;
+      width: auto; } }
 
 .contentTable {
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 7.8vw;
   margin: 0;
   padding: 0; }
+  @media (min-width: 600px) {
+    .contentTable {
+      font-size: 2.43rem; } }
   .contentTable :global li {
     font-weight: bold;
     margin-bottom: 1em; }
 
 .map {
+  width: 100%;
+  overflow: hidden;
   position: sticky;
   top: 0; }
 
@@ -176,7 +206,11 @@
   position: relative; }
 
 .stickyRouteContainer {
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
+
+.stickyRouteCol {
+  padding: 0 !important; }
 
 .end {
   padding-top: 1em; }

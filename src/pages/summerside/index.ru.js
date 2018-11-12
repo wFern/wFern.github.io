@@ -3,6 +3,7 @@ import {Link as GatsbyLink} from 'gatsby'
 import { Link, animateScroll as scroll } from "react-scroll"
 import { CSSTransition } from 'react-transition-group'
 import { Grid, Sticky } from 'semantic-ui-react'
+import Sticker from 'react-stickyfill'
 import VisibilitySensor from 'react-visibility-sensor'
 import {
   FacebookShareButton,
@@ -323,11 +324,10 @@ class SummersidePage extends React.PureComponent {
   };
 
   resizeMap = () => {
-    const containerTopNode = this.containerTop;
     if(window !== undefined){
       this.setState({
         containerTopWidth: window.innerWidth,
-        containerTopHeight: containerTopNode.clientHeight/2.2,
+        containerTopHeight: window.innerHeight,
         RouteScrollerContainerWith: (window.innerWidth / 16) * 4.7,
         RouteScrollerContainerHeight: window.innerHeight,
       });
@@ -355,7 +355,7 @@ class SummersidePage extends React.PureComponent {
           <div className={classes.mapWrapper} ref={this.setContainerTopRef}>
             <div className={classes.mapHeader}>
               <h2>
-                Двухэтапное велопутешествие в&nbsp;Европе.
+                Двухэтапное велопутешествие по&nbsp;Европе.
               </h2>
               <h3>
                 2000&nbsp;км, 24&nbsp;дня&nbsp;езды, &#8734;&nbsp;впечатлений.
@@ -367,7 +367,7 @@ class SummersidePage extends React.PureComponent {
                   <li>
                     <Link
                       to="intro"
-                      className={classes.link}
+                      className={classes.linkInverse}
                       smooth={true}
                     >
                       Кто&nbsp;мы
@@ -376,7 +376,7 @@ class SummersidePage extends React.PureComponent {
                   <li>
                     <Link
                       to="why"
-                      className={classes.link}
+                      className={classes.linkInverse}
                       smooth={true}
                       offset={-20}
                     >
@@ -386,7 +386,7 @@ class SummersidePage extends React.PureComponent {
                   <li>
                     <Link
                       to="get"
-                      className={classes.link}
+                      className={classes.linkInverse}
                       smooth={true}
                       offset={-20}
                     >
@@ -396,7 +396,7 @@ class SummersidePage extends React.PureComponent {
                   <li>
                     <Link
                       to="gallery"
-                      className={classes.link}
+                      className={classes.linkInverse}
                       smooth={true}
                       offset={-20}
                     >
@@ -406,7 +406,7 @@ class SummersidePage extends React.PureComponent {
                   <li>
                     <Link
                       to="end"
-                      className={classes.link}
+                      className={classes.linkInverse}
                       smooth={true}
                       offset={-20}
                     >
@@ -416,17 +416,18 @@ class SummersidePage extends React.PureComponent {
                 </ul>
               </div>
             </section>
-            <Sticky context={this.containerTop}>
+            <Sticker>
               <div className={classes.map}>
                 <RouteMap
                   width={this.state.containerTopWidth}
                   height={this.state.containerTopHeight}
                 />
               </div>
-            </Sticky>
+            </Sticker>
           </div>
           <section id="intro" className={classes.intro}>
             <div className={classes.textContainer}>
+              <h3>Кто мы</h3>
               <p>
                 Мы &mdash; Алена и Андрей. Летом 2018 мы отправились с велосипедами в Европу. <br/>
                 Путешествие заняло 44 дня, 24 из которых &mdash; в седле. Заезд разделился на два этапа, Калининград&nbsp;&mdash;&nbsp;Амстердам и Копенгаген&nbsp;&mdash;&nbsp;Стокгольм. В сумме на велосипедах мы проехали более 2000 км. Здесь наша история с маршрутом, фотографиями и комментариями.
@@ -593,7 +594,7 @@ class SummersidePage extends React.PureComponent {
                 <Grid.Column width={11}>
                   <Gallery comments={this.comments}/>
                 </Grid.Column>
-                <Grid.Column width={5}>
+                <Grid.Column width={5} className={classes.stickyRouteCol}>
                   <div className={classes.stickyRouteContainer} ref={this.setScrollRouterRef}>
                     <Sticky context={this.scrollRouterBlock}>
                       <RouteScroller
