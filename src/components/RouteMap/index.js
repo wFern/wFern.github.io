@@ -13,6 +13,10 @@ import trackData2 from "../../data/track2"
 import classes from './index.module.scss'
 
 class RouteMap extends React.Component {
+  constructor(props){
+    super(props);
+    this.projection = this.projection.bind(this);
+  }
 
   state = {
     mapData: [],
