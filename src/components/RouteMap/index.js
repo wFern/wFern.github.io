@@ -13,10 +13,6 @@ import trackData2 from "../../data/track2"
 import classes from './index.module.scss'
 
 class RouteMap extends React.Component {
-  constructor(props){
-    super(props);
-    this.projection = this.projection.bind(this);
-  }
 
   state = {
     mapData: [],
@@ -121,32 +117,34 @@ class RouteMap extends React.Component {
         />
         {
           this.state.citiesData.map((d,i) => {
-            let projectionVal = this.projection()([d.long, d.lat]);
-            let projectionValForLabel1 = this.projection()([d.long - 0.85, d.lat]);
-            let projectionValForLabel2 = this.projection()([d.long, d.lat + 0.15]);
-            return (
-              <g className="city" key={ `g-${ i }` }>
-                <circle
-                  cx={ projectionVal[0] }
-                  cy={ projectionVal[1] }
-                  r={ 4 }
-                  className={classes.cityMarkOuter}
-                />
-                <circle
-                  cx={ projectionVal[0] }
-                  cy={ projectionVal[1] }
-                  r={ 2 }
-                  className={classes.cityMarkInner}
-                />
-                <text
-                  dx={ projectionValForLabel1[0] }
-                  dy={ projectionValForLabel2[1] }
-                  className={classes.cityLabel}
-                >
-                  {d.label}
-                </text>
-              </g>
-            )
+            if (typeof this.projection() === 'function') {
+              let projectionVal = this.projection()([d.long, d.lat]);
+              let projectionValForLabel1 = this.projection()([d.long - 0.85, d.lat]);
+              let projectionValForLabel2 = this.projection()([d.long, d.lat + 0.15]);
+              return (
+                <g className="city" key={ `g-${ i }` }>
+                  <circle
+                    cx={ projectionVal[0] }
+                    cy={ projectionVal[1] }
+                    r={ 4 }
+                    className={classes.cityMarkOuter}
+                  />
+                  <circle
+                    cx={ projectionVal[0] }
+                    cy={ projectionVal[1] }
+                    r={ 2 }
+                    className={classes.cityMarkInner}
+                  />
+                  <text
+                    dx={ projectionValForLabel1[0] }
+                    dy={ projectionValForLabel2[1] }
+                    className={classes.cityLabel}
+                  >
+                    {d.label}
+                  </text>
+                </g>
+              )
+            }
           })
         }
       </svg>
