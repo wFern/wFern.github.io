@@ -324,7 +324,7 @@ class SummersidePage extends React.PureComponent {
   };
 
   resizeMap = () => {
-    if(window !== undefined){
+    if(typeof window !== 'undefined'){
       this.setState({
         containerTopWidth: window.innerWidth,
         containerTopHeight: window.innerHeight,

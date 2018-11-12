@@ -68,7 +68,7 @@ class RouteMap extends React.Component {
   };
 
   projection(){
-    if (window !== undefined){
+    if (typeof window !== 'undefined'){
       if(window.innerHeight > window.innerWidth){
         return geoMercator()
           .scale(this.props.width * 2.5)
