@@ -29,6 +29,8 @@ class SummersidePage extends React.PureComponent {
   state = {
     containerTopWidth: 0,
     containerTopHeight: 0,
+    RouteScrollerContainerWith: 0,
+    RouteScrollerContainerHeight: 0,
     showGear: false,
     trackPosition: null,
     track: 1
@@ -326,6 +328,8 @@ class SummersidePage extends React.PureComponent {
       this.setState({
         containerTopWidth: window.innerWidth,
         containerTopHeight: containerTopNode.clientHeight/2.2,
+        RouteScrollerContainerWith: (window.innerWidth / 16) * 4.7,
+        RouteScrollerContainerHeight: window.innerHeight,
       });
     }
   };
@@ -593,8 +597,8 @@ class SummersidePage extends React.PureComponent {
                   <div className={classes.stickyRouteContainer} ref={this.setScrollRouterRef}>
                     <Sticky context={this.scrollRouterBlock}>
                       <RouteScroller
-                        width={window ? (window.innerWidth / 16) * 5 : null}
-                        height={window ? window.innerHeight : null}
+                        width={this.state.RouteScrollerContainerWith}
+                        height={this.state.RouteScrollerContainerHeight}
                         trackPosition={this.state.trackPosition}
                         track={this.state.track}
                       />

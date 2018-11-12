@@ -89,23 +89,22 @@ const CITIES_DATA2 = [
 
   projection1(){
     return d3.geoMercator()
-      .scale(2500)
+      .scale(this.props.width * 6.25)
       .translate([this.props.width / 2, this.props.height / 2])
-      .center([-41, 38.5])
+      .center([-40.5, 38.5])
       .rotate([0, 0, 50])
   }
   projection2(){
     return d3.geoMercator()
-      .scale(2500)
+      .scale(this.props.width * 6.25)
       .translate([this.props.width / 2, this.props.height / 2])
-      .center([-28.5, 53])
+      .center([-28, 53])
       .rotate([0, 0, 30])
   }
 
   componentDidUpdate(prevProps, prevState, snapshot){
     let totalLength = d3.select(this.track).node().getTotalLength();
-
-    if(this.state.track !== this.props.track){
+    if(this.state.track !== this.props.track || prevProps.width !== this.props.width){
       let trackData = null;
       let citiesData = null;
       let path = null;
