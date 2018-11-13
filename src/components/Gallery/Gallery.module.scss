@@ -29,9 +29,7 @@
     max-width: calc(100%/4);
   }
   &:hover {
-    &:after{
-      opacity: .1;
-    }
+    opacity: .9;
   }
 
   @media screen and (orientation: landscape) {

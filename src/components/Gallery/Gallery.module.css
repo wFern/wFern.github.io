@@ -24,8 +24,8 @@
     .item {
       flex: 1 1 calc(100%/4);
       max-width: calc(100%/4); } }
-  .item:hover:after {
-    opacity: .1; }
+  .item:hover {
+    opacity: .9; }
   @media screen and (orientation: landscape) {
     .item {
       height: calc(100vh/4); } }

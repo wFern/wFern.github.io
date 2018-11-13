@@ -5,6 +5,7 @@ import '../index/index.module.scss'
 import classes from './summersideLayout.module.scss'
 import PropTypes from "prop-types"
 import { getCurrentLangKey } from "ptz-i18n";
+import shareImg from '../../../assets/img/pages/summerside/share.jpg'
 
 const languages = require('../../../data/languages');
 
@@ -23,9 +24,10 @@ const Summerside = ({ children, location }) => {
           {name: 'description', content: 'Summerside. Двухэтапное велопутешествие по Европе. 2000 км, 24 дня езды, бесконечное количество впечатлений.'},
           {name: 'keywords', content: 'salad_nights, велотур, велопутешествие, европа, велотрип'},
           {property:'og:title', content: 'Двухэтапное велопутешествие по Европе'},
-          {property:'og:description', content: 'Двухэтапное велопутешествие по Европе. 2000 км, 24 дня езды, бесконечное количество впечатлений.'},
+          {property:'og:description', content: '2000 км, 24 дня езды, бесконечное количество впечатлений.'},
           {property:'og:type', content: 'article'},
           {property:'og:url', content: `https://saladnights.site${url}`},
+          {property:'og:image', content: {shareImg}}
         ]}
       >
         <html lang={langKey} />
