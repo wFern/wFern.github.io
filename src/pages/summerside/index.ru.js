@@ -328,7 +328,7 @@ class SummersidePage extends React.PureComponent {
       this.setState({
         containerTopWidth: window.innerWidth,
         containerTopHeight: window.innerHeight,
-        RouteScrollerContainerWith: (window.innerWidth / 16) * 4.7,
+        RouteScrollerContainerWith: (window.innerWidth / 16) * 5,
         RouteScrollerContainerHeight: window.innerHeight,
       });
     }
@@ -457,9 +457,7 @@ class SummersidePage extends React.PureComponent {
               </p>
               <div>
                 Другие ресурсы и статьи, которые помогли со сборами
-                <ul
-                  style={{listStyle: 'none'}}
-                >
+                <ul className={classes.resourcesList}>
                   <li>
                     <a className={classes.link} target="_blank" rel="noopener noreferrer" href="http://www.bikepacking.com/">Bikepacking.com</a> - всё о байкпакинге
                   </li>
@@ -576,7 +574,7 @@ class SummersidePage extends React.PureComponent {
               <p>
                 Для упаковки велосипедов и перевозки в поезде мы использовали мешки для хранения покрышек (обычные мусорные, но с широкой горловиной) и пищевую пленку. Вот так они отправились на поезде в Калининград
                 <img
-                  style={{display: 'block', width: '50%', margin: '1em 0'}}
+                  style={{display: 'block', width: '100%', maxWidth: '400px', margin: '1em 0'}}
                   src="https://farm2.staticflickr.com/1899/43723828275_7709b7573f_h.jpg"
                   alt="packed bicycles"/>
               </p>

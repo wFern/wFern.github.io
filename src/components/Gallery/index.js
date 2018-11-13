@@ -163,22 +163,6 @@ class Gallery extends React.Component {
             }
           </Swiper>
         </div>
-        {/*<InfiniteScroll*/}
-          {/*className={classes.masonry}*/}
-          {/*loadMore={this.loadPhotos}*/}
-          {/*hasMore={this.state.hasMore}*/}
-          {/*loader={*/}
-            {/*<div key={'loader'} className={classes.loader}>*/}
-              {/*<div className={classes.ldsCss}>*/}
-                {/*<div className={classes.ldsEclipse}>*/}
-                  {/*<div/>*/}
-                {/*</div>*/}
-              {/*</div>*/}
-            {/*</div>*/}
-          {/*}*/}
-        {/*>*/}
-          {/*{items}*/}
-        {/*</InfiniteScroll>*/}
         <div className={classes.masonry}>
           {items}
         </div>
