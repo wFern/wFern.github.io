@@ -2,7 +2,7 @@ import React from 'react'
 import {Link as GatsbyLink} from 'gatsby'
 import { Link, animateScroll as scroll } from "react-scroll"
 import { CSSTransition } from 'react-transition-group'
-import { Grid, Sticky } from 'semantic-ui-react'
+import { Sticky } from 'semantic-ui-react'
 import Sticker from 'react-stickyfill'
 import VisibilitySensor from 'react-visibility-sensor'
 import {
@@ -589,25 +589,21 @@ class SummersidePage extends React.PureComponent {
             <div className={classes.textContainer}>
               <h3>Как прошло</h3>
             </div>
-            <Grid columns={2}>
-              <Grid.Row>
-                <Grid.Column width={11}>
-                  <Gallery comments={this.comments}/>
-                </Grid.Column>
-                <Grid.Column width={5} className={classes.stickyRouteCol}>
-                  <div className={classes.stickyRouteContainer} ref={this.setScrollRouterRef}>
-                    <Sticky context={this.scrollRouterBlock}>
-                      <RouteScroller
-                        width={this.state.RouteScrollerContainerWith}
-                        height={this.state.RouteScrollerContainerHeight}
-                        trackPosition={this.state.trackPosition}
-                        track={this.state.track}
-                      />
-                    </Sticky>
-                  </div>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
+            <div className={classes.galleryMapWrapper}>
+              <div className={classes.galleryWrapper}>
+                <Gallery comments={this.comments}/>
+              </div>
+              <div className={classes.stickyRouteWrapper} ref={this.setScrollRouterRef}>
+                <Sticky context={this.scrollRouterBlock}>
+                  <RouteScroller
+                    width={this.state.RouteScrollerContainerWith}
+                    height={this.state.RouteScrollerContainerHeight}
+                    trackPosition={this.state.trackPosition}
+                    track={this.state.track}
+                  />
+                </Sticky>
+              </div>
+            </div>
           </section>
           <section id="end" className={classes.end}>
             <div className={classes.textContainer}>

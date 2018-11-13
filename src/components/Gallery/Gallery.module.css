@@ -17,8 +17,8 @@
 
 .item {
   position: relative;
-  flex: 1 1 calc(100%/2);
-  max-width: calc(100%/2);
+  flex: 1 1 calc(100%/3);
+  max-width: calc(100%/3);
   cursor: pointer; }
   @media (min-width: 600px) {
     .item {

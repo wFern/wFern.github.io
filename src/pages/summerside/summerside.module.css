@@ -151,7 +151,7 @@
     text-transform: uppercase; }
     @media (min-width: 600px) {
       .mapHeader :global h2 {
-        font-size: 3.93rem; } }
+        font-size: 7vw; } }
   .mapHeader :global h3 {
     max-width: 50%;
     font-family: 'Montserrat', sans-serif;
@@ -163,7 +163,7 @@
 
 .contentTableSection {
   position: absolute;
-  top: 115vh;
+  top: 110vh;
   width: 100%;
   min-height: 110vh;
   background-color: rgba(0, 0, 0, 0.5);
@@ -205,9 +205,26 @@
   background-size: cover;
   position: relative; }
 
-.stickyRouteContainer {
-  height: 100%;
-  overflow: hidden; }
+.galleryMapWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch; }
+
+.galleryWrapper {
+  flex: 1 1 100%;
+  width: 100%; }
+  @media (min-width: 600px) {
+    .galleryWrapper {
+      flex: 11 1 68.75%; } }
+
+.stickyRouteWrapper {
+  display: none; }
+  @media (min-width: 600px) {
+    .stickyRouteWrapper {
+      display: block;
+      flex: 6 1 31.25%; } }
 
 .stickyRouteCol {
   padding: 0 !important; }
