@@ -68,7 +68,7 @@ const CITIES_DATA2 = [
   {
     label: 'Стокгольм',
     lat: 59.30,
-    long: 18.02
+    long: 17.98
   },
 ];
 
@@ -89,7 +89,7 @@ const CITIES_DATA2 = [
 
   projection1(){
     return d3.geoMercator()
-      .scale(this.props.width * 6.3)
+      .scale(this.props.width * 5)
       .translate([this.props.width / 2, this.props.height / 2])
       .center([-39.5, 38.5])
       .rotate([0, 0, 50])
@@ -98,7 +98,7 @@ const CITIES_DATA2 = [
     return d3.geoMercator()
       .scale(this.props.width * 7)
       .translate([this.props.width / 2, this.props.height / 2])
-      .center([-27.6, 53])
+      .center([-27.6, 53.5])
       .rotate([0, 0, 30])
   }
 
@@ -156,8 +156,8 @@ const CITIES_DATA2 = [
         {
           this.state.citiesData.map((d,i) => {
             let projectionVal = (this.state.track === 1 ? this.projection1() : this.projection2())([d.long, d.lat]);
-            let projectionValForLabel1 = (this.state.track === 1 ? this.projection1() : this.projection2())([d.long - 0.85, d.lat]);
-            let projectionValForLabel2 = (this.state.track === 1 ? this.projection1() : this.projection2())([d.long, d.lat + 0.15]);
+            let projectionValForLabelX = (this.state.track === 1 ? this.projection1() : this.projection2())([d.long - 0.2, d.lat]);
+            let projectionValForLabelY = (this.state.track === 1 ? this.projection1() : this.projection2())([d.long, d.lat + 0.2]);
             return (
               <g className="city" key={ `g-${ i }` }>
                 <circle
@@ -173,8 +173,8 @@ const CITIES_DATA2 = [
                   className={classes.cityMarkInner}
                 />
                 <text
-                  dx={ projectionValForLabel1[0] }
-                  dy={ projectionValForLabel2[1] }
+                  dx={ projectionValForLabelX[0] }
+                  dy={ projectionValForLabelY[1] }
                   className={classes.cityLabel}
                 >
                   {d.label}

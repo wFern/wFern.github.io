@@ -22,33 +22,15 @@ class Gallery extends React.Component {
       },
       renderPrevButton: () => {
         return (<div className='swiper-button-prev'>
-          <svg
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="100 0 270 477.175"
-          >
-            <g>
-              <path
-                d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
-                c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"
-              />
-            </g>
+          <svg viewBox="16 11 17 25" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.17 32.92l9.17-9.17-9.17-9.17 2.83-2.83 12 12-12 12z"/>
           </svg>
         </div>)
       },
       renderNextButton: () => {
         return (<div className='swiper-button-next'>
-          <svg
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="100 0 270 477.175"
-          >
-            <g>
-              <path
-                d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
-                c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"
-              />
-            </g>
+          <svg viewBox="16 11 17 25" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.17 32.92l9.17-9.17-9.17-9.17 2.83-2.83 12 12-12 12z"/>
           </svg>
         </div>)
       },
@@ -110,7 +92,7 @@ class Gallery extends React.Component {
             key={item.id}
             onClick={(e) => this.photoClickHandler(e, item.index)}
             style={{
-              background: `url('${item.medium}') no-repeat center`,
+              background: `url('${item.small}') no-repeat center`,
               backgroundSize: 'cover'
             }}
           />

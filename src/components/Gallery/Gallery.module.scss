@@ -106,8 +106,8 @@
   top: .5em;
   right: .5em;
   cursor: pointer;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 
   polygon{
     fill: $mojo;
@@ -148,8 +148,7 @@
   .swiper-button-next, .swiper-button-prev{
     display: none;
     background-image: none;
-    width: 20px;
-    height: 40px;
+    width: 40px;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-tap-highlight-color: transparent;
     outline: none !important;
@@ -170,6 +169,7 @@
     }
   }
   .swiper-button-prev{
+    top: 52%;
     transform: rotate(180deg);
   }
 }

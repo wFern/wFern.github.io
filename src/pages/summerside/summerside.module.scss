@@ -4,7 +4,7 @@
 
 //Common
 .textContainer{
-  padding: 0 20px;
+  padding: 0 15px;
   @include  for-tablet-portrait-up {
     padding: 0 50px;
     max-width: 75%;
@@ -186,7 +186,7 @@
     h2{
       max-width: 50%;
       font-family: 'Montserrat', sans-serif;
-      font-size: 2.98vw;
+      font-size: 4.81vw;
       font-weight: normal;
       text-transform: uppercase;
       @include  for-tablet-portrait-up {
@@ -214,7 +214,7 @@
 }
 .contentTable{
   list-style: none;
-  font-size: 7.8vw;
+  font-size: 4.81vw;
   margin: 0;
   padding: 0;
   @include  for-tablet-portrait-up {
@@ -223,7 +223,10 @@
   :global{
     li {
       font-weight: bold;
-      margin-bottom: 1em;
+      margin-bottom: .5em;
+      @include  for-tablet-portrait-up {
+        margin-bottom: 1em;
+      }
     }
   }
 }
@@ -271,14 +274,14 @@
   flex: 1 1 100%;
   width: 100%;
   @include  for-tablet-portrait-up {
-    flex: 11 1 68.75%;
+    flex: 11 1 62.5%;
   }
 }
 .stickyRouteWrapper{
   display: none;
   @include  for-tablet-portrait-up {
     display: block;
-    flex: 6 1 31.25%;
+    flex: 6 1 37.5%;
   }
 }
 .stickyRouteCol{

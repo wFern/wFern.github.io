@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;subset=cyrillic");
 .textContainer {
-  padding: 0 20px; }
+  padding: 0 15px; }
   @media (min-width: 600px) {
     .textContainer {
       padding: 0 50px;
@@ -141,7 +141,7 @@
   .mapHeader :global h2 {
     max-width: 50%;
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.98vw;
+    font-size: 4.81vw;
     font-weight: normal;
     text-transform: uppercase; }
     @media (min-width: 600px) {
@@ -167,7 +167,7 @@
 
 .contentTable {
   list-style: none;
-  font-size: 7.8vw;
+  font-size: 4.81vw;
   margin: 0;
   padding: 0; }
   @media (min-width: 600px) {
@@ -175,7 +175,10 @@
       font-size: 1.65vw; } }
   .contentTable :global li {
     font-weight: bold;
-    margin-bottom: 1em; }
+    margin-bottom: .5em; }
+    @media (min-width: 600px) {
+      .contentTable :global li {
+        margin-bottom: 1em; } }
 
 .map {
   width: 100%;
@@ -222,14 +225,14 @@
   width: 100%; }
   @media (min-width: 600px) {
     .galleryWrapper {
-      flex: 11 1 68.75%; } }
+      flex: 11 1 62.5%; } }
 
 .stickyRouteWrapper {
   display: none; }
   @media (min-width: 600px) {
     .stickyRouteWrapper {
       display: block;
-      flex: 6 1 31.25%; } }
+      flex: 6 1 37.5%; } }
 
 .stickyRouteCol {
   padding: 0 !important; }

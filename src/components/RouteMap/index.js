@@ -73,7 +73,7 @@ class RouteMap extends React.Component {
         return geoMercator()
           .scale(this.props.width * 2.5)
           .translate([ this.props.width/2.1, this.props.height*0.4 ])
-          .center([13.4, 56.88]);
+          .center([14.2, 56.88]);
       } else {
         return geoMercator()
           .scale(this.props.height * 3.6)
