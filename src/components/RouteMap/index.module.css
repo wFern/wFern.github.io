@@ -3,21 +3,22 @@
   fill: #fff; }
   @media (min-width: 600px) {
     .link {
-      fill: #C84930; } }
+      fill: #ff6633; } }
   .link:hover, .link:focus {
     fill: #fff; }
 
 .land {
   fill: #000;
   stroke: #fff;
-  stroke-width: 0.5; }
+  stroke-width: 2; }
 
 .track {
-  stroke: #C84930;
-  stroke-width: 2px; }
+  stroke: #ff6633;
+  stroke-width: 4px;
+  stroke-linejoin: round; }
 
 .cityMarkOuter {
-  fill: #C84930; }
+  fill: #ff6633; }
 
 .cityMarkInner {
   fill: #000; }

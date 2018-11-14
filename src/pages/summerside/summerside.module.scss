@@ -5,15 +5,15 @@
 //Common
 .textContainer{
   padding: 0 20px;
-
   @include  for-tablet-portrait-up {
     padding: 0 50px;
     max-width: 75%;
   }
-}
-.textHighlighted{
-  background-color: $mojo-75opaque;
-  padding: .2em;
+  :global{
+    p{
+      line-height: 1.2em;
+    }
+  }
 }
 .fullWidth{
   width: 100%;
@@ -39,9 +39,6 @@
 .spoiler {
   display: inline-block;
   margin: 1em 0;
-  background-color: $mojo-75opaque;
-  border-radius: 2px;
-  padding: .5em;
   :global{
     .enter{
       max-height: 0;
@@ -61,14 +58,6 @@
       max-height: 0;
       opacity: 0;
     }
-  }
-}
-.spoilerTitle, .spoilerTitle:active, .spoilerTitle:focus{
-  cursor: pointer;
-  color: $black;
-  text-decoration: underline;
-  &:hover{
-    text-decoration: none;
   }
 }
 .spoilerBody{
@@ -131,6 +120,7 @@
 .shareTitle{
   margin: 1.5em 0 1em;
 }
+
 //Blocks
 .main{
   width: 100%;
@@ -149,13 +139,10 @@
 
     h3{
       font-size: 7.8vw;
-      margin: 1em 0 .6em;
+      margin: .9em 0 .4em;
       @include  for-tablet-portrait-up {
-        font-size: 3.93rem;
+        font-size: 4.32vw;
       }
-    }
-    h4{
-      margin: .8em 0 .5em;
     }
   }
 }
@@ -176,8 +163,8 @@
   padding: 20px 0 0 20px;
   color: $white;
   width: 100%;
-  height: 110vh;
-  background: url(../../assets/img/pages/summerside/mapheader.jpg) no-repeat center;
+  min-height: 110vh;
+  background: url(../../assets/img/pages/summerside/mapheader4.jpg) no-repeat center;
   background-size: cover;
   z-index: 991;
   display: flex;
@@ -187,22 +174,23 @@
     padding: 50px 0 0 50px;
   }
   :global {
-    h2{
+    h1{
       max-width: 50%;
       font-family: 'Montserrat', sans-serif;
       font-size: 7.8vw;
-      text-transform: uppercase;
       @include  for-tablet-portrait-up {
         font-size: 7vw;
+        line-height: 1em;
       }
     }
-    h3{
+    h2{
       max-width: 50%;
       font-family: 'Montserrat', sans-serif;
-      font-size: 4.82vw;
+      font-size: 2.98vw;
+      font-weight: normal;
       text-transform: uppercase;
       @include  for-tablet-portrait-up {
-        font-size: 2.43rem;
+        font-size: 2.67rem;
       }
     }
   }
@@ -230,7 +218,7 @@
   margin: 0;
   padding: 0;
   @include  for-tablet-portrait-up {
-    font-size: 2.43rem;
+    font-size: 1.65vw;
   }
   :global{
     li {
@@ -253,6 +241,19 @@
   justify-content: center;
   background-size: cover;
   position: relative;
+}
+.getImg{
+  display: block;
+  border: 1px solid transparent;
+  width: 100%;
+  margin: 0 auto;
+  @include  for-tablet-portrait-up {
+    display: inline-block;
+    width: 50%;
+  }
+}
+.divider{
+  color: $mojo;
 }
 .resourcesList{
   list-style: none;

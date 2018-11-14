@@ -2,14 +2,15 @@
   display: flex;
   flex-flow: row wrap;
   align-content: stretch;
-  max-width: 100%; }
+  max-width: 100%;
+  padding: 0 15px; }
+  @media (min-width: 600px) {
+    .masonry {
+      padding: 0 50px; } }
 
 .comment {
   width: 100%;
-  padding: 0 20px 50px; }
-  @media (min-width: 600px) {
-    .comment {
-      padding: 0 1em 1em 50px; } }
+  padding-bottom: 50px; }
   .comment h3 {
     font-size: 1.8em; }
   .comment h4 {
@@ -17,13 +18,14 @@
 
 .item {
   position: relative;
-  flex: 1 1 calc(100%/3);
-  max-width: calc(100%/3);
+  margin: 1px;
+  flex: 1 1 calc(100%/3 - 2px);
+  max-width: calc(100%/3 - 2px);
   cursor: pointer; }
   @media (min-width: 600px) {
     .item {
-      flex: 1 1 calc(100%/4);
-      max-width: calc(100%/4); } }
+      flex: 1 1 calc(100%/4 - 2px);
+      max-width: calc(100%/4 - 2px); } }
   .item:hover {
     opacity: .9; }
   @media screen and (orientation: landscape) {
@@ -67,7 +69,7 @@
     top: 20px;
     left: 20px;
     border-radius: 50%;
-    box-shadow: 0 8px 0 0 #C84930;
+    box-shadow: 0 8px 0 0 #ff6633;
     -webkit-transform-origin: 80px 84px;
     transform-origin: 80px 84px; }
 
@@ -93,7 +95,7 @@
   width: 20px;
   height: 20px; }
   .modalClose polygon {
-    fill: #C84930; }
+    fill: #ff6633; }
   .modalClose:hover polygon, .modalClose:focus polygon {
     fill: #fff; }
 
@@ -132,7 +134,7 @@
   :global .swiper-button-next:focus, :global .swiper-button-prev:focus {
     outline: none !important; }
   :global .swiper-button-next path, :global .swiper-button-prev path {
-    fill: #C84930; }
+    fill: #ff6633; }
   :global .swiper-button-next:hover path, :global .swiper-button-next:focus path, :global .swiper-button-prev:hover path, :global .swiper-button-prev:focus path {
     fill: #fff; }
 :global .swiper-button-prev {

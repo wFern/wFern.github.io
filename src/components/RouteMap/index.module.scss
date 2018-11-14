@@ -15,11 +15,12 @@
 .land{
   fill: $black;
   stroke: $white;
-  stroke-width: 0.5;
+  stroke-width: 2;
 }
 .track{
   stroke: $track;
-  stroke-width: 2px;
+  stroke-width: 4px;
+  stroke-linejoin: round;
 }
 .cityMarkOuter{
   fill: $track;

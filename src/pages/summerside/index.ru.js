@@ -55,9 +55,17 @@ class SummersidePage extends React.PureComponent {
           partialVisibility={true}
         >
           <div id="kaliningrad">
-            <h4>Калининград</h4>
+            <h3 style={{marginTop: 0}}>Калининград</h3>
             <p>
-              Чтобы стартовать со свежими силами, мы решили, что лучше переночевать в хостеле и выехать на следующее утро. Остаток дня мы просто гуляли по городу, а в <a className={classes.link} target="_blank" rel="noopener noreferrer" href="https://vk.com/plohoiohotnik">Плохом Охотнике</a> нашли самый вкусный хэндмейд тофу.
+              В таком виде велосипеды прибыли в Калининград. Через два часа мы собрали их и поехали смотреть город.
+              <img
+                style={{display: 'block', width: '100%', maxWidth: '400px', margin: '1em 0'}}
+                src="https://farm2.staticflickr.com/1899/43723828275_7709b7573f_h.jpg"
+                alt="packed bicycles"
+              />
+            </p>
+            <p>
+              Чтобы стартовать со свежими силами, мы решили, что лучше переночевать в хостеле и выехать на следующее утро. Остаток дня мы просто гуляли, а в <a className={classes.link} target="_blank" rel="noopener noreferrer" href="https://vk.com/plohoiohotnik">Плохом Охотнике</a> нашли самый вкусный хэндмейд тофу.
             </p>
           </div>
         </VisibilitySensor>
@@ -67,16 +75,15 @@ class SummersidePage extends React.PureComponent {
       id: '43723829485',
       msg: (
         <VisibilitySensor
-          onChange={(e) => this.elementVisible(e, 8, 1)}
+          onChange={(e) => this.elementVisible(e, 6, 1)}
           partialVisibility={true}
         >
-          <div>
-            <h3>Польша</h3>
+          <div id='poland'>
+            <h3>Фромборк, Польша</h3>
             <p>
               Очень волновались из-за пересечения границы на велосипеде, поэтому навесили на себя все, о чём читали на тематических сайтах: фонари передние и задние, катафоты, звонки. Надели светоотражающие жилеты и шлемы. В итоге ничего из этого у нас не проверили, каждого просто попросили открыть любую из сумок и толком туда не заглянули. Пограничники посмотрели документы, поставили штамп и пропустили.
             </p>
-            <h4>Фромборк</h4>
-            <p>Первый польский кемпинг. Здесь большой замок, могила Коперника и свой маленький порт.</p>
+            <p>Фромборк - первый польский город, в котором мы остановились. Здесь большой замок, могила Коперника и свой маленький порт.</p>
           </div>
         </VisibilitySensor>
       )
@@ -89,9 +96,9 @@ class SummersidePage extends React.PureComponent {
           partialVisibility={true}
         >
           <div id='malbork'>
-            <h4>Мальборк</h4>
+            <h3>Мальборк</h3>
             <p>
-              Из-за дождя пришлось остановиться. Весь день мы провели в замке Мариенбург. Впечатляющее нагромождение красного кирпича площадью 20 га. История этого замка заслуживает отдельного рассказа. Начните с <a className={classes.link} target="_blank" rel="noopener noreferrer" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D0%B8%D0%B5%D0%BD%D0%B1%D1%83%D1%80%D0%B3_(%D0%B7%D0%B0%D0%BC%D0%BE%D0%BA)">Википедии</a>
+              Из-за дождя пришлось остановиться. Весь день мы провели в замке Мариенбург. Впечатляющее нагромождение красного кирпича площадью 20 гектаров. История этого замка заслуживает отдельного рассказа. Начните с <a className={classes.link} target="_blank" rel="noopener noreferrer" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D0%B8%D0%B5%D0%BD%D0%B1%D1%83%D1%80%D0%B3_(%D0%B7%D0%B0%D0%BC%D0%BE%D0%BA)">Википедии.</a>
             </p>
           </div>
         </VisibilitySensor>
@@ -105,12 +112,12 @@ class SummersidePage extends React.PureComponent {
           partialVisibility={true}
         >
           <div id='walcz'>
-            <h4>Валч</h4>
+            <h3>Валч</h3>
             <p>
               Три дня в дороге и снова застряли. Дожди шли слишком сильными и долгими, двигаться было нельзя. Два дня мы укрывались от ливня с хостеле рядом с озером для байдарочников-олимпийцев. В Польше, как мы поняли, многие любят этот спорт. Мы останавливались в нескольких специальных кемпингах для байдарочников, и там всегда было много народа. Плавают большими группами, семьей, с детьми, по-всякому.
             </p>
             <p>
-              Топ польской кухни &mdash; “пироги”, они же вареники. Подают везде, стоят недорого, энергии хватает на полдня минимум.
+              Топ польской кухни &mdash; &#171;пироги&#187;, они же вареники. Подают везде, стоят недорого, энергии хватает на полдня минимум.
             </p>
           </div>
         </VisibilitySensor>
@@ -123,7 +130,7 @@ class SummersidePage extends React.PureComponent {
           onChange={(e) => this.elementVisible(e, 43.7, 1)}
           partialVisibility={true}
         >
-          <div>
+          <div id="germany">
             <h3>Германия</h3>
             <p>
               Первая остановка в Германии шокировала. Мы нашли ночлег в кемпинг-деревне, где жили несколько тысяч человек: в вэнах, домах на колесах, палатках. Оказалось, это довольно популярный вид жилья в Германии. В доме на колесах можно даже прописаться и получать почту.
@@ -140,7 +147,7 @@ class SummersidePage extends React.PureComponent {
           partialVisibility={true}
         >
           <div id='berlin'>
-            <h4>Берлин</h4>
+            <h3>Берлин</h3>
             <p>
               Три дня гостили у нашего друга. Были здесь во второй раз, но хочется вернуться еще. Очень живой город. Всем, кто интересуется стрит-артом, город и музей <a className={classes.link} target="_blank" rel="noopener noreferrer" href="https://urban-nation.com/">Urban Nation</a> обязательны к посещению.
             </p>
@@ -156,7 +163,7 @@ class SummersidePage extends React.PureComponent {
           partialVisibility={true}
         >
           <div>
-            <h4>Потсдам, Магдебург</h4>
+            <h3>Потсдам, Магдебург</h3>
             <p>
               Стало очень жарко. За три дня мы отвыкли от дороги и выбираться из Берлина было тяжеловато. Маршрут прилип к Среднегерманскому каналу и большую часть пути до Нидерландов мы двигались вдоль него.
             </p>
@@ -186,7 +193,7 @@ class SummersidePage extends React.PureComponent {
           onChange={(e) => this.elementVisible(e, 89.7, 1)}
           partialVisibility={true}
         >
-          <div>
+          <div id='netherlands'>
             <h3>Нидерланды</h3>
             <p>
               Кемпинги в Нидерландах в два раза дороже чем в Германии. Поэтому мы решили сделать марш-бросок и добраться до Амстердама, не останавливаясь больше на ночевку. Пришлось проехать за день 143 км. Зато в городе ждали старые друзья и почти две недели покоя.
@@ -203,7 +210,7 @@ class SummersidePage extends React.PureComponent {
           partialVisibility={true}
         >
           <div id='amsterdam'>
-            <h4>Амстердам</h4>
+            <h3>Амстердам</h3>
             <p>
               Здесь мы были впервые, хотя уже много раз планировали добраться. В этом городе смешиваются сразу несколько любимых штук: корабли, вода и велосипеды. В одно утро мы специально встали пораньше, чтобы объехать вдоль все центральные каналы без туристов.
             </p>
@@ -225,7 +232,7 @@ class SummersidePage extends React.PureComponent {
           partialVisibility={true}
         >
           <div id='copenhagen'>
-            <h3>Дания</h3>
+            <h3>Копенгаген, Дания</h3>
             <p>
               До Копенгагена мы доехали на автобусах FlixBus. На некоторых есть специальный багажник для велосипедов, так что разбирать их не приходится. Однако лучше пользоваться этой компанией только в крайних случаях. У нас был рейс с пересадкой в Бремене, но следующий автобус просто не пришел. Пришлось искать, как добираться дальше. Все закончилось хорошо, но никакой денежной компенсации за купленные билеты мы до сих пор не получили, несмотря на десяток отправленных писем в поддержку.
             </p>
@@ -243,7 +250,7 @@ class SummersidePage extends React.PureComponent {
           onChange={(e) => this.elementVisible(e, 8.98, 2)}
           partialVisibility={true}
         >
-          <div>
+          <div id='sweden'>
             <h3>Швеция</h3>
             <p>
               В Швеции разрешен дикий кемпинг. Но дело даже не в этом. Здесь очень много красивых и безлюдных мест, чтобы поставить палатку. Мы почти не останавливались в кемпингах и ночевали возле какого-нибудь озера или за скалой.
@@ -263,7 +270,7 @@ class SummersidePage extends React.PureComponent {
           partialVisibility={true}
         >
           <div id='jonkoping'>
-            <h4>Йёнчёпинг</h4>
+            <h3>Йёнчёпинг</h3>
             <p>
               Около 70 км мы ехали вдоль берега огромного озера Веттерн. Снова наблюдали за судами, но уже другими. Здесь не торговые баржи, как на канале в Германии, а красивые яхты, парусники и прогулочные катера. И на всем побережьи традиционные красно-белые дома. Почти у каждого водоема стоит такой.
             </p>
@@ -275,11 +282,11 @@ class SummersidePage extends React.PureComponent {
       id: '29694619487',
       msg: (
         <VisibilitySensor
-          onChange={(e) => this.elementVisible(e, 75.06, 2)}
+          onChange={(e) => this.elementVisible(e, 74, 2)}
           partialVisibility={true}
         >
           <div id='norrkoping'>
-            <h4>Норрчёпинг</h4>
+            <h3>Норрчёпинг</h3>
             <p>
               Здесь уже выход к балтийскому морю и пахнет соленой водой. До Стокгольма оставалось совсем немного, поэтому мы стали больше фотографировать и отдыхать. <br/>
               В поисках места несколько раз видели оленей. Последний дикий кемпинг даже устроили на территории заповедника. 27-й день рождения я точно запомню: проснулся у озера в лесу, позавтракал на теплой скале и поехал в Стокгольм.
@@ -296,7 +303,7 @@ class SummersidePage extends React.PureComponent {
           partialVisibility={true}
         >
           <div id='stockholm'>
-            <h4>Стокгольм</h4>
+            <h3>Стокгольм</h3>
             <p>
               И снова у нас не было времени посмотреть город. Просто проехали через центральную часть, купили сувенир друзьям и загрузились на паром. На этом велосипедное приключение закончилось, остальную часть пути мы добирались домой паромами, автобусами и машинами. Очень хочется вернуться в города, которые не успели посмотреть.
             </p>
@@ -363,12 +370,12 @@ class SummersidePage extends React.PureComponent {
         <main className={classes.main}>
           <div className={classes.mapWrapper} ref={this.setContainerTopRef}>
             <div className={classes.mapHeader}>
-              <h2>
+              <h1>
                 Двухэтапное велопутешествие по&nbsp;Европе
+              </h1>
+              <h2>
+                2000&nbsp;км, 24&nbsp;дня&nbsp;езды, много&nbsp;впечатлений
               </h2>
-              <h3>
-                2000&nbsp;км, 24&nbsp;дня&nbsp;езды, &#8734;&nbsp;впечатлений
-              </h3>
             </div>
             <section className={classes.contentTableSection}>
               <div className={classes.textContainer}>
@@ -414,12 +421,62 @@ class SummersidePage extends React.PureComponent {
                   </li>
                   <li>
                     <Link
+                      to="poland"
+                      className={classes.linkInverse}
+                      smooth={true}
+                      offset={-20}
+                    >
+                      Польша
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="germany"
+                      className={classes.linkInverse}
+                      smooth={true}
+                      offset={-20}
+                    >
+                      Германия
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="netherlands"
+                      className={classes.linkInverse}
+                      smooth={true}
+                      offset={-20}
+                    >
+                      Нидерланды
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="copenhagen"
+                      className={classes.linkInverse}
+                      smooth={true}
+                      offset={-20}
+                    >
+                      Дания
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="sweden"
+                      className={classes.linkInverse}
+                      smooth={true}
+                      offset={-20}
+                    >
+                      Швеция
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
                       to="end"
                       className={classes.linkInverse}
                       smooth={true}
                       offset={-20}
                     >
-                      Конец
+                      Чем&nbsp;закончилось
                     </Link>
                   </li>
                 </ul>
@@ -438,7 +495,7 @@ class SummersidePage extends React.PureComponent {
             <div className={classes.textContainer}>
               <h3>Кто мы</h3>
               <p>
-                Мы &mdash; Алена и Андрей. Летом 2018 года путешествовали по Европе на велосипедах. Поездка заняла 44 дня, 24 из которых &mdash; в седле. Заезд разделился на два этапа: Калининград &mdash; Амстердам и Копенгаген &mdash; Стокгольм. В сумме на велосипедах проехали более 2000 км. Здесь наша история с маршрутом, фотографиями и комментариями.
+                Нас зовут Алёна и Андрей. Летом 2018 года мы путешествовали по Европе на велосипедах. Поездка заняла 44 дня, 24 из которых — в седле. Заезд разделился на два этапа: из Калининграда в Амстердам и из Копенгагена в Стокгольм. В сумме на велосипедах проехали более 2000 км. Здесь наша история с маршрутом, фотографиями и комментариями.
               </p>
               <img
                 className={classes.fullWidth}
@@ -488,31 +545,33 @@ class SummersidePage extends React.PureComponent {
             <div className={classes.textContainer}>
               <h3>Что получилось</h3>
             </div>
-            <img
-              className={classes.fullWidth}
-              src="https://farm2.staticflickr.com/1953/45051957631_60d12a3e33_h.jpg"
-              alt="bicycle bikepacking"
-            />
-            <img
-              className={classes.fullWidth}
-              src="https://farm2.staticflickr.com/1918/30116672827_14e27f256f_h.jpg"
-              alt="bicycle bikepacking"
-            />
+            <div style={{textAlign: 'center'}}>
+              <img
+                className={classes.getImg}
+                src="https://farm2.staticflickr.com/1953/45051957631_60d12a3e33_h.jpg"
+                alt="bicycle bikepacking"
+              />
+              <img
+                className={classes.getImg}
+                src="https://farm2.staticflickr.com/1918/30116672827_14e27f256f_h.jpg"
+                alt="bicycle bikepacking"
+              />
+            </div>
             <div className={classes.textContainer}>
-              <p style={{marginTop: '1em'}}>
-                <strong>Велосипеды</strong>: Verenti Substance Sora / Kona Rove<br/>
-                <strong>Подседельные сумки</strong>: <a className={classes.link} rel="noopener noreferrer" target="_blank" href="https://vk.com/kravetsbikepacking">Kravets</a> / <a className={classes.link} rel="noopener noreferrer" target="_blank" href="https://vk.com/uraltour">Uraltour</a><br/>
-                <strong>Нарульные сумки и стаканы</strong>: <a className={classes.link} rel="noopener noreferrer" target="_blank" href="https://malpa.by/">Malpa</a><br/>
-                <strong>Передние багажники</strong>: <a className={classes.link} rel="noopener noreferrer" target="_blank" href="https://vk.com/bikerack">Bazhov</a><br/>
-                <strong>Сумки на багажник</strong>: <a className={classes.link} rel="noopener noreferrer" target="_blank" href="http://rackbag.ru/">RackBag</a><br/>
-                <strong>Поясные сумки</strong>: <a className={classes.link} rel="noopener noreferrer" target="_blank" href="http://zulufixed.com/">Zulu</a> / <a className={classes.link} rel="noopener noreferrer" target="_blank" href="https://vk.com/graphitemade">Graphit</a><br/>
+              <p style={{marginTop: '1em', lineHeight: '1.5em'}}>
+                Велосипеды: Verenti Substance / Kona Rove<br/>
+                Подседельные сумки: <a className={classes.link} rel="noopener noreferrer" target="_blank" href="https://vk.com/kravetsbikepacking">Kravets</a> <span className={classes.divider}>/</span> <a className={classes.link} rel="noopener noreferrer" target="_blank" href="https://vk.com/uraltour">Uraltour</a><br/>
+                Нарульные сумки и стаканы: <a className={classes.link} rel="noopener noreferrer" target="_blank" href="https://malpa.by/">Malpa</a><br/>
+                Передние багажники: <a className={classes.link} rel="noopener noreferrer" target="_blank" href="https://vk.com/bikerack">Bazhov</a><br/>
+                Сумки на багажник: <a className={classes.link} rel="noopener noreferrer" target="_blank" href="http://rackbag.ru/">RackBag</a><br/>
+                Поясные сумки: <a className={classes.link} rel="noopener noreferrer" target="_blank" href="http://zulufixed.com/">Zulu</a> <span className={classes.divider}>/</span> <a className={classes.link} rel="noopener noreferrer" target="_blank" href="https://vk.com/graphitemade">Graphit</a><br/>
               </p>
               <p>
                 Палатка, коврики и остальное туристическое снаряжение почти полностью собрано в Декатлоне.
               </p>
               <div className={classes.spoiler}>
                 <div
-                  className={classes.spoilerTitle}
+                  className={[classes.spoilerTitle, classes.link].join(' ')}
                   onClick={this.showGearHandler}
                 >
                   {this.state.showGear ? 'Скрыть' : 'Показать'} полный список вещей
@@ -563,14 +622,7 @@ class SummersidePage extends React.PureComponent {
                 </CSSTransition>
               </div>
               <p>
-                Чтобы перевезти велосипеды в поезде, мы разобрали их, упаковали в мешки для хранения покрышек (обычные мусорные, но с широкой горловиной) и пищевую пленку. Переднее колесо, руль, педали и багажник сняты и примотаны пленкой к раме. Чтобы ничего не поцарапалось, переложили детали картоном. Когда подходили со всем этим к поеду, проводницы начали цепляться с вопросами, говорили, что не пустят с таким багажом в поезд. Все это можно смело игнорировать и загружаться в вагон. В таком виде велосипед можно провозить в плацкарте. Это написано в <a className={classes.link} target="_blank" rel="noopener noreferrer" href="http://pass.rzd.ru/static/public/ru?STRUCTURE_ID=5116&layer_id=3290&refererLayerId=162&id=2457">правилах перевозки</a>. Сам велосипед помещается на верхнюю багажную полку.
-                <img
-                  style={{display: 'block', width: '100%', maxWidth: '400px', margin: '1em 0'}}
-                  src="https://farm2.staticflickr.com/1899/43723828275_7709b7573f_h.jpg"
-                  alt="packed bicycles"/>
-              </p>
-              <p>
-                В таком виде они прибыли в Калининград. Через два часа мы собрали их и поехали смотреть город.
+                Чтобы перевезти велосипеды в поезде, мы разобрали их, упаковали в мешки для хранения покрышек (обычные мусорные, но с широкой горловиной) и пищевую пленку. Переднее колесо, руль, педали и багажник сняты и примотаны пленкой к раме. Чтобы ничего не поцарапалось, переложили детали картоном. Когда подходили со всем этим к поезду, проводницы начали цепляться с вопросами, говорили, что не пустят с таким багажом. Все это можно смело игнорировать и загружаться в вагон. В таком виде велосипед можно провозить в плацкарте. Это написано в правилах перевозки(ссылка). Сам велосипед помещается на верхнюю багажную полку.
               </p>
             </div>
           </section>
@@ -596,7 +648,7 @@ class SummersidePage extends React.PureComponent {
           </section>
           <section id="end" className={classes.end}>
             <div className={classes.textContainer}>
-              <h3>Конец</h3>
+              <h3>Чем закончилось</h3>
               <p>
                 За 44 дня произошло больше событий, чем описано здесь. Был еще нудистский кемпинг, мертвые опоссумы на дороге, обед с клещами и многое другое. Мы хотели сделать небольшой обзор нашей поездки, чтобы показать, как можно провести путешествие. Если вас интересуют подробности, пишите в <a className={classes.link} target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/salad.nights">facebook</a>
               </p>
@@ -605,7 +657,7 @@ class SummersidePage extends React.PureComponent {
               </p>
               <div className={classes.shareBlock}>
                 <div className={classes.shareTitle}>
-                  Поделиться:
+                  Расскажите друзьям:
                 </div>
                 <FacebookShareButton
                   url={'https://saladnights.site/ru/summerside/'}

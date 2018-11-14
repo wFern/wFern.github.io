@@ -5,13 +5,14 @@
   flex-flow: row wrap;
   align-content: stretch;
   max-width: 100%;
+  padding: 0 15px;
+  @include  for-tablet-portrait-up {
+    padding: 0 50px;
+  }
 }
 .comment{
   width: 100%;
-  padding: 0 20px 50px;
-  @include  for-tablet-portrait-up {
-    padding: 0 1em 1em 50px;
-  }
+  padding-bottom: 50px;
   h3{
     font-size: 1.8em;
   }
@@ -21,12 +22,13 @@
 }
 .item{
   position: relative;
-  flex: 1 1 calc(100%/3);
-  max-width: calc(100%/3);
+  margin: 1px;
+  flex: 1 1 calc(100%/3 - 2px);
+  max-width: calc(100%/3 - 2px);
   cursor: pointer;
   @include  for-tablet-portrait-up {
-    flex: 1 1 calc(100%/4);
-    max-width: calc(100%/4);
+    flex: 1 1 calc(100%/4 - 2px);
+    max-width: calc(100%/4 - 2px);
   }
   &:hover {
     opacity: .9;

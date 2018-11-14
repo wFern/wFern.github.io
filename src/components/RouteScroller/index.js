@@ -8,22 +8,22 @@ import classes from "./index.module.scss"
 
 const CITIES_DATA1 = [
   {
-    label: 'Kaliningrad',
+    label: 'Калининград',
     lat: 54.7,
     long: 20.5
   },
   {
-    label: 'Malbork',
+    label: 'Мальборк',
     lat: 54.03,
     long: 19.03
   },
   {
-    label: 'Wałcz',
+    label: 'Валч',
     lat: 53.27,
     long: 16.48
   },
   {
-    label: 'Berlin',
+    label: 'Берлин',
     lat: 52.52,
     long: 13.41
   },
@@ -33,12 +33,12 @@ const CITIES_DATA1 = [
     long: 11.62
   },
   {
-    label: 'Hannover',
+    label: 'Ганновер',
     lat: 52.38,
     long: 9.72
   },
   {
-    label: 'Amsterdam',
+    label: 'Амстердам',
     lat: 52.37,
     long: 4.9
   },
@@ -46,27 +46,27 @@ const CITIES_DATA1 = [
 
 const CITIES_DATA2 = [
   {
-    label: 'Copenhagen',
+    label: 'Копенгаген',
     lat: 55.68,
     long: 12.57
   },
   {
-    label: 'Helsingborg',
+    label: 'Хельсингборг',
     lat: 56.07,
     long: 12.69
   },
   {
-    label: 'Jönköping',
+    label: 'Йёнчёпинг',
     lat: 57.77,
     long: 14.16
   },
   {
-    label: 'Norrköping',
+    label: 'Норрчёпинг',
     lat: 58.6,
     long: 16.18
   },
   {
-    label: 'Stockholm',
+    label: 'Стокгольм',
     lat: 59.30,
     long: 18.02
   },

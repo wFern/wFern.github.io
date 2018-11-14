@@ -1,5 +1,5 @@
 .cityMarkOuter {
-  fill: #C84930; }
+  fill: #ff6633; }
 
 .cityMarkInner {
   fill: #fff; }
@@ -10,11 +10,11 @@
   font-size: 3vw; }
   @media (min-width: 600px) {
     .cityLabel {
-      font-size: 1.3rem; } }
+      font-size: 1.65vw; } }
 
 .track {
   fill: #fff;
-  stroke: #C84930;
+  stroke: #ff6633;
   stroke-width: 4px;
   stroke-linejoin: round;
   transition: all 1s linear; }

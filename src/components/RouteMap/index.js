@@ -20,47 +20,47 @@ class RouteMap extends React.Component {
     trackData2: [],
     citiesData: [
       {
-        label: <Link to="kaliningrad" smooth={true} offset={-20} className={classes.link}>Kaliningrad</Link>,
+        label: <Link to="kaliningrad" smooth={true} offset={-20} className={classes.link}>Калининград</Link>,
         lat: 54.7,
         long: 20.5
       },
       {
-        label: <Link to="malbork" smooth={true} offset={-20} className={classes.link}>Malbork</Link>,
+        label: <Link to="malbork" smooth={true} offset={-20} className={classes.link}>Мальборк</Link>,
         lat: 54.03,
         long: 19.03
       },
       {
-        label: <Link to="walcz" smooth={true} offset={-20} className={classes.link}>Wałcz</Link>,
+        label: <Link to="walcz" smooth={true} offset={-20} className={classes.link}>Валч</Link>,
         lat: 53.27,
         long: 16.48
       },
       {
-        label: <Link to="berlin" smooth={true} offset={-20} className={classes.link}>Berlin</Link>,
+        label: <Link to="berlin" smooth={true} offset={-20} className={classes.link}>Берлин</Link>,
         lat: 52.52,
         long: 13.41
       },
       {
-        label: <Link to="amsterdam" smooth={true} offset={-20} className={classes.link}>Amsterdam</Link>,
+        label: <Link to="amsterdam" smooth={true} offset={-20} className={classes.link}>Амстердам</Link>,
         lat: 52.37,
         long: 4.9
       },
       {
-        label: <Link to="copenhagen" smooth={true} offset={-20} className={classes.link}>Copenhagen</Link>,
+        label: <Link to="copenhagen" smooth={true} offset={-20} className={classes.link}>Копенгаген</Link>,
         lat: 55.68,
         long: 12.57
       },
       {
-        label: <Link to="jonkoping" smooth={true} offset={-20} className={classes.link}>Jönköping</Link>,
+        label: <Link to="jonkoping" smooth={true} offset={-20} className={classes.link}>Йёнчёпинг</Link>,
         lat: 57.77,
         long: 14.16
       },
       {
-        label: <Link to="norrkoping" smooth={true} offset={-20} className={classes.link}>Norrköping</Link>,
+        label: <Link to="norrkoping" smooth={true} offset={-20} className={classes.link}>Норрчёпинг</Link>,
         lat: 58.6,
         long: 16.18
       },
       {
-        label: <Link to="stockholm" smooth={true} offset={-20} className={classes.link}>Stockholm</Link>,
+        label: <Link to="stockholm" smooth={true} offset={-20} className={classes.link}>Стокгольм</Link>,
         lat: 59.30,
         long: 18.02
       },
