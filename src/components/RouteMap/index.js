@@ -145,6 +145,7 @@ class RouteMap extends React.Component {
                 </g>
               )
             }
+            return null;
           })
         }
       </svg>

@@ -48,6 +48,7 @@ class Gallery extends React.Component {
         photoWithComments.splice(i + setCommentCounter, 0, {comment: true, msg: photoItem.msg});
         setCommentCounter++;
       }
+      return null;
     });
     this.setState({
         photoSizes: photoWithComments
@@ -130,6 +131,7 @@ class Gallery extends React.Component {
                   <img
                       className={['swiper-item swiper-lazy', classes.swiperItem].join(' ')}
                       data-src={item.large}
+                      alt={item.id}
                   />
                   <div className={['swiper-lazy-preloader', classes.swiperLazyPreloader].join(' ')}>
                     <div className={classes.loader}>

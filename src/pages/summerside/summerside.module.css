@@ -172,7 +172,7 @@
   padding: 0; }
   @media (min-width: 600px) {
     .contentTable {
-      font-size: 1.65vw; } }
+      font-size: 1em; } }
   .contentTable :global li {
     font-weight: bold;
     margin-bottom: .5em; }

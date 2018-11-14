@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { navigate } from "gatsby-link"
-import { Icon, Grid, Container, Menu, Dropdown } from 'semantic-ui-react'
+import { Icon, Menu } from 'semantic-ui-react'
 import { getCurrentLangKey, getUrlForLang, getLangs } from 'ptz-i18n'
 import 'semantic-ui-css/semantic.min.css'
 import '../../../styles/main.scss'
@@ -39,7 +39,7 @@ const Footer = () => (
     <a className={[classes.IconLink, commonClasses.Link].join(' ')} href="https://500px.com/salad_nights" target="_blank" rel="noopener noreferrer">
       <Icon link name='500px' size="huge" className={classes.spacedIcon}/>
     </a>
-    <a className={[classes.IconLink, commonClasses.Link].join(' ')} href="https://www.strava.com/athletes/salad_nights" target="_blank">
+    <a className={[classes.IconLink, commonClasses.Link].join(' ')} href="https://www.strava.com/athletes/salad_nights" target="_blank" rel="noopener noreferrer">
       <Icon link name='strava' size="huge" className={classes.spacedIcon}/>
     </a>
   </footer>
@@ -59,12 +59,12 @@ const Layout = ({ children, location }) => {
     return {key: lang.langKey, label: langs[lang.langKey]}
   });
   const langsMenuElement = (
-    <a
+    <span
       className={[classes.langSwitcher, commonClasses.Link].join(' ')}
       onClick={(e) => {e.preventDefault(); navigate(`/${langOption[0].key}/`)}}
     >
       {langOption[0].label}
-    </a>
+    </span>
   );
 
   return (
