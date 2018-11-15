@@ -23,7 +23,7 @@ const IndexPage = ({location}) => (
       </List>
     </div>
     <p>
-      Currently, I'm unemployed and looking for interesting projects. If you have something for me, feel free to contact me via social networks below.
+      Currently, I'm looking for interesting projects. If you have something for me, feel free to contact me via social networks below.
       There is <a className={commonClasses.Link} rel="noopener noreferrer" target="_blank" href={resume}>my&nbsp;resume.</a>
     </p>
     <h4 className={classes.heading}>My skills</h4>
