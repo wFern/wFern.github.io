@@ -9,11 +9,6 @@
     padding: 0 50px;
     max-width: 75%;
   }
-  :global{
-    p{
-      line-height: 1.2em;
-    }
-  }
 }
 .fullWidth{
   width: 100%;
@@ -64,15 +59,12 @@
   overflow: hidden;
 }
 .goToIndex{
-  position: absolute;
-  top: 1em;
-  left: 1em;
+  margin-top: 30px;
   width: 30px;
-  height: 15px;
   z-index: 999;
   &:hover{
     path{
-      fill: #fff;
+      fill: #000;
     }
   }
   path{
@@ -134,14 +126,20 @@
   :global{
     section{
       line-height: 1.4285em;
-      margin-bottom: 2em;
+      margin-bottom: 1em;
     }
 
     h3{
       font-size: 7.8vw;
-      margin: .9em 0 .4em;
+      margin: 40px 0 18px;
       @include  for-tablet-portrait-up {
         font-size: 4.32vw;
+      }
+    }
+    p{
+      line-height: 1.4em;
+      @include  for-tablet-portrait-up {
+        line-height: 1.3em;
       }
     }
   }

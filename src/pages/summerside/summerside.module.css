@@ -5,8 +5,6 @@
     .textContainer {
       padding: 0 50px;
       max-width: 75%; } }
-  .textContainer :global p {
-    line-height: 1.2em; }
 
 .fullWidth {
   width: 100%; }
@@ -45,14 +43,11 @@
   overflow: hidden; }
 
 .goToIndex {
-  position: absolute;
-  top: 1em;
-  left: 1em;
+  margin-top: 30px;
   width: 30px;
-  height: 15px;
   z-index: 999; }
   .goToIndex:hover path {
-    fill: #fff; }
+    fill: #000; }
   .goToIndex path {
     fill: #ff6633; }
 
@@ -95,13 +90,18 @@
       font-size: 1.5em; } }
   .main :global section {
     line-height: 1.4285em;
-    margin-bottom: 2em; }
+    margin-bottom: 1em; }
   .main :global h3 {
     font-size: 7.8vw;
-    margin: .9em 0 .4em; }
+    margin: 40px 0 18px; }
     @media (min-width: 600px) {
       .main :global h3 {
         font-size: 4.32vw; } }
+  .main :global p {
+    line-height: 1.4em; }
+    @media (min-width: 600px) {
+      .main :global p {
+        line-height: 1.3em; } }
 
 .mapWrapper {
   width: 100%;

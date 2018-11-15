@@ -120,6 +120,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+:global .swiper-lazy {
+  display: none; }
+:global .swiper-lazy-loaded {
+  display: block; }
 :global .swiper-button-next, :global .swiper-button-prev {
   display: none;
   background-image: none;

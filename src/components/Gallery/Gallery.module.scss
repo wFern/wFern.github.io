@@ -145,6 +145,12 @@
     justify-content: center;
     align-items: center;
   }
+  .swiper-lazy{
+    display: none;
+  }
+  .swiper-lazy-loaded{
+    display: block;
+  }
   .swiper-button-next, .swiper-button-prev{
     display: none;
     background-image: none;
