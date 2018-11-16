@@ -24,6 +24,7 @@ import RouteScroller from '../../components/RouteScroller'
 import classes from './summerside.module.scss'
 
 import introImg from '../../assets/img/pages/summerside/intro.jpg'
+import shareImg from '../../assets/img/pages/summerside/share.png'
 
 class SummersidePage extends React.PureComponent {
 
@@ -675,7 +676,7 @@ class SummersidePage extends React.PureComponent {
                   url={'https://saladnights.site/ru/summerside/'}
                   title={'Двухэтапное велопутешествие по Европе'}
                   description={'Двухэтапное велопутешествие по Европе. 2000 км, 24 дня езды, бесконечное количество впечатлений.'}
-                  // image={}
+                  image={shareImg}
                 >
                   <VKIcon/>
                 </VKShareButton>

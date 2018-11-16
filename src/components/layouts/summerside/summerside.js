@@ -27,7 +27,8 @@ const Summerside = ({ children, location }) => {
           {property:'og:description', content: '2000 км, 24 дня езды, много впечатлений.'},
           {property:'og:type', content: 'article'},
           {property:'og:url', content: `https://saladnights.site${url}`},
-          {property:'og:image', content: {shareImg}}
+          {property:'og:image', content: shareImg},
+          {property:'og:image:secure_url', content: shareImg}
         ]}
       >
         <html lang={langKey} />

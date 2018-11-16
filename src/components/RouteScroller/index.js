@@ -120,7 +120,7 @@ const CITIES_DATA2 = [
           path = geoPath().projection(this.projection2());
           break;
         default:
-          trackData = trackData1;
+          trackData = [];
       }
 
       const d = path(mesh(trackData, trackData.objects[`track${this.props.track}`]));
