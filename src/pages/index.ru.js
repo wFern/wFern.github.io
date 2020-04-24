@@ -10,7 +10,7 @@ const IndexPage = ({location}) => (
     <h2 className={classes.subTitle}>Фронтэнд-разработчик</h2>
     <p>
       Более 6 лет работаю в разных сферах веб-разработки. <br/>
-      Последние два года главный интерес &mdash; фронтэнд и JavaScript экосистема.
+      Последние три года главный интерес &mdash; фронтэнд и JavaScript экосистема.
     </p>
     <div className={classes.List}>
       <span>Работал с</span>
