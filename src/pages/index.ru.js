@@ -7,10 +7,10 @@ import commonClasses from '../styles/elements.module.scss'
 const IndexPage = ({location}) => (
   <Layout location={location}>
     <h1 className={classes.title}>Андрей Тарасов</h1>
-    <h2 className={classes.subTitle}>Фронтэнд&mdash;разработчик</h2>
+    <h2 className={classes.subTitle}>Фронтэнд-разработчик</h2>
     <p>
-      Более 5 лет работаю в разных сферах веб&mdash;разработки. <br/>
-      Последние два года главный интерес &mdash; фронтэнд и визуализация данных.
+      Более 6 лет работаю в разных сферах веб-разработки. <br/>
+      Последние два года главный интерес &mdash; фронтэнд и JavaScript экосистема.
     </p>
     <div className={classes.List}>
       <span>Работал с</span>
@@ -22,11 +22,11 @@ const IndexPage = ({location}) => (
       </List>
     </div>
     <p>
-      Сейчас в поиске интересных проектов. Если у вас есть что-то для меня, пишите в социалки внизу.
+      <a className={commonClasses.Link} rel="noopener noreferrer" target="_blank" href='https://docs.google.com/document/d/15uZ5AJl-hdgLkoeHEOf3n7AZ1i-UEXw0zvv9UHqADAA/edit?usp=sharing'>Моё&nbsp;резюме</a>
     </p>
     <h4 className={classes.heading}>Мои навыки</h4>
     <p>
-      HTML, CSS, JS, React, Redux, Gatsby.js, D3.js.
+      HTML, CSS, JavaScript, TypeScript, React, Redux, Gatsby.js, D3.js.
     </p>
     <p>
       Иногда я закрываю редактор и иду <a className={commonClasses.Link} rel="noopener noreferrer" target="_blank" href="https://500px.com/salad_nights">фотографировать</a> на пленку,<br/>делать <a className={commonClasses.Link} rel="noopener noreferrer" target="_blank" href="https://www.mixcloud.com/andrey-ivanov19/">микстейпы</a> для жены или отправляюсь в странные путешествия и потом <a className={commonClasses.Link} rel="noopener noreferrer" target="_blank" href="https://journal.tinkoff.ru/work_exchange/">пишу&nbsp;об&nbsp;этом.</a>
